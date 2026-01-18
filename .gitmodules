@@ -1,0 +1,6 @@
+[submodule "original/ml-core-readonly"]
+	path = original/ml-core-readonly
+	url = https://github.com/vetalis-ru/ml-core-readonly.git
+[submodule "addons/ml-adds"]
+	path = addons/ml-adds
+	url = https://github.com/vetalis-ru/ml-adds.git
