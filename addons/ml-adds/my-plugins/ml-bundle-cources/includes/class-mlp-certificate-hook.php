@@ -1,5 +1,6 @@
 <?php // includes/class-mlp-certificate-hook.php 
 
+
 class MLP_Certificate_Hook {
     public static function handle($user_id, $cert_id) {
         // 1) Идемпотентность
