@@ -1,0 +1,1 @@
+<li><a href="#tab-mbl-protection" class="mwp-color-tab"><?php _e('Защита от камеры', 'mbl_admin') ?></a></li>

@@ -1,0 +1,795 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MEMBERLUX 2.0\n"
+"POT-Creation-Date: 2017-06-06 15:14:51+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2025-10-06 12:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: uk\n"
+"X-Generator: Manual"
+
+msgid "подробнее"
+msgstr "детальніше"
+
+msgid "Панель управления"
+msgstr "Панель керування"
+
+msgid "Редактировать материал"
+msgstr "Редагувати матеріал"
+
+msgid "Главная"
+msgstr "Головна"
+
+msgid "Расписание"
+msgstr "Розклад"
+
+msgid "Задать вопрос"
+msgstr "Задати питання"
+
+msgid "закрыть"
+msgstr "закрити"
+
+msgid "Не принимаю"
+msgstr "Не приймаю"
+
+msgid "Принимаю"
+msgstr "Приймаю"
+
+msgid "Заголовок вопроса"
+msgstr "Заголовок питання"
+
+msgid "Отправить"
+msgstr "Надіслати"
+
+msgid "Логин"
+msgstr "Логін"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Ваш вопрос"
+msgstr "Ваше питання"
+
+msgid "Ваше сообщение отправлено."
+msgstr "Ваше повідомлення надіслано."
+
+msgid "Произошла ошибка! Сообщение не отправлено."
+msgstr "Сталася помилка! Повідомлення не надіслано."
+
+msgid "Войти"
+msgstr "Увійти"
+
+msgid "Пароль"
+msgstr "Пароль"
+
+msgid "Запомнить меня"
+msgstr "Запам'ятати мене"
+
+msgid "Забыли пароль?"
+msgstr "Забули пароль?"
+
+msgid "Проверка..."
+msgstr "Перевірка..."
+
+msgid "Вход выполнен, переадресация..."
+msgstr "Вхід виконано, переадресація..."
+
+msgid ""
+"Логин или пароль неправильные. Попробуйте ввести еще раз, возможно включен "
+"CapsLock."
+msgstr ""
+"Логін або пароль неправильні. Спробуйте ввести ще раз, можливо увімкнено "
+"CapsLock."
+
+msgid "Фамилия"
+msgstr "Прізвище"
+
+msgid "Имя"
+msgstr "Ім'я"
+
+msgid "Отчество"
+msgstr "По батькові"
+
+msgid "Телефон"
+msgstr "Телефон"
+
+msgid "Желаемый логин"
+msgstr "Бажаний логін"
+
+msgid "Желаемый пароль"
+msgstr "Бажаний пароль"
+
+msgid "Код доступа"
+msgstr "Код доступу"
+
+msgid "Зарегистрироваться"
+msgstr "Зареєструватися"
+
+msgid "Произошла ошибка."
+msgstr "Сталася помилка."
+
+msgid "Поиск..."
+msgstr "Пошук..."
+
+msgid "Регистрация"
+msgstr "Реєстрація"
+
+msgid "Профиль"
+msgstr "Профіль"
+
+msgid "Активация"
+msgstr "Активація доступу до курсів"
+
+msgid "Вход"
+msgstr "Вхід"
+
+msgid "Выход"
+msgstr "Вихід"
+
+msgid "Регистрация..."
+msgstr "Реєстрація..."
+
+msgid "Пройдено уроков"
+msgstr "Пройдено уроків"
+
+msgid "Предыдущая"
+msgstr "Попередня"
+
+msgid "Следующая"
+msgstr "Наступна"
+
+msgid "Главная страница"
+msgstr "Головна сторінка"
+
+msgid "Нет материалов"
+msgstr "Немає матеріалів"
+
+msgid "доступ открыт"
+msgstr "доступ відкрито"
+
+msgid "доступ закрыт"
+msgstr "доступ закрито"
+
+msgid "пройдите предыдущий урок"
+msgstr "пройдіть попередній урок"
+
+msgid "выполнено"
+msgstr "виконано"
+
+msgid "проверяется"
+msgstr "перевіряється"
+
+msgid "отклонено"
+msgstr "відхилено"
+
+msgid "не начат"
+msgstr "не розпочато"
+
+msgid "Материал доступен для следующих тарифных планов:"
+msgstr "Матеріал доступний для наступних тарифних планів:"
+
+msgid "Предыдущий урок"
+msgstr "Попередній урок"
+
+msgid "Следующий урок"
+msgstr "Наступний урок"
+
+msgid "Пройден"
+msgstr "Пройдено"
+
+msgid "Не пройден"
+msgstr "Не пройдено"
+
+msgid "Обновить"
+msgstr "Оновити"
+
+msgid "Загрузка..."
+msgstr "Завантаження..."
+
+msgid "Пройдено"
+msgstr "Пройдено"
+
+msgid "Контент"
+msgstr "Контент"
+
+msgid "Задание"
+msgstr "Завдання"
+
+msgid "Вложения"
+msgstr "Вкладення"
+
+msgid "Все коментарии"
+msgstr "Всі коментарі"
+
+msgid "Мои комментарии"
+msgstr "Мої коментарі"
+
+msgid "Уведомлять по почте об ответах на мои комментарии"
+msgstr "Повідомляти поштою про відповіді на мої коментарі"
+
+msgid "Ваш комментарий ожидает проверки."
+msgstr "Ваш коментар очікує на перевірку."
+
+msgid "Ответить"
+msgstr "Відповісти"
+
+msgid "Изменить"
+msgstr "Змінити"
+
+msgid "Текст комментария"
+msgstr "Текст коментаря"
+
+msgid "Отменить"
+msgstr "Скасувати"
+
+msgid "Добавить комментарий"
+msgstr "Додати коментар"
+
+msgid "Выбрать файлы"
+msgstr "Обрати файли"
+
+msgid "Файлы не выбраны"
+msgstr "Файли не обрано"
+
+msgid "Ответьте на вопрос:"
+msgstr "Дайте відповідь на питання:"
+
+msgid "Ваш ответ"
+msgstr "Ваша відповідь"
+
+msgid "Обсуждение ответа"
+msgstr "Обговорення відповіді"
+
+msgid "доступно только Вам и Тренеру"
+msgstr "доступно тільки Вам і Тренеру"
+
+msgid "Написать сообщение"
+msgstr "Написати повідомлення"
+
+msgid "Ошибка"
+msgstr "Помилка"
+
+msgid "Удалить"
+msgstr "Видалити"
+
+msgid "Загрузить"
+msgstr "Завантажити"
+
+msgid "Отмена"
+msgstr "Скасування"
+
+msgid "Тип файла не разрешен"
+msgstr "Тип файлу не дозволено"
+
+msgid "Результаты поиска"
+msgstr "Результати пошуку"
+
+msgid "Нет материалов удовлетворяющих условиям поиска"
+msgstr "Немає матеріалів, що відповідають умовам пошуку"
+
+msgid "Ваш код доступа"
+msgstr "Ваш код доступу"
+
+msgid "Добавить"
+msgstr "Додати"
+
+msgid "Уровень доступа"
+msgstr "Рівень доступу"
+
+msgid "Старт"
+msgstr "Старт"
+
+msgid "Конец"
+msgstr "Кінець"
+
+msgid "осталось"
+msgstr "залишилось"
+
+msgid "дней"
+msgstr "днів"
+
+msgid "Показать детали"
+msgstr "Показати деталі"
+
+msgid "Неверный ключ"
+msgstr "Невірний ключ"
+
+msgid "Ключ добавлен"
+msgstr "Ключ додано"
+
+msgid "Этот ключ уже используется"
+msgstr "Цей ключ вже використовується"
+
+msgid "Предупреждение о выходе из системы"
+msgstr "Попередження про вихід із системи"
+
+msgid "Кто-то вошел в систему под вашим логином."
+msgstr "Хтось увійшов у систему під вашим логіном."
+
+msgid "Вы будете перенаправлены на главную страницу через 7 секунд"
+msgstr "Ви будете переспрямовані на головну сторінку через 7 секунд"
+
+msgid "Этот код доступа уже используется"
+msgstr "Цей код доступу вже використовується"
+
+msgid ""
+"Некорректный логин. Для логина разрешены только буквы латинского алфавита и "
+"цифры"
+msgstr ""
+"Некоректний логін. Для логіну дозволені тільки букви латинського алфавіту та "
+"цифри"
+
+msgid "Этот логин уже используется"
+msgstr "Цей логін вже використовується"
+
+msgid "Этот email уже используется"
+msgstr "Цей email вже використовується"
+
+msgid "Спасибо за регистрацию!"
+msgstr "Дякуємо за реєстрацію!"
+
+msgid "Сообщение с подтверждением отправлено на указанный адрес"
+msgstr "Повідомлення з підтвердженням надіслано на вказану адресу"
+
+msgid "Произошла ошибка!"
+msgstr "Сталася помилка!"
+
+msgid "Ответ не сохранен!"
+msgstr "Відповідь не збережено!"
+
+msgid "Ответ отправлен!"
+msgstr "Відповідь надіслано!"
+
+msgid "Необходимо пройти проверку reCAPTCHA"
+msgstr "Необхідно пройти перевірку reCAPTCHA"
+
+msgid "Урок откроется через"
+msgstr "Урок відкриється через"
+
+msgid "Задание проверяется..."
+msgstr "Завдання перевіряється..."
+
+#: templates/front/test-edit.php:30 templates/front/test.php:36
+msgid "Варианты ответов:"
+msgstr "Варіанти відповідей:"
+
+#: templates/front/review-link.php:3
+msgid "Перейти к обсуждению"
+msgstr "Перейти до обговорення"
+
+#: templates/front/test-edit.php:7
+msgid "Показать тест"
+msgstr "Показати тест"
+
+#: templates/front/test-edit.php:11
+msgid "Скрыть тест"
+msgstr "Сховати тест"
+
+#: templates/front/test-edit.php:21 templates/front/test.php:27
+msgid "Вопрос #"
+msgstr "Питання #"
+
+#: templates/front/test-edit.php:83 templates/front/test.php:75
+msgid "Готово"
+msgstr "Готово"
+
+#: templates/front/test-edit.php:118
+msgid "Измените ответы"
+msgstr "Змініть відповіді"
+
+#: templates/front/test-edit.php:147
+msgid "Отправка..."
+msgstr "Надсилання..."
+
+#: templates/front/test.php:14
+msgid "Начать"
+msgstr "Почати"
+
+msgid "Редактировать"
+msgstr "Редагувати"
+
+#: templates/front/test.php:19
+msgid "Пройдите тест"
+msgstr "Пройдіть тест"
+
+#: templates/front/test.php:109
+msgid "Ответьте на все вопросы"
+msgstr "Дайте відповідь на всі питання"
+
+msgid "Ваш вариант ответа"
+msgstr "Ваш варіант відповіді"
+
+msgid "Описание теста"
+msgstr "Опис тесту"
+
+#: js\summernote\lang\summernote-ru-RU.js | js\summernote\summernote.js:2060
+msgid "Полужирный"
+msgstr "Напівжирний"
+
+msgid "Курсив"
+msgstr "Курсив"
+
+msgid "Подчёркнутый"
+msgstr "Підкреслений"
+
+msgid "Убрать стили шрифта"
+msgstr "Прибрати стилі шрифту"
+
+msgid "Высота линии"
+msgstr "Висота лінії"
+
+msgid "Шрифт"
+msgstr "Шрифт"
+
+msgid "Зачёркнутый"
+msgstr "Закреслений"
+
+msgid "Нижний индекс"
+msgstr "Нижній індекс"
+
+msgid "Верхний индекс"
+msgstr "Верхній індекс"
+
+msgid "Размер шрифта"
+msgstr "Розмір шрифту"
+
+msgid "Картинка"
+msgstr "Зображення"
+
+msgid "Вставить картинку"
+msgstr "Вставити зображення"
+
+msgid "Восстановить размер"
+msgstr "Відновити розмір"
+
+msgid "Уменьшить до 50%"
+msgstr "Зменшити до 50%"
+
+msgid "Уменьшить до 25%"
+msgstr "Зменшити до 25%"
+
+msgid "Расположить слева"
+msgstr "Розташувати ліворуч"
+
+msgid "Расположить справа"
+msgstr "Розташувати праворуч"
+
+msgid "Расположение по умолчанию"
+msgstr "Розташування за замовчуванням"
+
+msgid "Форма: Закругленная"
+msgstr "Форма: Закруглена"
+
+msgid "Форма: Круг"
+msgstr "Форма: Коло"
+
+msgid "Форма: Миниатюра"
+msgstr "Форма: Мініатюра"
+
+msgid "Форма: Нет"
+msgstr "Форма: Немає"
+
+msgid "Перетащите сюда картинку"
+msgstr "Перетягніть сюди зображення"
+
+msgid "Перетащите картинку"
+msgstr "Перетягніть зображення"
+
+msgid "Выбрать из файлов"
+msgstr "Обрати з файлів"
+
+msgid "URL картинки"
+msgstr "URL зображення"
+
+msgid "Удалить картинку"
+msgstr "Видалити зображення"
+
+msgid "Видео"
+msgstr "Відео"
+
+msgid "Ссылка на видео"
+msgstr "Посилання на відео"
+
+msgid "Вставить видео"
+msgstr "Вставити відео"
+
+msgid "URL видео"
+msgstr "URL відео"
+
+msgid "(YouTube, Vimeo, Vine, Instagram, DailyMotion або Youku)"
+msgstr "(YouTube, Vimeo, Vine, Instagram, DailyMotion або Youku)"
+
+msgid "Ссылка"
+msgstr "Посилання"
+
+msgid "Вставить ссылку"
+msgstr "Вставити посилання"
+
+msgid "Убрать ссылку"
+msgstr "Прибрати посилання"
+
+msgid "Отображаемый текст"
+msgstr "Відображуваний текст"
+
+msgid "URL для перехода"
+msgstr "URL для переходу"
+
+msgid "Открывать в новом окне"
+msgstr "Відкривати в новому вікні"
+
+msgid "Таблица"
+msgstr "Таблиця"
+
+msgid "Вставить горизонтальную линию"
+msgstr "Вставити горизонтальну лінію"
+
+msgid "Стиль"
+msgstr "Стиль"
+
+msgid "Нормальный"
+msgstr "Нормальний"
+
+msgid "Цитата"
+msgstr "Цитата"
+
+msgid "Код"
+msgstr "Код"
+
+msgid "Заголовок 1"
+msgstr "Заголовок 1"
+
+msgid "Заголовок 2"
+msgstr "Заголовок 2"
+
+msgid "Заголовок 3"
+msgstr "Заголовок 3"
+
+msgid "Заголовок 4"
+msgstr "Заголовок 4"
+
+msgid "Заголовок 5"
+msgstr "Заголовок 5"
+
+msgid "Заголовок 6"
+msgstr "Заголовок 6"
+
+msgid "Маркированный список"
+msgstr "Маркований список"
+
+msgid "Нумерованный список"
+msgstr "Нумерований список"
+
+msgid "Помощь"
+msgstr "Допомога"
+
+msgid "На весь экран"
+msgstr "На весь екран"
+
+msgid "Исходный код"
+msgstr "Вихідний код"
+
+msgid "Параграф"
+msgstr "Параграф"
+
+msgid "Уменьшить отступ"
+msgstr "Зменшити відступ"
+
+msgid "Увеличить отступ"
+msgstr "Збільшити відступ"
+
+msgid "Выровнять по левому краю"
+msgstr "Вирівняти по лівому краю"
+
+msgid "Выровнять по центру"
+msgstr "Вирівняти по центру"
+
+msgid "Выровнять по правому краю"
+msgstr "Вирівняти по правому краю"
+
+msgid "Растянуть по ширине"
+msgstr "Розтягнути по ширині"
+
+msgid "Последний цвет"
+msgstr "Останній колір"
+
+msgid "Еще цвета"
+msgstr "Ще кольори"
+
+msgid "Цвет фона"
+msgstr "Колір фону"
+
+msgid "Цвет шрифта"
+msgstr "Колір шрифту"
+
+msgid "Прозрачный"
+msgstr "Прозорий"
+
+msgid "Сделать прозрачным"
+msgstr "Зробити прозорим"
+
+msgid "Сброс"
+msgstr "Скидання"
+
+msgid "По умолчанию"
+msgstr "За замовчуванням"
+
+msgid "Сочетания клавиш"
+msgstr "Комбінації клавіш"
+
+msgid "Закрыть"
+msgstr "Закрити"
+
+msgid "Форматирование текста"
+msgstr "Форматування тексту"
+
+msgid "Действие"
+msgstr "Дія"
+
+msgid "Форматирование параграфа"
+msgstr "Форматування параграфа"
+
+msgid "Стиль документа"
+msgstr "Стиль документа"
+
+msgid "Дополнительные комбинации"
+msgstr "Додаткові комбінації"
+
+msgid "Повтор"
+msgstr "Повтор"
+
+msgid "Добавить видео, макс. - "
+msgstr "Додати відео, макс. - "
+
+msgid "Видео [beta]"
+msgstr "Відео [beta]"
+
+msgid "URL"
+msgstr "URL аудіо файлу"
+
+msgid "Ой. Что то пошло не так!"
+msgstr "Ой. Щось пішло не так!"
+
+msgid "URL видео (YouTube, Vimeo, Vine, Instagram, DailyMotion или Youku)"
+msgstr "URL відео (YouTube, Vimeo, Vine, Instagram, DailyMotion або Youku)"
+
+msgid "Выбрать из файлов (поддерживаемые форматы: mp4/mov)"
+msgstr "Обрати з файлів (підтримувані формати: mp4/mov)"
+
+msgid "Файл не должен быть больше "
+msgstr "Файл не повинен бути більше "
+
+msgid "Загружаемый файл должен быть видео файлом!"
+msgstr "Завантажуваний файл повинен бути відео файлом!"
+
+msgid "Добавить аудио, макс. - "
+msgstr "Додати аудіо, макс. - "
+
+msgid "Аудио [beta]"
+msgstr "Аудіо [beta]"
+
+msgid "Выбрать из файлов (поддерживаемые форматы: mp3/m4a/wav)"
+msgstr "Обрати з файлів (підтримувані формати: mp3/m4a/wav)"
+
+msgid "Загружаемый файл должен быть аудио файлом!"
+msgstr "Завантажуваний файл повинен бути аудіо файлом!"
+
+msgid "Вставить аудио"
+msgstr "Вставити аудіо"
+
+msgid "Эмоджи [beta]"
+msgstr "Емоджі [beta]"
+
+msgid "Курс доступен"
+msgstr "Курс доступний"
+
+msgid "ПОЛУЧИТЬ ДОСТУП БЕСПЛАТНО"
+msgstr "ОТРИМАТИ ДОСТУП БЕЗКОШТОВНО"
+
+msgid "Username"
+msgstr "Логін"
+
+msgid "E-mail"
+msgstr "E-mail"
+
+msgid ""
+"<strong>ERROR</strong>: Invalid username or incorrect password. <a "
+"href=\"%s\">Lost your password</a>?"
+msgstr ""
+"<strong>ПОМИЛКА</strong>: Невірне ім'я користувача або невірний пароль. <a "
+"href=\"%s\">Забули пароль</a>?"
+
+msgid "<strong>ERROR</strong>: Please type your e-mail address."
+msgstr "<strong>ПОМИЛКА</strong>: Будь ласка, вкажіть вашу адресу e-mail."
+
+msgid "<strong>ERROR</strong>: Please enter a valid email address."
+msgstr "<strong>ПОМИЛКА</strong>: Будь ласка, введіть правильну адресу email."
+
+msgid "<strong>ERROR</strong>: Sorry, that email address is already used!"
+msgstr ""
+"<strong>ПОМИЛКА</strong>: Вибачте, ця адреса email вже використовується!"
+
+msgid "<strong>ERROR</strong>: That username is not allowed."
+msgstr "<strong>ПОМИЛКА</strong>: Це ім'я користувача не дозволено."
+
+msgid "<strong>ERROR</strong>: Username must be at least 4 characters."
+msgstr ""
+"<strong>ПОМИЛКА</strong>: Ім'я користувача має містити щонайменше 4 символи."
+
+msgid "<strong>ERROR</strong>: Sorry, usernames must have letters too!"
+msgstr ""
+"<strong>ПОМИЛКА</strong>: Вибачте, імена користувачів повинні містити також "
+"літери!"
+
+msgid "<strong>ERROR</strong>: Sorry, that username already exists!"
+msgstr "<strong>ПОМИЛКА</strong>: Вибачте, але це ім'я користувача вже існує!"
+
+msgid "Hi %s"
+msgstr "Привіт, %s"
+
+msgid ""
+"You're now signed in with your %s account but you are still one step away of "
+"getting into our website"
+msgstr ""
+"Ви тепер зареєстровані з Вашим обліковим записом %s, залишився лише крок до "
+"входу на сайт."
+
+msgid "Already have an account"
+msgstr "Вже є аккаунт"
+
+msgid "Link your existing account on our website to your %s ID."
+msgstr ""
+"Зв'яжіть свій існуючий обліковий запис на нашому сайті та ваш ідентифікатор "
+"%s."
+
+msgid "New to our website"
+msgstr "Новачок на сайті"
+
+msgid "Create a new account and it will be associated with your %s ID."
+msgstr ""
+"Створіть новий обліковий запис, і він буде пов'язаний з вашим "
+"ідентифікатором %s."
+
+msgid "Link my account"
+msgstr "Зв'язати з моїм обліковим записом"
+
+msgid "Create a new account"
+msgstr "Створити новий обліковий запис"
+
+msgid ""
+"Please enter your username and password of your existing account on our "
+"website. Once verified, it will linked to your %s ID"
+msgstr ""
+"Будь ласка, введіть ваше ім'я користувача та пароль від існуючого облікового "
+"запису на нашому сайті. Після перевірки, його буде пов'язано з "
+"ідентифікатором %s"
+
+msgid "Password"
+msgstr "Пароль"
+
+msgid "Continue"
+msgstr "Продовжити"
+
+msgid "Cancel"
+msgstr "Скасувати"
+
+msgid ""
+"Please fill in your information in the form below. Once completed, you will "
+"be able to automatically sign into our website through your %s ID"
+msgstr ""
+"Будь ласка, заповніть ваші дані в формі нижче. Після завершення, ви зможете "
+"автоматично увійти на наш веб-сайт з Вашим ID %s"
+
+msgid "Back to %s"
+msgstr "Повернутися на %s"
+
+msgid "Партнерская программа"
+msgstr "Партнерська програма"
+
+msgid "Символов из"
+msgstr "Символів з"
+
+msgid "Лимит символов в контенте"
+msgstr "Ліміт символів у контенті"

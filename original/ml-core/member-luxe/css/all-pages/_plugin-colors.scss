@@ -1,0 +1,322 @@
+$black_color: #32373c;
+$gray_color: #6A6F73;
+
+$mbl_color: #3b8d69; //Основной плагин
+$mpp_color: #AC5E91; //Модуль приема платежей
+$mpt_color: #548EC2; //Модуль продвинутого тренера
+$mt_color: #A49074; //Модуль тестов
+$mpn_color: #8E8E8E; //Модуль панели навигации
+$mmini_color: #a37171; //Модуль мини интерфейса
+$ma_color: #64AE51; //Модуль авторегистрации
+$mwp_color: #7F3902; //Модуль Защиты от камеры
+$discounts_color: #EA8585; //Модуль Купонов и скидок
+$connector_color: #b22a2a; //Модуль Купонов и скидок
+$universal_aсcess_color: #000; //Модуль универсального доступа
+
+
+/* ---------------------- Темный зеленый цвет вкладок МБЛ ---------------------- */
+.wpm-tabs .tabs-nav .ui-tabs-active a {
+  background-color: $mbl_color !important;
+}
+
+.wpm-inner-tabs-nav .ui-tabs-active > a {
+  background-color: $mbl_color;
+}
+
+.mbl-settings-color {
+  padding: 20px!important;
+  border: 2px solid $black_color !important;
+  background-color: #fff !important;
+  box-shadow: $mbl_color 4px 4px 0 0 !important;
+}
+
+.mbl-color-content {
+  box-shadow: $mbl_color 4px 4px 0 0 !important;
+  border: 2px solid $black_color !important;
+  background-color: #fff !important;
+}
+
+.wpm-tabs .tabs-nav .ui-tabs-active:after {
+  border-right: 10px solid $black_color !important;
+}
+
+
+/* ---------------------- Настройки продвинутого тренера ---------------------- */
+.mbla-settings-color {
+    box-shadow: $mpt_color 4px 4px 0 0 !important;
+    padding: 20px !important;
+    border: 1px solid $gray_color !important;
+    background-color: #fff !important;
+}
+
+.mpt-color-content {
+    box-shadow: $mpt_color 4px 4px 0 0 !important;
+    border: 2px solid $black_color !important;
+    background-color: #fff !important;
+}
+
+.wpm-tabs .tabs-nav .ui-tabs-active .mpt-color-tab {
+    background-color: $mpt_color !important;
+}
+
+.mpt-mask-background {
+    background: repeating-linear-gradient(-45deg,
+            transparentize($mpt_color, .4),
+            transparentize($mpt_color, .4) 25px,
+            transparentize($mpt_color, .6) 25px,
+            transparentize($mpt_color, .6) 50px);
+}
+
+/* ---------------------- Настройки МПП ---------------------- */
+#tab-mblp .wpm-tab-content .wpm-inner-tabs-nav .ui-tabs-active > a {
+    background-color: $mpp_color !important;
+}
+
+.wpm-tabs .tabs-nav .ui-tabs-active .mpp-color-tab {
+    background-color: $mpp_color !important;
+}
+
+.mpp-color-content {
+    box-shadow: $mpp_color 4px 4px 0 0 !important;
+    border: 2px solid $black_color !important;
+    background-color: #fff !important;
+}
+
+.mpp-mask-background {
+    background: repeating-linear-gradient(-45deg,
+            transparentize($mpp_color, 0.4),
+            transparentize($mpp_color, 0.4) 25px,
+            transparentize($mpp_color, 0.6) 25px,
+            transparentize($mpp_color, 0.6) 50px);
+}
+
+
+/* ---------------------- Настройки авторегистрации ---------------------- */
+.ma-color-content {
+    box-shadow: $ma_color 4px 4px 0 0 !important;
+    border: 2px solid $black_color !important;
+    background-color: #fff !important;
+}
+
+.wpm-tabs .tabs-nav .ui-tabs-active .ma-color-tab {
+    background-color: $ma_color !important;
+}
+
+.ma-mask-background {
+    background: repeating-linear-gradient(-45deg,
+            transparentize($ma_color, 0.4),
+            transparentize($ma_color, 0.4) 25px,
+            transparentize($ma_color, 0.6) 25px,
+            transparentize($ma_color, 0.6) 50px);
+}
+
+
+/* ---------------------- Настройки Панель Навигации ---------------------- */
+.wpm-tabs .tabs-nav .ui-tabs-active .mpn-color-tab {
+    background-color: $mpn_color !important;
+}
+
+.mpn-color-content {
+    box-shadow: $mpn_color 4px 4px 0 0 !important;
+    border: 2px solid $black_color !important;
+    background-color: #fff !important;
+}
+
+.mpn-mask-background {
+    background: repeating-linear-gradient(-45deg,
+            transparentize($mpn_color, 0.4),
+            transparentize($mpn_color, 0.4) 25px,
+            transparentize($mpn_color, 0.6) 25px,
+            transparentize($mpn_color, 0.6) 50px);
+}
+
+
+/* ---------------------- Настройки Мини Интерфейс ---------------------- */
+.wpm-tabs .tabs-nav .ui-tabs-active .mmini-color-tab {
+    background-color: $mmini_color !important;
+}
+
+.mmini-color-content {
+    box-shadow: $mmini_color 4px 4px 0 0 !important;
+    border: 2px solid $black_color !important;
+    background-color: #fff !important;
+}
+
+.mmini-mask-background {
+    background: repeating-linear-gradient(-45deg,
+            transparentize($mmini_color, 0.4),
+            transparentize($mmini_color, 0.4) 25px,
+            transparentize($mmini_color, 0.6) 25px,
+            transparentize($mmini_color, 0.6) 50px);
+}
+
+
+/* ---------------------- Настройки Тестов ---------------------- */
+.wpm-tabs .tabs-nav .ui-tabs-active .mt-color-tab {
+    background-color: $mt_color !important;
+}
+
+.mt-color-content {
+    box-shadow: $mt_color 4px 4px 0 0 !important;
+    border: 2px solid $black_color !important;
+    background-color: #fff !important;
+}
+
+.mt-mask-background {
+    background: repeating-linear-gradient(-45deg,
+            transparentize($mt_color, 0.4),
+            transparentize($mt_color, 0.4) 25px,
+            transparentize($mt_color, 0.6) 25px,
+            transparentize($mt_color, 0.6) 50px);
+}
+
+/* ---------------------- Настройки Защиты от камеры ---------------------- */
+.wpm-tabs .tabs-nav .ui-tabs-active .mwp-color-tab {
+    background-color: $mwp_color !important;
+}
+
+.mwp-color-content {
+    box-shadow: $mwp_color 4px 4px 0 0 !important;
+    border: 2px solid #32373c !important;
+    background-color: #fff !important;
+}
+
+.mwp-mask-background {
+    background: repeating-linear-gradient(-45deg,
+            transparentize($mwp_color, 0.4),
+            transparentize($mwp_color, 0.4) 25px,
+            transparentize($mwp_color, 0.6) 25px,
+            transparentize($mwp_color, 0.6) 50px);
+}
+
+/* ---------------------- Настройки Купонов и Скидок ---------------------- */
+.wpm-tabs .tabs-nav .ui-tabs-active .discount-color-tab {
+    background-color: $discounts_color !important;
+}
+
+.discount-color-content {
+    box-shadow: $discounts_color 4px 4px 0 0 !important;
+    border: 2px solid #32373c !important;
+    background-color: #fff !important;
+}
+
+.discount-mask-background {
+    background: repeating-linear-gradient(-45deg,
+            transparentize($discounts_color, 0.4),
+            transparentize($discounts_color, 0.4) 25px,
+            transparentize($discounts_color, 0.6) 25px,
+            transparentize($discounts_color, 0.6) 50px);
+}
+
+
+/* ---------------------- Настройки Коннектора ---------------------- */
+.wpm-tabs .tabs-nav .ui-tabs-active .connector-color-tab {
+    background-color: $connector_color !important;
+}
+
+.connector-color-content {
+    box-shadow: $connector_color 4px 4px 0 0 !important;
+    border: 2px solid #32373c !important;
+    background-color: #fff !important;
+}
+
+.connector-mask-background {
+    background: repeating-linear-gradient(-45deg,
+            transparentize($connector_color, 0.4),
+            transparentize($connector_color, 0.4) 25px,
+            transparentize($connector_color, 0.6) 25px,
+            transparentize($connector_color, 0.6) 50px);
+}
+
+#mbla_autotraining_options {
+    box-shadow: $mpt_color 4px 4px 0 0 !important;
+    padding: 0 20px 10px !important;
+    border: 1px solid $gray_color !important;
+    margin-bottom: 15px !important;
+    width: 93% !important;
+    background-color: #fff !important;
+}
+
+#mbl-test-label {
+    padding: 9px !important;
+    box-shadow: $mt_color 4px 4px 0 0 !important;
+    border: 1px solid $gray_color !important;
+    margin: -10px !important;
+    height: 19px !important;
+    background-color: #FFFDFB !important;
+}
+
+#homework_type_tests:active ~ .wpm-tab-content {
+    box-shadow: $mt_color 4px 4px 0 0 !important;
+    border: 1px solid $gray_color !important;
+    background-color: #FFFDFB !important;
+}
+
+.mbl-homework-type[data-original-title="Тест"] {
+    color: $mt_color !important;
+}
+
+/* ---------------------- Настройки Универсального доступа ---------------------- */
+.wpm-tabs .tabs-nav .ui-tabs-active .universal-aсcess-color-tab {
+    background-color: $universal_aсcess_color !important;
+}
+.universal-access-color-content .wpm-inner-tabs-nav .ui-tabs-active > a {
+    background-color: $universal_aсcess_color;
+}
+.universal-access-color-content {
+    box-shadow: $universal_aсcess_color 4px 4px 0 0 !important;
+    border: 2px solid #32373c !important;
+    background-color: #fff !important;
+}
+
+
+//MASKS
+.mask-tab {
+    position: relative;
+    min-width: 595px;
+    min-height: 300px;
+}
+
+.mask_wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //min-width: 550px;
+    z-index: 100;
+    .mask_content {
+        background-color: white;
+        width: 450px;
+        min-width: 450px;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        min-height: 200px;
+
+        img {
+            margin: 15px;
+            margin-right: 25px;
+            width: 100px;
+            height: 100%;
+            min-width: 100px;
+            object-fit: contain;
+            &:after {
+                content: '';
+                display: table-cell;
+                clear: both;
+            }
+        }
+    }
+    .button-on-mask {
+        background-color: #c3996b;
+        color: black!important;
+        border: none;
+    }
+}
+
+

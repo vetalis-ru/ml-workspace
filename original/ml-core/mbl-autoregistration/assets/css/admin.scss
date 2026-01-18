@@ -1,0 +1,39 @@
+@import 'partials/admin/loader';
+
+.mblr_autoreg_buttons {
+  button.button {
+    width: 120px;
+    margin-right: 15px;
+    display: inline-block;
+    float: none;
+    padding: 3px;
+    height: auto;
+  }
+}
+
+.mblr_autoreg {
+  position: relative;
+
+  textarea {
+    max-width: 500px;
+  }
+  
+  .mbl_term_keys_period {
+    display: block;
+
+    > label {
+      display: block;
+    }
+
+    .mbl_term_keys_period_inner {
+      display: flex;
+      align-items: center;
+      margin-top: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}

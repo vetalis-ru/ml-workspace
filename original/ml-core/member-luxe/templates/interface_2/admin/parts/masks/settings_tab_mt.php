@@ -1,0 +1,1 @@
+<li><a href="#tab-mt-options" class="mt-color-tab"><?php _e('Модуль тестов', 'mbl_admin') ?></a></li>

@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Archives
+*.zip
+
+# Local backups / old files
+old/
+
+# WordPress
+wp-config.php
+
+# IDE
+.idea/
+.vscode/
+

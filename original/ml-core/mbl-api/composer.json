@@ -1,0 +1,15 @@
+{
+    "name": "mbl/api",
+    "description": "Memberlux addon",
+    "autoload": {
+        "psr-4": {
+            "Mbl\\Api\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dmitriy Svistunov"
+        }
+    ],
+    "require": {}
+}

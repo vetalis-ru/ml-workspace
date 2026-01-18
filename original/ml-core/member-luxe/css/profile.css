@@ -1,0 +1,170 @@
+.mbl-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #dee2e6;
+}
+.mbl-key {
+    display: inline-block;
+    width: 380px;
+    word-break: break-all;
+}
+.mbl-table .mbl-date {
+    width: 120px;
+}
+.mbl-table td, .mbl-table th {
+    padding: 0.5rem;
+    vertical-align: top;
+    border: 1px solid #dee2e6;
+    text-align: center;
+}
+.mbl-remove-key {
+    background-color: transparent;
+    border: 0;
+    color: red;
+    cursor: pointer;
+    font-size: 20px;
+}
+.mbl-remove-key:hover {
+    color: #b90000;
+}
+.mbl-table .mbl-remove {
+    width: 50px;
+}
+.mbl-table .mbl-left {
+    width: 50px;
+}
+.mbl-table .mbl-duration {
+    width: 50px;
+}
+.mbl-table .mbl-status {
+    width: 30px;
+}
+.mbl-table .mbl-key-col {
+    text-align: left;
+}
+.mbl-table thead {
+    background-color: rgba(0, 0, 0, .03);
+}
+@media screen and (max-width: 782px) {
+    .mbl-table thead {
+        display: none;
+    }
+}
+.mbl-table tbody tr:hover {
+    color: #212529;
+    background-color: rgba(0, 0, 0, .075);
+}
+.mbl-icon {
+    color: #0f0f0f;
+    width: 20px;
+    height: 20px;
+}
+.mbl-form-key {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 15px;
+}
+.mbl-users-level {
+    width: 200px;
+}
+.mbl-key-forms {
+    margin-bottom: 15px;
+}
+.mbl-level-key {
+    max-width: 600px;
+    width: 100%;
+}
+
+.mbl-table-wrap {
+    position: relative;
+}
+.wpm-ajax-overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255 255 255 / 39%);
+    z-index: 100;
+}
+
+.wpm-spinner {
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 25px);
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.wpm-spinner > div {
+    background-color: #1abc9c;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+
+    -webkit-animation: stretchdelay 1s infinite ease-in-out;
+    animation: stretchdelay 1s infinite ease-in-out;
+}
+
+.wpm-spinner .rect2 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+
+.wpm-spinner .rect3 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+}
+
+.wpm-spinner .rect4 {
+    -webkit-animation-delay: -0.7s;
+    animation-delay: -0.7s;
+}
+
+.wpm-spinner .rect5 {
+    -webkit-animation-delay: -0.6s;
+    animation-delay: -0.6s;
+}
+
+@-webkit-keyframes stretchdelay {
+    0%, 40%, 100% {
+        -webkit-transform: scaleY(0.4)
+    }
+    20% {
+        -webkit-transform: scaleY(1.0)
+    }
+}
+
+@keyframes stretchdelay {
+    0%, 40%, 100% {
+        transform: scaleY(0.4);
+        -webkit-transform: scaleY(0.4);
+    }
+    20% {
+        transform: scaleY(1.0);
+        -webkit-transform: scaleY(1.0);
+    }
+}
+
+.mbl-notice {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-left-width: 4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    margin: 5px 0 15px;
+    padding: 5px 12px;
+}
+
+.mbl-success {
+    border-left-color: #00a32a;
+}
+
+.mbl-error {
+    border-left-color: #d63638;
+}

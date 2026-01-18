@@ -1,0 +1,1 @@
+<li><a href="#tab-mmini-options" class="mmini-color-tab"><?php _e('Мини интерфейс', 'mbl_admin') ?></a></li>

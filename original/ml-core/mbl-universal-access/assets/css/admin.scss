@@ -1,0 +1,76 @@
+#tab_mbl_access_options {
+  .wpm-row {
+    margin-bottom: 5px;
+  }
+
+  .row {
+    display: flex;
+
+    .col-1 {
+      width: 33.33%;
+    }
+
+    .col-2 {
+      width: 66.66%;
+    }
+  }
+}
+
+.mbl-access-pin-code-intervention ~ .wpm-row {
+  display: none;
+}
+
+.mbl-access-pin-code-intervention {
+  .mbl_term_keys_period {
+    display: block;
+
+    > label {
+      display: block;
+    }
+
+    .mbl_term_keys_period_inner {
+      display: flex;
+      align-items: center;
+      margin-top: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+.mbl-access-pin-code-duration {
+  display: flex;
+  align-items: center;
+}
+
+.payment_methods_icons {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  button {
+    margin-right: 10px !important;
+  }
+
+  img {
+    margin-right: 15px;
+    width: 75px;
+    height: 25px;
+    object-fit: contain;
+  }
+
+  input {
+    display: none;
+  }
+}
+
+.mbl-universal-autoreg-row {
+  input {
+    max-width: 500px;
+  }
+}
+
+.wpm-row-2-labels {
+  label + label {
+    margin-left: 20px;
+  }
+}

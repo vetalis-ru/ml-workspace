@@ -1,0 +1,116 @@
+.mbl-autotraining-map {
+  .mbl-autotraining-map-title {
+    text-decoration: none;
+    color: #23282d;
+
+    &:hover {
+      text-decoration: underline;
+      color: darken(#23282d, 30%);
+    }
+
+    i.fa {
+      color: #0073aa;
+    }
+  }
+  
+  .mbl-autotraining-map-category-shift {
+    color: #fa9d11;
+    font-weight: bold;
+
+    &:focus,
+    &:active {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  .mbl-current-time {
+    text-align: right;
+
+    > span {
+      margin-left: 15px;
+    }
+  }
+
+  .mbl-map-subtitle {
+    flex: 1;
+  }
+
+  .wp-list-table.widefat {
+    margin-top: 15px;
+
+    th {
+      font-size: 12px;
+
+      @media screen and (max-width: 782px) {
+        &:not(.column-primary) {
+          display: none;
+        }
+      }
+    }
+
+    tr {
+      @media screen and (max-width: 782px) {
+        td {
+          &:not(.column-primary) {
+            display: none !important;
+          }
+        }
+
+        &.is-expanded td[data-colname] {
+          display: block !important;
+          overflow: hidden;
+          padding: 3px 8px 3px 35%;
+          position: relative;
+          clear: both;
+          width: auto !important;
+
+          &::before {
+            position: absolute;
+            left: 10px;
+            display: block;
+            overflow: hidden;
+            width: 32%;
+            content: attr(data-colname);
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+    }
+
+    th, td {
+      vertical-align: middle;
+    }
+
+    .fa-md {
+      font-size: 17px;
+    }
+
+    .mbl-autotraining-number {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: #fffdfd;
+      border: 1px solid #bbbbbb;
+      text-align: center;
+      line-height: 40px;
+      font-size: 16px;
+      border-radius: 20px;
+    }
+
+    .mbl-autotraining-view-shift {
+      //line-height: 40px;
+    }
+
+    .mbl-homework-type {
+      font-size: 22px;
+      //line-height: 40px;
+    }
+  }
+
+  .tooltip.top,
+  .tooltip.bottom {
+    z-index: 99999;
+  }
+}

@@ -1,0 +1,1 @@
+<li><a class="profile_tab" href="#navpanel_options_tab_3"><?php _e('Профиль', 'mbl_admin') ?></a></li>

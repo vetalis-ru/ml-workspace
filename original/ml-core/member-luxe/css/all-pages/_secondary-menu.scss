@@ -1,0 +1,19 @@
+.mbl-secondary-menu {
+  width: 100%;
+
+  ul {
+    li {
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 12px;
+
+      a {
+        color: #23282d;
+
+        &:hover {
+          color: #11527f;
+        }
+      }
+    }
+  }
+}

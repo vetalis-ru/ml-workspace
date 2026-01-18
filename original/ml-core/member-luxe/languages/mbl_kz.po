@@ -1,0 +1,793 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MEMBERLUX 2.0\n"
+"POT-Creation-Date: 2017-06-06 15:14:51+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2025-10-06 12:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: kk\n"
+"X-Generator: Manual"
+
+msgid "подробнее"
+msgstr "толығырақ"
+
+msgid "Панель управления"
+msgstr "Басқару панелі"
+
+msgid "Редактировать материал"
+msgstr "Материалды өңдеу"
+
+msgid "Главная"
+msgstr "Басты бет"
+
+msgid "Расписание"
+msgstr "Кесте"
+
+msgid "Задать вопрос"
+msgstr "Сұрақ қою"
+
+msgid "закрыть"
+msgstr "жабу"
+
+msgid "Не принимаю"
+msgstr "Қабылдамаймын"
+
+msgid "Принимаю"
+msgstr "Қабылдаймын"
+
+msgid "Заголовок вопроса"
+msgstr "Сұрақ тақырыбы"
+
+msgid "Отправить"
+msgstr "Жіберу"
+
+msgid "Логин"
+msgstr "Логин"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Ваш вопрос"
+msgstr "Сіздің сұрағыңыз"
+
+msgid "Ваше сообщение отправлено."
+msgstr "Сіздің хабарламаңыз жіберілді."
+
+msgid "Произошла ошибка! Сообщение не отправлено."
+msgstr "Қате орын алды! Хабарлама жіберілмеді."
+
+msgid "Войти"
+msgstr "Кіру"
+
+msgid "Пароль"
+msgstr "Құпия сөз"
+
+msgid "Запомнить меня"
+msgstr "Мені есте сақта"
+
+msgid "Забыли пароль?"
+msgstr "Құпия сөзді ұмыттыңыз ба?"
+
+msgid "Проверка..."
+msgstr "Тексерілуде..."
+
+msgid "Вход выполнен, переадресация..."
+msgstr "Кіру орындалды, бағыттау..."
+
+msgid ""
+"Логин или пароль неправильные. Попробуйте ввести еще раз, возможно включен "
+"CapsLock."
+msgstr ""
+"Логин немесе құпия сөз қате. Қайта енгізіп көріңіз, CapsLock қосулы болуы "
+"мүмкін."
+
+msgid "Фамилия"
+msgstr "Тегі"
+
+msgid "Имя"
+msgstr "Аты"
+
+msgid "Отчество"
+msgstr "Әкесінің аты"
+
+msgid "Телефон"
+msgstr "Телефон"
+
+msgid "Желаемый логин"
+msgstr "Қалаған логин"
+
+msgid "Желаемый пароль"
+msgstr "Қалаған құпия сөз"
+
+msgid "Код доступа"
+msgstr "Қолжетімділік коды"
+
+msgid "Зарегистрироваться"
+msgstr "Тіркелу"
+
+msgid "Произошла ошибка."
+msgstr "Қате орын алды."
+
+msgid "Поиск..."
+msgstr "Іздеу..."
+
+msgid "Регистрация"
+msgstr "Тіркеу"
+
+msgid "Профиль"
+msgstr "Профиль"
+
+msgid "Активация"
+msgstr "Курстарға қолжетімділікті белсендіру"
+
+msgid "Вход"
+msgstr "Кіру"
+
+msgid "Выход"
+msgstr "Шығу"
+
+msgid "Регистрация..."
+msgstr "Тіркелуде..."
+
+msgid "Пройдено уроков"
+msgstr "Өтілген сабақтар"
+
+msgid "Предыдущая"
+msgstr "Алдыңғы"
+
+msgid "Следующая"
+msgstr "Келесі"
+
+msgid "Главная страница"
+msgstr "Басты бет"
+
+msgid "Нет материалов"
+msgstr "Материалдар жоқ"
+
+msgid "доступ открыт"
+msgstr "қолжетімділік ашық"
+
+msgid "доступ закрыт"
+msgstr "қолжетімділік жабық"
+
+msgid "пройдите предыдущий урок"
+msgstr "алдыңғы сабақты өтіңіз"
+
+msgid "выполнено"
+msgstr "орындалды"
+
+msgid "проверяется"
+msgstr "тексерілуде"
+
+msgid "отклонено"
+msgstr "қабылданбады"
+
+msgid "не начат"
+msgstr "басталмады"
+
+msgid "Материал доступен для следующих тарифных планов:"
+msgstr "Материал келесі тарифтік жоспарлар үшін қолжетімді:"
+
+msgid "Предыдущий урок"
+msgstr "Алдыңғы сабақ"
+
+msgid "Следующий урок"
+msgstr "Келесі сабақ"
+
+msgid "Пройден"
+msgstr "Өтілді"
+
+msgid "Не пройден"
+msgstr "Өтілмеді"
+
+msgid "Обновить"
+msgstr "Жаңарту"
+
+msgid "Загрузка..."
+msgstr "Жүктелуде..."
+
+msgid "Пройдено"
+msgstr "Өтілді"
+
+msgid "Контент"
+msgstr "Мазмұн"
+
+msgid "Задание"
+msgstr "Тапсырма"
+
+msgid "Вложения"
+msgstr "Тіркемелер"
+
+msgid "Все коментарии"
+msgstr "Барлық пікірлер"
+
+msgid "Мои комментарии"
+msgstr "Менің пікірлерім"
+
+msgid "Уведомлять по почте об ответах на мои комментарии"
+msgstr "Менің пікірлеріме жауаптар туралы поштаға хабарлау"
+
+msgid "Ваш комментарий ожидает проверки."
+msgstr "Сіздің пікіріңіз тексеруді күтуде."
+
+msgid "Ответить"
+msgstr "Жауап беру"
+
+msgid "Изменить"
+msgstr "Өзгерту"
+
+msgid "Текст комментария"
+msgstr "Пікір мәтіні"
+
+msgid "Отменить"
+msgstr "Болдырмау"
+
+msgid "Добавить комментарий"
+msgstr "Пікір қосу"
+
+msgid "Выбрать файлы"
+msgstr "Файлдарды таңдау"
+
+msgid "Файлы не выбраны"
+msgstr "Файлдар таңдалмады"
+
+msgid "Ответьте на вопрос:"
+msgstr "Сұраққа жауап беріңіз:"
+
+msgid "Ваш ответ"
+msgstr "Сіздің жауабыңыз"
+
+msgid "Обсуждение ответа"
+msgstr "Жауапты талқылау"
+
+msgid "доступно только Вам и Тренеру"
+msgstr "тек Сізге және жаттықтырушыға қолжетімді"
+
+msgid "Написать сообщение"
+msgstr "Хабарлама жазу"
+
+msgid "Ошибка"
+msgstr "Қате"
+
+msgid "Удалить"
+msgstr "Жою"
+
+msgid "Загрузить"
+msgstr "Жүктеу"
+
+msgid "Отмена"
+msgstr "Болдырмау"
+
+msgid "Тип файла не разрешен"
+msgstr "Файл түріне рұқсат етілмеген"
+
+msgid "Результаты поиска"
+msgstr "Іздеу нәтижелері"
+
+msgid "Нет материалов удовлетворяющих условиям поиска"
+msgstr "Іздеу шарттарына сәйкес келетін материалдар жоқ"
+
+msgid "Ваш код доступа"
+msgstr "Сіздің қолжетімділік кодыңыз"
+
+msgid "Добавить"
+msgstr "Қосу"
+
+msgid "Уровень доступа"
+msgstr "Қолжетімділік деңгейі"
+
+msgid "Старт"
+msgstr "Бастау"
+
+msgid "Конец"
+msgstr "Аяқтау"
+
+msgid "осталось"
+msgstr "қалды"
+
+msgid "дней"
+msgstr "күн"
+
+msgid "Показать детали"
+msgstr "Мәліметтерді көрсету"
+
+msgid "Неверный ключ"
+msgstr "Қате кілт"
+
+msgid "Ключ добавлен"
+msgstr "Кілт қосылды"
+
+msgid "Этот ключ уже используется"
+msgstr "Бұл кілт қазірдің өзінде пайдаланылуда"
+
+msgid "Предупреждение о выходе из системы"
+msgstr "Жүйеден шығу туралы ескерту"
+
+msgid "Кто-то вошел в систему под вашим логином."
+msgstr "Біреу сіздің логиніңізбен жүйеге кірді."
+
+msgid "Вы будете перенаправлены на главную страницу через 7 секунд"
+msgstr "Сіз 7 секундтан кейін басты бетке бағытталасыз"
+
+msgid "Этот код доступа уже используется"
+msgstr "Бұл қолжетімділік коды қазірдің өзінде пайдаланылуда"
+
+msgid ""
+"Некорректный логин. Для логина разрешены только буквы латинского алфавита и "
+"цифры"
+msgstr "Қате логин. Логин үшін тек латын әріптері мен сандарға рұқсат етіледі"
+
+msgid "Этот логин уже используется"
+msgstr "Бұл логин қазірдің өзінде пайдаланылуда"
+
+msgid "Этот email уже используется"
+msgstr "Бұл email қазірдің өзінде пайдаланылуда"
+
+msgid "Спасибо за регистрацию!"
+msgstr "Тіркелгеніңіз үшін рахмет!"
+
+msgid "Сообщение с подтверждением отправлено на указанный адрес"
+msgstr "Растау хабарламасы көрсетілген мекенжайға жіберілді"
+
+msgid "Произошла ошибка!"
+msgstr "Қате орын алды!"
+
+msgid "Ответ не сохранен!"
+msgstr "Жауап сақталмады!"
+
+msgid "Ответ отправлен!"
+msgstr "Жауап жіберілді!"
+
+msgid "Необходимо пройти проверку reCAPTCHA"
+msgstr "reCAPTCHA тексеруден өту қажет"
+
+msgid "Урок откроется через"
+msgstr "Сабақ ашылады"
+
+msgid "Задание проверяется..."
+msgstr "Тапсырма тексерілуде..."
+
+#: templates/front/test-edit.php:30 templates/front/test.php:36
+msgid "Варианты ответов:"
+msgstr "Жауап нұсқалары:"
+
+#: templates/front/review-link.php:3
+msgid "Перейти к обсуждению"
+msgstr "Талқылауға өту"
+
+#: templates/front/test-edit.php:7
+msgid "Показать тест"
+msgstr "Тестті көрсету"
+
+#: templates/front/test-edit.php:11
+msgid "Скрыть тест"
+msgstr "Тестті жасыру"
+
+#: templates/front/test-edit.php:21 templates/front/test.php:27
+msgid "Вопрос #"
+msgstr "Сұрақ #"
+
+#: templates/front/test-edit.php:83 templates/front/test.php:75
+msgid "Готово"
+msgstr "Дайын"
+
+#: templates/front/test-edit.php:118
+msgid "Измените ответы"
+msgstr "Жауаптарды өзгертіңіз"
+
+#: templates/front/test-edit.php:147
+msgid "Отправка..."
+msgstr "Жіберілуде..."
+
+#: templates/front/test.php:14
+msgid "Начать"
+msgstr "Бастау"
+
+msgid "Редактировать"
+msgstr "Өңдеу"
+
+#: templates/front/test.php:19
+msgid "Пройдите тест"
+msgstr "Тестті өтіңіз"
+
+#: templates/front/test.php:109
+msgid "Ответьте на все вопросы"
+msgstr "Барлық сұрақтарға жауап беріңіз"
+
+msgid "Ваш вариант ответа"
+msgstr "Сіздің жауап нұсқаңыз"
+
+msgid "Описание теста"
+msgstr "Тест сипаттамасы"
+
+#: js\summernote\lang\summernote-ru-RU.js | js\summernote\summernote.js:2060
+msgid "Полужирный"
+msgstr "Қалың"
+
+msgid "Курсив"
+msgstr "Курсив"
+
+msgid "Подчёркнутый"
+msgstr "Асты сызылған"
+
+msgid "Убрать стили шрифта"
+msgstr "Қаріп стильдерін алып тастау"
+
+msgid "Высота линии"
+msgstr "Жол биіктігі"
+
+msgid "Шрифт"
+msgstr "Қаріп"
+
+msgid "Зачёркнутый"
+msgstr "Сызып тасталған"
+
+msgid "Нижний индекс"
+msgstr "Төменгі индекс"
+
+msgid "Верхний индекс"
+msgstr "Жоғарғы индекс"
+
+msgid "Размер шрифта"
+msgstr "Қаріп өлшемі"
+
+msgid "Картинка"
+msgstr "Сурет"
+
+msgid "Вставить картинку"
+msgstr "Сурет енгізу"
+
+msgid "Восстановить размер"
+msgstr "Өлшемді қалпына келтіру"
+
+msgid "Уменьшить до 50%"
+msgstr "50%-ға дейін кішірейту"
+
+msgid "Уменьшить до 25%"
+msgstr "25%-ға дейін кішірейту"
+
+msgid "Расположить слева"
+msgstr "Солға орналастыру"
+
+msgid "Расположить справа"
+msgstr "Оңға орналастыру"
+
+msgid "Расположение по умолчанию"
+msgstr "Әдепкі орналасу"
+
+msgid "Форма: Закругленная"
+msgstr "Пішін: Дөңгелектелген"
+
+msgid "Форма: Круг"
+msgstr "Пішін: Шеңбер"
+
+msgid "Форма: Миниатюра"
+msgstr "Пішін: Миниатюра"
+
+msgid "Форма: Нет"
+msgstr "Пішін: Жоқ"
+
+msgid "Перетащите сюда картинку"
+msgstr "Суретті мұнда апарыңыз"
+
+msgid "Перетащите картинку"
+msgstr "Суретті апарыңыз"
+
+msgid "Выбрать из файлов"
+msgstr "Файлдардан таңдау"
+
+msgid "URL картинки"
+msgstr "Сурет URL"
+
+msgid "Удалить картинку"
+msgstr "Суретті жою"
+
+msgid "Видео"
+msgstr "Бейне"
+
+msgid "Ссылка на видео"
+msgstr "Бейне сілтемесі"
+
+msgid "Вставить видео"
+msgstr "Бейне енгізу"
+
+msgid "URL видео"
+msgstr "Бейне URL"
+
+msgid "(YouTube, Vimeo, Vine, Instagram, DailyMotion или Youku)"
+msgstr "(YouTube, Vimeo, Vine, Instagram, DailyMotion немесе Youku)"
+
+msgid "Ссылка"
+msgstr "Сілтеме"
+
+msgid "Вставить ссылку"
+msgstr "Сілтеме енгізу"
+
+msgid "Убрать ссылку"
+msgstr "Сілтемені алып тастау"
+
+msgid "Отображаемый текст"
+msgstr "Көрсетілетін мәтін"
+
+msgid "URL для перехода"
+msgstr "Өту үшін URL"
+
+msgid "Открывать в новом окне"
+msgstr "Жаңа терезеде ашу"
+
+msgid "Таблица"
+msgstr "Кесте"
+
+msgid "Вставить горизонтальную линию"
+msgstr "Көлденең сызық енгізу"
+
+msgid "Стиль"
+msgstr "Стиль"
+
+msgid "Нормальный"
+msgstr "Қалыпты"
+
+msgid "Цитата"
+msgstr "Дәйексөз"
+
+msgid "Код"
+msgstr "Код"
+
+msgid "Заголовок 1"
+msgstr "Тақырып 1"
+
+msgid "Заголовок 2"
+msgstr "Тақырып 2"
+
+msgid "Заголовок 3"
+msgstr "Тақырып 3"
+
+msgid "Заголовок 4"
+msgstr "Тақырып 4"
+
+msgid "Заголовок 5"
+msgstr "Тақырып 5"
+
+msgid "Заголовок 6"
+msgstr "Тақырып 6"
+
+msgid "Маркированный список"
+msgstr "Маркерленген тізім"
+
+msgid "Нумерованный список"
+msgstr "Нөмірленген тізім"
+
+msgid "Помощь"
+msgstr "Көмек"
+
+msgid "На весь экран"
+msgstr "Толық экранға"
+
+msgid "Исходный код"
+msgstr "Бастапқы код"
+
+msgid "Параграф"
+msgstr "Параграф"
+
+msgid "Уменьшить отступ"
+msgstr "Шегінуді азайту"
+
+msgid "Увеличить отступ"
+msgstr "Шегінуді ұлғайту"
+
+msgid "Выровнять по левому краю"
+msgstr "Сол жақтан туралау"
+
+msgid "Выровнять по центру"
+msgstr "Ортадан туралау"
+
+msgid "Выровнять по правому краю"
+msgstr "Оң жақтан туралау"
+
+msgid "Растянуть по ширине"
+msgstr "Енімен созу"
+
+msgid "Последний цвет"
+msgstr "Соңғы түс"
+
+msgid "Еще цвета"
+msgstr "Басқа түстер"
+
+msgid "Цвет фона"
+msgstr "Фон түсі"
+
+msgid "Цвет шрифта"
+msgstr "Қаріп түсі"
+
+msgid "Прозрачный"
+msgstr "Мөлдір"
+
+msgid "Сделать прозрачным"
+msgstr "Мөлдір ету"
+
+msgid "Сброс"
+msgstr "Қалпына келтіру"
+
+msgid "По умолчанию"
+msgstr "Әдепкі бойынша"
+
+msgid "Сочетания клавиш"
+msgstr "Пернелер тіркесімі"
+
+msgid "Закрыть"
+msgstr "Жабу"
+
+msgid "Форматирование текста"
+msgstr "Мәтінді пішімдеу"
+
+msgid "Действие"
+msgstr "Әрекет"
+
+msgid "Форматирование параграфа"
+msgstr "Параграфты пішімдеу"
+
+msgid "Стиль документа"
+msgstr "Құжат стилі"
+
+msgid "Дополнительные комбинации"
+msgstr "Қосымша тіркесімдер"
+
+msgid "Повтор"
+msgstr "Қайталау"
+
+msgid "Добавить видео, макс. - "
+msgstr "Бейне қосу, макс. - "
+
+msgid "Видео [beta]"
+msgstr "Бейне [beta]"
+
+msgid "URL"
+msgstr "Аудио файл URL"
+
+msgid "Ой. Что то пошло не так!"
+msgstr "Ой. Бірдеңе дұрыс болмады!"
+
+msgid "URL видео (YouTube, Vimeo, Vine, Instagram, DailyMotion или Youku)"
+msgstr "Бейне URL (YouTube, Vimeo, Vine, Instagram, DailyMotion немесе Youku)"
+
+msgid "Выбрать из файлов (поддерживаемые форматы: mp4/mov)"
+msgstr "Файлдардан таңдау (қолдау көрсетілетін форматтар: mp4/mov)"
+
+msgid "Файл не должен быть больше "
+msgstr "Файл одан үлкен болмауы керек "
+
+msgid "Загружаемый файл должен быть видео файлом!"
+msgstr "Жүктелетін файл бейне файл болуы керек!"
+
+msgid "Добавить аудио, макс. - "
+msgstr "Аудио қосу, макс. - "
+
+msgid "Аудио [beta]"
+msgstr "Аудио [beta]"
+
+msgid "Выбрать из файлов (поддерживаемые форматы: mp3/m4a/wav)"
+msgstr "Файлдардан таңдау (қолдау көрсетілетін форматтар: mp3/m4a/wav)"
+
+msgid "Загружаемый файл должен быть аудио файлом!"
+msgstr "Жүктелетін файл аудио файл болуы керек!"
+
+msgid "Вставить аудио"
+msgstr "Аудио енгізу"
+
+msgid "Эмоджи [beta]"
+msgstr "Эмодзи [beta]"
+
+msgid "Курс доступен"
+msgstr "Курс қолжетімді"
+
+msgid "ПОЛУЧИТЬ ДОСТУП БЕСПЛАТНО"
+msgstr "ТЕГІН ҚОЛЖЕТІМДІЛІК АЛУ"
+
+msgid "Username"
+msgstr "Логин"
+
+msgid "E-mail"
+msgstr "E-mail"
+
+msgid ""
+"<strong>ERROR</strong>: Invalid username or incorrect password. <a "
+"href=\"%s\">Lost your password</a>?"
+msgstr ""
+"<strong>ҚАТЕ</strong>: Қате пайдаланушы аты немесе құпия сөз. <a href=\"%s\">"
+"Құпия сөзді ұмыттыңыз ба</a>?"
+
+msgid "<strong>ERROR</strong>: Please type your e-mail address."
+msgstr "<strong>ҚАТЕ</strong>: Өтінеміз, e-mail мекенжайыңызды енгізіңіз."
+
+msgid "<strong>ERROR</strong>: Please enter a valid email address."
+msgstr "<strong>ҚАТЕ</strong>: Өтінеміз, дұрыс email мекенжайын енгізіңіз."
+
+msgid "<strong>ERROR</strong>: Sorry, that email address is already used!"
+msgstr ""
+"<strong>ҚАТЕ</strong>: Кешіріңіз, бұл email мекенжайы қазірдің өзінде "
+"пайдаланылуда!"
+
+msgid "<strong>ERROR</strong>: That username is not allowed."
+msgstr "<strong>ҚАТЕ</strong>: Бұл пайдаланушы атына рұқсат етілмейді."
+
+msgid "<strong>ERROR</strong>: Username must be at least 4 characters."
+msgstr "<strong>ҚАТЕ</strong>: Пайдаланушы аты кемінде 4 таңбадан тұруы керек."
+
+msgid "<strong>ERROR</strong>: Sorry, usernames must have letters too!"
+msgstr ""
+"<strong>ҚАТЕ</strong>: Кешіріңіз, пайдаланушы аттарында әріптер де болуы "
+"керек!"
+
+msgid "<strong>ERROR</strong>: Sorry, that username already exists!"
+msgstr ""
+"<strong>ҚАТЕ</strong>: Кешіріңіз, бірақ бұл пайдаланушы аты қазірдің өзінде "
+"бар!"
+
+msgid "Hi %s"
+msgstr "Сәлем, %s"
+
+msgid ""
+"You're now signed in with your %s account but you are still one step away of "
+"getting into our website"
+msgstr ""
+"Сіз қазір %s тіркелгіңізбен кірдіңіз, бірақ сайтқа кіруге бір қадам қалды."
+
+msgid "Already have an account"
+msgstr "Тіркелгі бар"
+
+msgid "Link your existing account on our website to your %s ID."
+msgstr ""
+"Біздің сайттағы бар тіркелгіңізді %s идентификаторыңызбен байланыстырыңыз."
+
+msgid "New to our website"
+msgstr "Сайтта жаңасыз"
+
+msgid "Create a new account and it will be associated with your %s ID."
+msgstr ""
+"Жаңа тіркелгі жасаңыз және ол сіздің %s идентификаторыңызбен "
+"байланыстырылады."
+
+msgid "Link my account"
+msgstr "Тіркелгімді байланыстыру"
+
+msgid "Create a new account"
+msgstr "Жаңа тіркелгі жасау"
+
+msgid ""
+"Please enter your username and password of your existing account on our "
+"website. Once verified, it will linked to your %s ID"
+msgstr ""
+"Өтінеміз, біздің сайттағы бар тіркелгіңіздің пайдаланушы атын және құпия "
+"сөзін енгізіңіз. Расталғаннан кейін, ол %s идентификаторыңызбен "
+"байланыстырылады"
+
+msgid "Password"
+msgstr "Құпия сөз"
+
+msgid "Continue"
+msgstr "Жалғастыру"
+
+msgid "Cancel"
+msgstr "Болдырмау"
+
+msgid ""
+"Please fill in your information in the form below. Once completed, you will "
+"be able to automatically sign into our website through your %s ID"
+msgstr ""
+"Өтінеміз, төмендегі формадағы ақпаратыңызды толтырыңыз. Аяқталғаннан кейін, "
+"сіз біздің сайтқа %s идентификаторыңыз арқылы автоматты түрде кіре аласыз"
+
+msgid "Back to %s"
+msgstr "%s бетіне оралу"
+
+msgid "Партнерская программа"
+msgstr "Серіктестік бағдарламасы"
+
+msgid "Символов из"
+msgstr "Таңбалар"
+
+msgid "Лимит символов в контенте"
+msgstr "Мазмұндағы таңбалар шегі"

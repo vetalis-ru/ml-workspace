@@ -1,0 +1,1 @@
+<li><a href="#tab-mpt-options" class="mpt-color-tab"><?php _e('Модуль тренера', 'mbl_admin') ?></a></li>

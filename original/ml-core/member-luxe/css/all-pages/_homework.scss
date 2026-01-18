@@ -1,0 +1,1047 @@
+@import "../2_0/fonts/icomoon/icomoon.css";
+
+.mbl-hw-datetime {
+  display: none;
+}
+
+.mbl-homework-wrap {
+  .mbl-homework-tabs {
+    li:not(:first-child) {
+      @media screen and (max-width: 782px) {
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .panel-default > .panel-heading {
+    color: #333333;
+    background-color: #f5f5f5;
+    border-color: #dddddd;
+    padding: 10px 5px 0;
+  }
+
+  textarea[data-version="new"] {
+    +.note-editor{
+      &.note-frame {
+        border: 1px solid #9ad3ac !important;
+      }
+      .note-toolbar{
+        &.panel-heading {
+          background-color: #eefaf3;
+          border-color: #e5ebe7;
+        }
+      }
+    }
+  }
+
+  .tab-content {
+    overflow: visible;
+  }
+
+  #wpm-hw-filter-search {
+    position: absolute;
+    right: 20px;
+    margin-top: -100px;
+  }
+
+  .hw-column {
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 12px;
+
+    i.fa {
+      font-size: 18px;
+      position: relative;
+      top: 2px;
+      margin-right: 1px;
+    }
+
+    &.order-desc,
+    &.order-asc {
+      &:after {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: 16px;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        margin-left: 1px;
+        position: relative;
+      }
+    }
+
+    &.order-desc {
+      &:after {
+        content: "\f0dd";
+        top: -2px;
+      }
+    }
+
+    &.order-asc {
+      &:after {
+        content: "\f0de";
+        top: 5px;
+      }
+    }
+  }
+
+  #wpm-hw-select-all {
+    margin-right: 5px;
+    margin-left: 0;
+  }
+
+  .wpm-status-filters {
+    display: flex;
+
+    a {
+      color: #808080;
+      display: block;
+      text-align: center;
+      min-width: 28px;
+      height: 42px;
+
+      i {
+        font-size: 24px;
+        display: block;
+      }
+
+      &:hover,
+      &.active {
+        &.opened {
+          color: #fa9d11;
+        }
+
+        &.approved {
+          color: #47ad47;
+        }
+
+        &.rejected {
+          color: #d32527;
+        }
+
+        &.trash {
+          color: #000;
+        }
+      }
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: inherit;
+  }
+
+  .mbl-dates-select {
+    &.mbl-border- {
+      &opened {
+        .select2-selection--single {
+          border-color: #fa9d11;
+
+          .select2-selection__arrow b {
+            border-top-color: #fa9d11;
+          }
+        }
+      }
+
+      &approved {
+        .select2-selection--single {
+          border-color: #47ad47;
+
+          .select2-selection__arrow b {
+            border-top-color: #47ad47;
+          }
+        }
+      }
+
+      &rejected {
+        .select2-selection--single {
+          border-color: #d32527;
+
+          .select2-selection__arrow b {
+            border-top-color: #d32527;
+          }
+        }
+      }
+
+      &trash {
+        .select2-selection--single {
+          border-color: #000;
+
+          .select2-selection__arrow b {
+            border-top-color: #000;
+          }
+        }
+      }
+    }
+
+    .mbl-dates-popup {
+      display: none;
+      max-width: 100%;
+      width: 500px;
+      background: #fff;
+      position: absolute;
+      z-index: 9;
+      margin-top: -28px;
+      padding: 0 5px 15px 15px;
+      transform: translate3d(0, 0, 0);
+
+      @media screen and (max-width: 782px) {
+        width: auto;
+
+        .flex-row {
+          justify-content: center;
+
+          > div {
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      .date-title {
+        color: #444;
+        line-height: 28px;
+      }
+
+      .mbl-date-label {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 5px;
+        font-style: italic;
+      }
+
+      .ui-datepicker {
+        box-shadow: none;
+      }
+
+      .ui-datepicker-today > a {
+        background: #aaaaaa;
+        color: #ffffff !important;
+      }
+
+      .ui-datepicker .ui-state-default:hover, .ui-datepicker-current-day > a, .ui-timepicker .ui-state-default:hover, .ui-datepicker .ui-state-active, .ui-timepicker .ui-state-active {
+        background: #30a957;
+        color: #ffffff !important;
+        cursor: pointer;
+      }
+
+      .mbl-dates-buttons {
+        text-align: right;
+        padding: 15px 10px 0;
+        line-height: 30px;
+
+        @media screen and (max-width: 782px) {
+          text-align: center;
+          padding: 15px 0 0;
+        }
+
+        a {
+          width: 100px;
+          display: inline-block;
+          text-align: center;
+
+        }
+      }
+    }
+
+    &.opened {
+      position: static;
+
+      .mbl-dates-popup {
+        display: block;
+      }
+    }
+
+    .mbl-date {
+      display: block;
+    }
+  }
+
+  th {
+    .select2 {
+      width: 100%;
+    }
+
+    .ui-datepicker-title {
+      text-align: center;
+    }
+
+    table.ui-datepicker-calendar {
+      width: 100%;
+      text-align: center;
+
+      td,
+      th {
+        padding: 0;
+        border: none;
+        text-align: center;
+      }
+
+      th {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .wpm-hw-table {
+    > thead > tr > th,
+    > tbody > tr > td {
+      &:first-child {
+        text-align: left;
+
+        input {
+          margin-left: 0;
+        }
+      }
+
+      &.column-user {
+        .text {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  #wpm-hw-content td.details-row {
+    position: relative;
+    background: #eaeaea;
+
+    .mbl-hw-actions-row {
+      position: absolute;
+      width: 50%;
+      right: 0;
+      display: flex;
+
+      > div {
+        width: 100%;
+        padding-right: 15px;
+        text-align: right;
+        box-sizing: border-box;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        position: relative;
+
+        &.mbl-hw-outer-link {
+          > a {
+            color: #2c8bb7 !important;
+            font-size: 21px;
+            line-height: 28px;
+
+            &:hover {
+              color: lighten(#2c8bb7, 30%) !important;
+            }
+          }
+        }
+      }
+    }
+
+    .mbl-hw-actions {
+      display: inline-block;
+      position: relative;
+      top: -2px;
+
+      .buttons {
+        box-sizing: border-box;
+        display: none;
+        margin: 0;
+        position: relative;
+        vertical-align: middle;
+
+        &.opened {
+          display: inline-block;
+        }
+
+        .wpm-hw-status-change {
+          margin-left: 2px;
+          font-size: 24px;
+
+          &.accept {
+            color: #47ad47;
+
+            &:hover {
+              color: lighten(#47ad47, 15%);
+            }
+          }
+
+          &.decline {
+            color: #d32527;
+
+            &:hover {
+              color: lighten(#d32527, 15%);
+            }
+          }
+
+          &:active,
+          &:focus {
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+
+  #mbl_hw_order_buttons {
+    height: 45px;
+  }
+
+  .mbl-hw-select-all-th {
+    white-space: nowrap;
+  }
+
+  #wpm-hw-content {
+    tr.mbl-hw-content-row {
+      td:not(.mbl-checkbox-td) {
+        cursor: pointer;
+
+        &:hover,
+        &.mbl-row-opened {
+          color: #000;
+        }
+      }
+
+      &:hover,
+      &.mbl-row-opened {
+        background-color: #eaeaea;
+
+        td:not(.mbl-checkbox-td) {
+          color: #000;
+        }
+      }
+    }
+
+    .mbl-hw-details-row-inner {
+      &:not(.expanded) {
+        .mbl-hw-actions-row {
+          display: none;
+        }
+      }
+    }
+
+    td {
+      &.mbl-row-toggler {
+        color: #555;
+        text-align: right;
+        padding-right: 20px;
+
+        .mbl-state-opened {
+          display: none;
+          font-size: 20px;
+        }
+
+        .mbl-state-closed {
+          margin-right: 2px;
+        }
+      }
+
+
+      a {
+        color: #555;
+
+        &[data-toggle-row] {
+          text-align: right;
+          display: block;
+          padding-right: 20px;
+
+          .mbl-state-opened {
+            display: none;
+            font-size: 20px;
+          }
+
+          .mbl-state-closed {
+            margin-right: 2px;
+          }
+
+
+          &:focus {
+            outline: none;
+            box-shadow: none;
+          }
+        }
+      }
+
+      #homework-response-content {
+        a:not(.mbl-hw-attachment) {
+          text-decoration: none;
+          color: #5395bc;
+
+          &:hover,
+          &:focus,
+          &:active {
+            text-decoration: none;
+            outline: none;
+            color: #328fc3;
+          }
+        }
+      }
+
+      &.mbl-hw-user {
+        a:hover {
+          color: #000;
+          text-decoration: underline;
+        }
+
+        i.fa {
+          position: relative;
+          top: 1px;
+        }
+      }
+    }
+
+    tr.mbl-row-opened {
+      td.mbl-row-toggler {
+        .mbl-state-opened {
+          display: inline-block;
+        }
+
+        .mbl-state-closed {
+          display: none;
+        }
+      }
+    }
+  }
+
+  #wpm-hw-select-all-action {
+    box-sizing: border-box;
+    margin: 0;
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    z-index: 9;
+
+    @media (min-width: 1250.1px) {
+      background: #fff;
+      padding: 0 3px 0 0;
+      box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .2);
+      border-radius: 3px;
+    }
+
+    .cancel-button {
+      margin-left: 2px;
+      font-size: 24px;
+      color: #797979;
+      display: inline-block;
+      box-sizing: border-box;
+      position: relative;
+      vertical-align: middle;
+
+      @media (max-width: 1250px) {
+        margin-left: 40px;
+      }
+
+      &:hover {
+        color: lighten(#797979, 15%);
+      }
+    }
+
+    .buttons {
+      box-sizing: border-box;
+      display: none;
+      margin: 0;
+      position: relative;
+      vertical-align: middle;
+
+      &.opened {
+        display: inline-block;
+
+        & + .cancel-button {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .wpm-hw-status-bulk-change {
+    margin-left: 2px;
+    font-size: 24px;
+
+    &.accept {
+      color: #47ad47;
+
+      &:hover {
+        color: lighten(#47ad47, 15%);
+      }
+    }
+
+    &.decline {
+      color: #d32527;
+
+      &:hover {
+        color: lighten(#d32527, 15%);
+      }
+    }
+  }
+
+  .mbl-hw-type {
+    i {
+      font-size: 20px;
+    }
+  }
+
+  .select2 {
+    font-size: 12px;
+  }
+
+  .select2-selection__rendered:focus,
+  .select2-selection:focus {
+    outline: none;
+  }
+
+  .wpm-no-results {
+    text-align: center !important;
+    font-size: 16px !important;
+    line-height: 3em;
+    color: lighten(#444, 30%) !important;
+  }
+
+  .mbl-hw-inner-panel {
+    margin: 5px;
+    border-radius: 0;
+    .tab-pane .page-content-wrap {
+      ul:not(.discussion-list) {
+        margin-left: 2em;
+        list-style: disc;
+      }
+    }
+  }
+
+  #wpm-hw-content {
+
+    .answer-meta {
+      padding: 12px 0;
+      border-radius: 3px;
+      color: #404040;
+
+      .wpm-user-info {
+        margin-bottom: 5px;
+        color: #724213;
+        font-size: 15px;
+
+        a {
+          color: #724213;
+          font-size: 15px;
+
+          &:hover {
+            text-decoration: underline;
+
+            color: darken(#724213, 15%);
+          }
+        }
+
+        i.fa {
+          font-size: 16px;
+        }
+      }
+
+      .meta-item {
+        margin-right: 10px;
+
+        .iconmoon {
+          color: #bbbbbb;
+          margin-right: 5px;
+        }
+
+        i.fa {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .homework-attachments {
+    overflow: hidden;
+    position: relative;
+    display: block;
+
+    a {
+      display: block;
+      float: left;
+
+      height: 48px;
+      vertical-align: baseline;
+      margin: 0 14px 15px 0;
+
+      padding-left: 45px;
+      position: relative;
+
+      width: 165px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      box-sizing: border-box;
+
+      @include respond-to('xs') {
+        //height: 38px;
+        margin: 0 5px 10px 0;
+      }
+
+      .extension {
+        display: block;
+        text-transform: uppercase;
+        color: #8e8e8e;
+        margin-top: 3px;
+      }
+
+      &:hover {
+        .extension {
+          text-decoration: none;
+        }
+      }
+
+      .filename {
+        line-height: 27px;
+      }
+
+      .fa {
+        font-size: 48px;
+        position: absolute;
+        left: 0;
+
+        @include respond-to('xs') {
+          font-size: 38px;
+            padding-top: 5px;
+        }
+      }
+
+      img {
+        border-radius: 3px;
+        max-height: 48px;
+        vertical-align: baseline;
+        margin: 0;
+        padding: 0;
+        display: block;
+        @include respond-to('xs') {
+          max-height: 38px;
+        }
+      }
+
+      &:hover {
+        color: #000;
+
+        .fa {
+          color: #000;
+        }
+      }
+
+    }
+  }
+
+  .mbl_hw_inner_comments {
+    label {
+      font-weight: normal;
+    }
+  }
+
+  .wpm_homework_reviews {
+    .comment-item {
+      margin-bottom: 25px;
+      color: #724213;
+
+      .comment-content {
+        border-left: 2px solid;
+        padding: 1px 22px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        margin-left: 7px;
+
+        video {
+          border: 1px solid #ededed;
+        }
+      }
+
+      &.answer {
+        color: #20538f;
+
+        .comment-content {
+
+        }
+      }
+
+      .comment-meta {
+        > span {
+          margin-right: 10px;
+
+          i.fa {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .wpm_homework_reviews_wrap {
+    .comment-label {
+      color: #000;
+
+      i.fa {
+        font-size: 16px;
+      }
+    }
+
+    .author {
+      color: #20538f;
+      margin-top: 5px;
+      margin-bottom: 10px;
+
+      i.fa {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .discussion-form-wrap {
+    .submit-row {
+      text-align: right;
+    }
+
+    .wpm-fileupload-wrapper .fileupload-buttonbar {
+      margin-top: 0;
+    }
+
+    .wpm-fileupload-wrapper .wpm_jqhfu-upload-download-table .name,
+    .wpm-fileupload-wrapper .wpm_jqhfu-upload-download-table .size {
+      overflow: hidden;
+    }
+  }
+
+  .mbl-hw-attachment {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.wpm-hw-select-2 {
+  font-size: 12px;
+}
+
+.dropdown-backdrop {
+
+  display: none !important;
+}
+
+//------
+
+.file-attachment-button {
+  cursor: pointer;
+
+  .iconmoon {
+    margin-right: 5px;
+  }
+
+  .help-link {
+    color: #5d95be;
+    border-bottom: 1px dashed #5d95be;
+    margin-right: 30px;
+    padding: 0;
+    border-radius: 0;
+    @include respond-to('xs') {
+      margin-right: 15px;
+    }
+  }
+
+  input {
+    width: .01px;
+    height: .01px;
+    overflow: hidden;
+    float: left;
+  }
+
+  .selected-file-name {
+    white-space: nowrap;
+  }
+}
+
+// ---- uploads for comments, homework
+.fileupload-progress {
+  max-width: none !important;
+}
+
+.wpm-fileupload {
+  .template-download,
+  .template-upload {
+    td:last-child {
+      text-align: right;
+    }
+
+    &:nth-child(odd) {
+      background: transparent;
+
+      td {
+        background: rgba(249, 249, 249, 0.67);
+
+        &:first-child {
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+        }
+
+        &:last-child {
+          border-top-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+        }
+      }
+    }
+
+    .preview {
+      display: flex;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+
+      img,
+      .fa {
+        font-size: 40px;
+        line-height: 40px;
+      }
+    }
+
+    .name,
+    .size {
+      padding: 0 5px;
+      font-size: 12px;
+      @include respond-to('md') {
+        font-size: 14px;
+      }
+      @include respond-to('md') {
+        font-size: 16px;
+      }
+      @include respond-to('lg') {
+        font-size: 16px;
+      }
+    }
+
+    .delete.mbr-btn,
+    .cancel.mbr-btn {
+      display: inline-block !important;
+      width: auto !important;
+      font-size: 14px;
+      text-transform: none;
+      color: #eb0000;
+      border-radius: 3px;
+      padding: 0 10px !important;
+      margin: 0 !important;
+      background-color: transparent;
+
+      &:hover {
+        color: #6c0000;
+      }
+
+      @include respond-to('md') {
+        font-size: 14px;
+      }
+      @include respond-to('md') {
+        font-size: 16px;
+      }
+      @include respond-to('lg') {
+        font-size: 16px;
+      }
+    }
+
+    .cancel.mbr-btn {
+      color: #acacac;
+
+      &:hover {
+        color: #929292;
+      }
+    }
+  }
+}
+
+
+//---- file upload progress
+.ui-progressbar {
+  max-width: none !important;
+  width: 100% !important;
+  border: none !important;
+  background: #F5F5F5 !important;
+  height: 5px !important;
+  border-radius: 2.5px !important;
+  margin: 10px 0;
+
+  .ui-progressbar-value {
+    background: #65BF49 !important;
+  }
+}
+
+.wpm-hw-status-icon {
+  font-size: 16px;
+  margin-right: 3px;
+
+  &.archived,
+  &.archived + span {
+    color: #000;
+  }
+
+  &.opened,
+  &.opened + span {
+    color: #fa9d11;
+  }
+
+  &.unarchive,
+  &.unarchive + span {
+    color: #fa9d11;
+  }
+
+  &.approved,
+  &.approved + span {
+    color: #47ad47;
+  }
+
+  &.rejected,
+  &.rejected + span {
+    color: #d32527;
+  }
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  .wpm-hw-status-icon,
+  .wpm-hw-status-icon + span {
+    color: #fff;
+  }
+}
+
+#mbl_hw_settings_pane {
+  h4 {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .wpm-row {
+    padding-right: 20px;
+
+    i.fa {
+      font-size: 16px;
+      margin-right: 3px;
+    }
+  }
+
+  input[type=checkbox]:focus {
+    border-color: #7e8993;
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.select2-container--default .select2-selection--single .select2-selection__clear {
+  color: #fff;
+  background: #797979;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 2px;
+  margin-top: 3px;
+
+  &:hover {
+    background: lighten(#797979, 15%);
+  }
+}
+#wpm-hw-content {
+  .summerNoteImgMargin {
+    cursor: pointer;
+  }
+}

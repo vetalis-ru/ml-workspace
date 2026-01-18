@@ -1,0 +1,13 @@
+.note-editor {
+  .note-editable {
+    white-space: normal;
+  }
+}
+
+.note-editor{
+  .note-toolbar{
+    &.panel-heading {
+      background-color: rgba(0, 0, 0, 0.04);
+    }
+  }
+}

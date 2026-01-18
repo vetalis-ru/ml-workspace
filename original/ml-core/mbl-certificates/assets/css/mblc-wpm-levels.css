@@ -1,0 +1,60 @@
+.mblc-options-group-certificate .mbl-color-content{
+    width: 95%;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.mblc-settings-color, .mblc-options-group-certificate .mblc-settings-color{
+    box-shadow: #2E7F84 4px 4px 0 0!important;
+}
+
+.mblc-form-field {
+    display: flex;
+    align-items: center;
+    padding: 5px 20px 5px 0;
+    margin: 9px 0;
+    font-size: 12px;
+    line-height: 24px;
+    max-width: 540px;
+    width: 100%;
+}
+
+.mblc-form-inp-wrap {
+    width: 100%;
+}
+
+.mblc-form-inp, .mblc-form-inp-wrap .mblc-form-inp[type=text], .mblc-form-inp-wrap textarea.mblc-form-inp{
+    width: 100%;
+}
+
+.mblc-form-label {
+    display: inline-block;
+    flex: 0 0 150px;
+    font-size: 12px;
+    margin-right: 15px;
+}
+
+.mblc-series-group {
+    position: relative;
+}
+
+.mblc-series-error {
+    border-color: red !important;
+}
+
+.mblc-series-error-msg {
+    color: red;
+    display: none;
+    margin: 0;
+    padding: 0 9px;
+    font-size: 12px !important;
+}
+
+.mblc-no-certificate .show-if-yes-certificate {
+    display: none;
+}
+
+.mblc-series-list {
+    display: flex;
+    column-gap: 6px;
+}

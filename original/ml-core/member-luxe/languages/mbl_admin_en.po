@@ -1,0 +1,1752 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MEMBERLUX 2.0\n"
+"POT-Creation-Date: 2017-06-06 15:14:51+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>"
+
+msgid "Пользователь"
+msgstr "User"
+
+msgid "Убрать"
+msgstr "Remove"
+
+msgid "Нет записей"
+msgstr "No entries"
+
+msgid "Название фильтра"
+msgstr "Filter Name"
+
+msgid "Интервал времени"
+msgstr "Time interval"
+
+msgid "Количество уникальных входов"
+msgstr "Number of unique logins"
+
+msgid "Сохранить"
+msgstr "Save"
+
+msgid "Удалить"
+msgstr "Delete"
+
+msgid "Дата блокировки"
+msgstr "Lock Date"
+
+msgid "Исключения"
+msgstr "Exceptions"
+
+msgid "Show more details"
+msgstr "Show more details"
+
+msgid "Добавить"
+msgstr "Add"
+
+msgid "Снять блок"
+msgstr "Remove block"
+
+msgid "Подробнее"
+msgstr "More details"
+
+msgid "№"
+msgstr "#"
+
+msgid "Дата и время"
+msgstr "Date and time"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Страна"
+msgstr "Country"
+
+msgid "Браузер"
+msgstr "Browser"
+
+msgid "ОС"
+msgstr "OS"
+
+msgid "Устройство"
+msgstr "Device"
+
+msgid "Подзаголовок"
+msgstr "Subtitle"
+
+msgid "Автотренинг"
+msgstr "Autotraining"
+
+msgid "Сделать автотренингом"
+msgstr "Make autotraining"
+
+msgid "Стикер"
+msgstr "Sticker"
+
+msgid "Отображать"
+msgstr "Display"
+
+msgid "Цвет фона"
+msgstr "Background color"
+
+msgid "Цвет текста"
+msgstr "Text color"
+
+msgid "Текст"
+msgstr "Text"
+
+msgid "Индикаторы"
+msgstr "Indicators"
+
+msgid "Индивидуальные настройки индикаторов данной рубрики"
+msgstr "Advanced Indicator settings for this category"
+
+msgid "Отображать количество комментариев"
+msgstr "Display quantity of comments"
+
+msgid "Отображать количество просмотров"
+msgstr "Display quantity of views"
+
+msgid "Отображать прогресс курса"
+msgstr "Show course progress"
+
+msgid "Отображать доступность"
+msgstr "Display availability"
+
+msgid "Описание рубрики"
+msgstr "Category description"
+
+msgid "Индивидуальные настройки описания данной рубрики"
+msgstr "Advanced Description settings for this category"
+
+msgid "Открывать при входе"
+msgstr "Open at login"
+
+msgid "Зафиксировать открытым"
+msgstr "Lock opened"
+
+msgid "Доступ"
+msgstr "Access"
+
+msgid "Не отображать для следующих уровней доступа:"
+msgstr "Do not display for the following access levels:"
+
+msgid "Отображать только для следующих уровней доступа:"
+msgstr "Display only for the following access levels:"
+
+msgid "Не отображать для незарегистрированных пользователей."
+msgstr "Do not display for unregistered users."
+
+msgid "Фоновое изображение"
+msgstr "Background Image"
+
+msgid "Загрузить"
+msgstr "Upload"
+
+msgid "Выберите файл"
+msgstr "Select file"
+
+msgid "Использовать изображение"
+msgstr "Use image"
+
+msgid "Видео"
+msgstr "Video"
+
+msgid "Аудио"
+msgstr "Audio"
+
+msgid "Отменить"
+msgstr "Cancel"
+
+msgid "Предпросмотр"
+msgstr "Preview"
+
+msgid "Редактировать"
+msgstr "Edit"
+
+msgid "Выбрать файлы"
+msgstr "Select files"
+
+msgid "Загрузка..."
+msgstr "Loading ..."
+
+msgid "Отмена"
+msgstr "Cancel"
+
+msgid "Ошибка"
+msgstr "Error"
+
+msgid "Ссылка"
+msgstr "Link"
+
+msgid "Открывать в:"
+msgstr "Open in:"
+
+msgid "текущем окне"
+msgstr "current tab"
+
+msgid "новом окне"
+msgstr "new tab"
+
+msgid "Ответы"
+msgstr "Answers"
+
+msgid "Ожидающие"
+msgstr "Pending"
+
+msgid "Одобренные"
+msgstr "Approved"
+
+msgid "Не одобренные"
+msgstr "Not approved"
+
+msgid "Архив"
+msgstr "Archive"
+
+msgid "Поиск"
+msgstr "Search"
+
+msgid "Фильтр"
+msgstr "Filter"
+
+msgid "ответов"
+msgstr "replies"
+
+msgid "Перейти на первую страницу"
+msgstr "Go to the first page"
+
+msgid "Перейти на предыдущую страницу"
+msgstr "Go to previous page"
+
+msgid "Текущая страница"
+msgstr "Current page"
+
+msgid "из"
+msgstr "of"
+
+msgid "Перейти на следующую страницу"
+msgstr "Go to next page"
+
+msgid "Перейти на последнюю страницу"
+msgstr "Go to last page"
+
+msgid "Автор"
+msgstr "Author"
+
+msgid "Ответ"
+msgstr "Answer"
+
+msgid "Дата"
+msgstr "Date"
+
+msgid "Урок"
+msgstr "Lesson"
+
+msgid "Статус"
+msgstr "Status"
+
+msgid "Ожидается проверка"
+msgstr "Check pending"
+
+msgid "Ответ правильный"
+msgstr "Answer is correct"
+
+msgid "Ответ принят автоматически"
+msgstr "Answer is accepted automatically"
+
+msgid "Ответ неправильный"
+msgstr "The answer is wrong"
+
+msgid "Редактировать последний ответ"
+msgstr "Edit last answer"
+
+msgid "Одобрить этот ответ"
+msgstr "Approve this answer"
+
+msgid "Одобрить"
+msgstr "Approve"
+
+msgid "Отклонить этот ответ"
+msgstr "Reject this answer"
+
+msgid "Отклонить"
+msgstr "Reject"
+
+msgid "Отклонено"
+msgstr "Not correct"
+
+msgid "Архивировать"
+msgstr "Archive"
+
+msgid "Восстановить"
+msgstr "Restore"
+
+msgid "Ответить"
+msgstr "Reply"
+
+msgid "Удалить навсегда"
+msgstr "Delete forever"
+
+msgid "Комментарии:"
+msgstr "Comments:"
+
+msgid "Нет ответов"
+msgstr "No Answers"
+
+msgid "Вы действительно хотите сбросить настройки?"
+msgstr "Do you really want to reset to default settings?"
+
+msgid "Настройки не сброшены"
+msgstr "Settings not reset"
+
+msgid "Найдено емейлов:"
+msgstr "Found emails:"
+
+msgid "Все пользователи успешно зарегистрированы!"
+msgstr "All users are successfully registered!"
+
+msgid "Ни один пользователь не зарегистрирован!"
+msgstr "No user is registered!"
+
+msgid "Не все пользователи зарегистрированы!"
+msgstr "Not all users are registered!"
+
+msgid "Зарегистрировано:"
+msgstr "Registered:"
+
+msgid "Не зарегистрировано:"
+msgstr "Not registered:"
+
+msgid "Не найдено корректных емейлов."
+msgstr "No valid emails found."
+
+msgid "Нет пользователей с такими емейлами"
+msgstr "There are no users with such emails"
+
+msgid "Зарегистрированные:"
+msgstr "Registered:"
+
+msgid "Не зарегистрированные:"
+msgstr "Not registered:"
+
+msgid "Коды доступа успешно добавлены!"
+msgstr "Access codes successfully added!"
+
+msgid "Коды доступа не добавлены!"
+msgstr "No access codes added!"
+
+msgid "Не всем пользователям добавлены коды доступа!"
+msgstr "Access codes added NOT to all Users!"
+
+msgid "Добавлено:"
+msgstr "Added:"
+
+msgid "Не добавлено:"
+msgstr "Not added:"
+
+msgid "Индивидуальные настройки индикаторов данного материала"
+msgstr "Advanced Indicators settings for this material"
+
+msgid "Отображать порядковый номер материала"
+msgstr "Display material number"
+
+msgid "Отображать тип контента"
+msgstr "Display content type"
+
+msgid "Отображать статус ДЗ"
+msgstr "Display Homework status"
+
+msgid "Отображать дату"
+msgstr "Display date"
+
+msgid "Отображать комментарии"
+msgstr "Display comments"
+
+msgid "Настройки"
+msgstr "Settings"
+
+msgid "Общие"
+msgstr "General"
+
+msgid "Страницы"
+msgstr "Pages"
+
+msgid "Внешний вид"
+msgstr "Appearance"
+
+msgid "Автотренинги"
+msgstr "Autotrainings"
+
+msgid "Письма"
+msgstr "Letters"
+
+msgid "Защита"
+msgstr "Protection"
+
+msgid "Массовые операции"
+msgstr "Bulk actions"
+
+msgid "Аватар"
+msgstr "Avatar"
+
+msgid "Генерация пин-кодов"
+msgstr "Access codes generation"
+
+msgid "Блокировка"
+msgstr "Lock"
+
+msgid "Комментарии"
+msgstr "Comments"
+
+msgid "Тексты"
+msgstr "Interface texts"
+
+msgid "Автоподписки"
+msgstr "Autosubscriptions"
+
+msgid "Скрипты"
+msgstr "Scripts"
+
+msgid "Включить генерацию"
+msgstr "Enable generation"
+
+msgid "Название ссылки"
+msgstr "Link text"
+
+msgid "Генерировать"
+msgstr "Generate"
+
+msgid "Выберите уровень доступа"
+msgstr "Select Access level"
+
+msgid "Не выбрано"
+msgstr "Not selected"
+
+msgid "Выберите код доступа"
+msgstr "Select Access code duration"
+
+msgid "Снять блокировку"
+msgstr "Unlock"
+
+msgid "Добавить капчу"
+msgstr "Add captcha"
+
+msgid "Ключ"
+msgstr "Key"
+
+msgid "Секретный ключ"
+msgstr "Secret key"
+
+msgid "Включить reCAPTCHA на следующих страницах:"
+msgstr "Enable reCAPTCHA on the following pages:"
+
+msgid "Вход"
+msgstr "Login"
+
+msgid "Регистрация"
+msgstr "Registration"
+
+msgid "Задать вопрос"
+msgstr "Ask a question"
+
+msgid "Тип комментариев:"
+msgstr "Comment type:"
+
+msgid "Стандартные"
+msgstr "Standard"
+
+msgid "ID сайта Cackle:"
+msgstr "Cackle site ID:"
+
+msgid "Автообновление комментариев"
+msgstr "Auto update comments"
+
+msgid "Добавление файлов к комментариям:"
+msgstr "Add attachments:"
+
+msgid "Доступно всем пользователям"
+msgstr "Available to all users"
+
+msgid "Только администратору"
+msgstr "Only for Administrator"
+
+msgid "Недоступно"
+msgstr "Not available"
+
+msgid "Видимость комментариев:"
+msgstr "Visibility of comments:"
+
+msgid "Показывать всем"
+msgstr "Show to all users"
+
+msgid "Только зарегистрированным пользователям"
+msgstr "Only for registered users"
+
+msgid "Редактирование текстов"
+msgstr "Editing Interface texts in"
+
+msgid "Включить"
+msgstr "Enable"
+
+msgid "По истечению срока действия пин-кода удалить пользователя из рассылки"
+msgstr "At the expiration of the Access code, remove user from the list"
+
+msgid "Логин"
+msgstr "Login"
+
+msgid "Секретный ключ для подписи"
+msgstr "Secret key"
+
+msgid "Адрес после подтверждения"
+msgstr "URL after confirmation"
+
+msgid "не обязательно"
+msgstr "not required"
+
+msgid "Аудио-плеер"
+msgstr "Audio player"
+
+msgid "Аудио файлы должны быть загружены на ваш сайт"
+msgstr "Audio files must be uploaded to your host"
+
+msgid "например в Медиафайлы"
+msgstr "for example in Media Library"
+
+msgid "Ваш код"
+msgstr "Your code"
+
+msgid "Стартовая"
+msgstr "Homepage"
+
+msgid "Расписание"
+msgstr "Schedule"
+
+msgid "Пользовательское соглашение"
+msgstr "User agreement"
+
+msgid "Постраничная навигация"
+msgstr "Page navigation"
+
+msgid "Стартовая страница:"
+msgstr "Description content:"
+
+msgid "Сделать главной страницей сайта"
+msgstr "Set as site homepage"
+
+msgid "Описание:"
+msgstr "Description settings:"
+
+msgid "Стартовая страница"
+msgstr "Homepage URL"
+
+msgid "Страница входа пользователя"
+msgstr "Login page URL"
+
+msgid "Страница регистрации пользователя"
+msgstr "Registration URL"
+
+msgid "Спрятать расписание"
+msgstr "Hide schedule"
+
+msgid "Контент для отображения на странице входа в систему."
+msgstr "Content to display on login page."
+
+msgid "Вверху"
+msgstr "Above login form"
+
+msgid "Внизу"
+msgstr "Under login form"
+
+msgid "Фамилия"
+msgstr "Last Name"
+
+msgid "Имя"
+msgstr "First Name"
+
+msgid "Отчество"
+msgstr "Middle Name"
+
+msgid "Это поле нельзя убрать из регистрационной формы"
+msgstr "This field cannot be removed from the registration form"
+
+msgid "Телефон"
+msgstr "Phone Number"
+
+msgid "Желаемый логин"
+msgstr "Your login"
+
+msgid "Желаемый пароль"
+msgstr "Your password"
+
+msgid "Код доступа"
+msgstr "Access code"
+
+msgid "Вход в систему"
+msgstr "Login"
+
+msgid "пользовательское соглашение"
+msgstr "user agreement"
+
+msgid "Подвал системы"
+msgstr "Footer"
+
+msgid "Название"
+msgstr "Title text"
+
+msgid "Сколько рубрик отображать на одной странице?"
+msgstr "Categories per page:"
+
+msgid "показать все на одной странице"
+msgstr "show all"
+
+msgid "Сколько материалов отображать на одной странице?"
+msgstr "Materials per page:"
+
+msgid "Цвет рамки"
+msgstr "Border color"
+
+msgid "Цвет фона при наведении"
+msgstr "Background color on MouseOver"
+
+msgid "Цвет текста при наведении"
+msgstr "Text color on MouseOver"
+
+msgid "Цвет рамки при наведении"
+msgstr "Border color on MouseOver"
+
+msgid "Цвет фона текущей страницы"
+msgstr "Current page background color"
+
+msgid "Цвет текста текущей страницы"
+msgstr "Current page text color"
+
+msgid "Цвет рамки текущей страницы"
+msgstr "Border color for current page"
+
+msgid "Интерфейс"
+msgstr "Interface version"
+
+msgid "Логотип и favicon"
+msgstr "Logo and favicon"
+
+msgid "Фон"
+msgstr "Background"
+
+msgid "Панель управления"
+msgstr "Control panel"
+
+msgid "Шапка"
+msgstr "Header"
+
+msgid "Подвал"
+msgstr "Footer"
+
+msgid "Хлебные крошки"
+msgstr "Navigation Breadcrumbs"
+
+msgid "Рубрика"
+msgstr "Categories"
+
+msgid "Заголовок и подзаголовок рубрики"
+msgstr "Category title and subtitle"
+
+msgid "Материал"
+msgstr "Material preview"
+
+msgid "Контент материала"
+msgstr "Material Content"
+
+msgid "Прогресс курса"
+msgstr "Course progress"
+
+msgid "Плеер"
+msgstr "Player"
+
+msgid "Логотип"
+msgstr "Logotype"
+
+msgid "Выравнивание изображения"
+msgstr "Image Alignment"
+
+msgid "сверху слева"
+msgstr "top left"
+
+msgid "сверху справа"
+msgstr "top right"
+
+msgid "сверху по центру"
+msgstr "top center"
+
+msgid "снизу слева"
+msgstr "bottom left"
+
+msgid "снизу справа"
+msgstr "bottom right"
+
+msgid "снизу по центру"
+msgstr "bottom center"
+
+msgid "Повторение изображения"
+msgstr "Backgroung image repeat"
+
+msgid "не повторять"
+msgstr "no repeat"
+
+msgid "повторять"
+msgstr "repeat"
+
+msgid "повторять по горизонтали"
+msgstr "repeat horizontally"
+
+msgid "повторять по вертикали"
+msgstr "repeat vertically"
+
+msgid "Зафиксировать фон"
+msgstr "Fix background"
+
+msgid "Цвет иконок"
+msgstr "Icon color"
+
+msgid "Цвет иконок при наведении"
+msgstr "Icon color on MouseOver"
+
+msgid "Цвет фона поиска"
+msgstr "Search background color"
+
+msgid "Цвет рамки поиска"
+msgstr "Search frame border color"
+
+msgid "Цвет фона выпадающего меню"
+msgstr "Background color of the drop-down menu"
+
+msgid "Цвет фона выпадающего меню при наведении"
+msgstr "The background color of the drop down menu on MouseOver"
+
+msgid "Цвет текста-подсказки в полях форм"
+msgstr "Color of text hints in forms"
+
+msgid "Цвет заполняемого текста в полях форм"
+msgstr "Fill text color in forms"
+
+msgid "Цвет кнопок"
+msgstr "Buttons color"
+
+msgid "Цвет кнопок при наведении"
+msgstr "Buttons color on MouseOver"
+
+msgid "Цвет кнопок при клике"
+msgstr "Button color on click"
+
+msgid "Цвет текста кнопок"
+msgstr "Button text color"
+
+msgid "Цвет текста кнопок при наведении"
+msgstr "Buttons text color on MouseOver"
+
+msgid "Цвет текста кнопок при клике"
+msgstr "Buttons text color on click"
+
+msgid "Цвет текста «Закрыть»"
+msgstr "'Close' text color"
+
+msgid "Цвет иконки «Закрыть»"
+msgstr "'Close' icon color"
+
+msgid "Цвет иконки «Закрыть» при наведении"
+msgstr "'Close' icon color on MouseOver"
+
+msgid "Цвет иконки «Закрыть» при клике"
+msgstr "'Close' icon color on click"
+
+msgid "Цвет фона иконки «Закрыть»"
+msgstr "'Close' icon background color"
+
+msgid "Цвет фона иконки «Закрыть» при наведении"
+msgstr "'Close' icon background color on MouseOver"
+
+msgid "Цвет фона иконки «Закрыть» при клике"
+msgstr "'Close' icon background color on click"
+
+msgid "Сделать прозрачной"
+msgstr "Make transparent"
+
+msgid "Включить шапки для страниц"
+msgstr "Enable headers"
+
+msgid "Добавить шапку для уровня доступа"
+msgstr "Add header for access level"
+
+msgid "По умолчанию"
+msgstr "Default header"
+
+msgid "Страница Входа"
+msgstr "Login page"
+
+msgid "Скрыть логотип"
+msgstr "Hide logo"
+
+msgid "Временно отключить эту шапку"
+msgstr "Disable this header"
+
+msgid "Удалить шапку"
+msgstr "Remove header"
+
+msgid "Цвет текстов"
+msgstr "Text color"
+
+msgid "Цвет иконки активной крошки"
+msgstr "Active breadcrumb icon color"
+
+msgid "Цвет текста активной крошки"
+msgstr "Active breadcrumb text color"
+
+msgid "Цвет иконки при наведении"
+msgstr "Icon color on MouseOver"
+
+msgid "Цвет линии под крошками"
+msgstr "Line color under breadcrumbs"
+
+msgid "Цвет разделителей"
+msgstr "Separators color"
+
+msgid "Цвет заголовка"
+msgstr "Title color"
+
+msgid "Жирность"
+msgstr "Bold"
+
+msgid "Подчеркнутость"
+msgstr "Underline"
+
+msgid "Курсив"
+msgstr "italic"
+
+msgid "Размер заголовка"
+msgstr "Title size"
+
+msgid "Не показывать заголовок"
+msgstr "Do not show title"
+
+msgid "Цвет подзаголовка"
+msgstr "Subtitle color"
+
+msgid "Размер подзаголовка"
+msgstr "Subtitle size"
+
+msgid "Не показывать подзаголовок"
+msgstr "Do not show subtitle"
+
+msgid "Отображать описание рубрик"
+msgstr "Show categories description"
+
+msgid "Развернуть описание рубрик по умолчанию"
+msgstr "Expand description for default categories"
+
+msgid "Свернутая кнопка «подробнее»"
+msgstr "Collapsed 'more' button"
+
+msgid "Цвет иконки"
+msgstr "Icon color"
+
+msgid "Развернутая кнопка «подробнее»"
+msgstr "Expanded 'more' button"
+
+msgid "Размер шрифта"
+msgstr "Font size"
+
+msgid "Фоновое изображение по умолчанию"
+msgstr "Default background image"
+
+msgid "Цвет названия рубрики"
+msgstr "Category title color"
+
+msgid "Расположение материалов:"
+msgstr "Location of materials:"
+
+msgid "2 колонки"
+msgstr "2 columns"
+
+msgid "1 колонка"
+msgstr "1 column"
+
+msgid "Цвет описания"
+msgstr "Description color"
+
+msgid "Цвет индикаторов"
+msgstr "Indicators color"
+
+msgid "Цвет иконок «тип контента»"
+msgstr "'Content type' icons color"
+
+msgid "Цвет фона иконок «тип контента»"
+msgstr "'Content type' icons background color"
+
+msgid "Цвет фона блока с описанием"
+msgstr "Description frame background color"
+
+msgid "Цвет рамки блока с описанием"
+msgstr "Description frame border color"
+
+msgid "Доступ открыт:"
+msgstr "Access granted:"
+
+msgid "Цвет фона блока с описанием при наведении"
+msgstr "Description frame background color on MouseOver"
+
+msgid "Цвет рамки блока с описанием при наведении"
+msgstr "Description frame border color on MouseOver"
+
+msgid "Цвет текста на кнопке"
+msgstr "Button text color"
+
+msgid "Цвет фона кнопки"
+msgstr "Button background color"
+
+msgid "Доступ закрыт:"
+msgstr "Access denied:"
+
+msgid "Не пройденный урок автотренинга:"
+msgstr "Uncompleted autotraining lesson:"
+
+msgid "Контент:"
+msgstr "Content:"
+
+msgid "Цвет иконок на вкладках"
+msgstr "Tab icons color"
+
+msgid "Цвет текста на вкладках"
+msgstr "Tab text color"
+
+msgid "Цвет иконок на активных вкладках"
+msgstr "Active tab icons color"
+
+msgid "Цвет текста на активных вкладках"
+msgstr "Active tab text color"
+
+msgid "Цвет фона контента"
+msgstr "Content background color"
+
+msgid "Цвет рамки контента"
+msgstr "Content frame border color"
+
+msgid "Цвет фона неактивной вкладки"
+msgstr "Inactive tab background color"
+
+msgid "Переключение между уроками:"
+msgstr "Switching between lessons:"
+
+msgid "Отображать подвал"
+msgstr "Display footer"
+
+msgid "Сделать прозрачным"
+msgstr "Make transparent"
+
+msgid "Показывать прогресс курса"
+msgstr "Show course progress"
+
+msgid "На папках с файлами"
+msgstr "On folders with files"
+
+msgid "На родительских папках"
+msgstr "On parent folders"
+
+msgid "На подпапках"
+msgstr "On subfolders"
+
+msgid "На странице списка материалов"
+msgstr "On the categories list page"
+
+msgid "Под контентом в открытом файле"
+msgstr "Under content in open file"
+
+msgid "Цвет линии прогресса"
+msgstr "Progress line color"
+
+msgid "Цвет процентов"
+msgstr "Percentage color"
+
+msgid "Цвет элементов видео-плеера"
+msgstr "Video player controls color"
+
+msgid "Материалы"
+msgstr "Categories"
+
+msgid "Домашние задания"
+msgstr "Homeworks"
+
+msgid "Отображать все уроки автотренингов"
+msgstr "Display all autotraining lessons"
+
+msgid "Выберите порядок сортировки комментариев к домашним заданиям:"
+msgstr "Choose how to sort comments for Homework:"
+
+msgid "От более ранних к более поздним"
+msgstr "From earlier to later"
+
+msgid "От более поздних до более ранних"
+msgstr "From later to earlier"
+
+msgid "Добавление файлов к домашним заданиям:"
+msgstr "Add files to Homework:"
+
+msgid "Настройки отправки писем"
+msgstr "Email settings"
+
+msgid "Письмо при регистрации пользователя"
+msgstr "Email at User registration"
+
+msgid "Уведомление о новом комментарии"
+msgstr "New comment notification"
+
+msgid "Отправлять письма через"
+msgstr "Send email through"
+
+msgid "Укажите"
+msgstr "Specify"
+
+msgid "Укажите верифицированный email"
+msgstr "Specify verified email"
+
+msgid "Укажите регион"
+msgstr "Specify region"
+
+msgid "Отправить тестовое письмо"
+msgstr "Send test email"
+
+msgid "Отправлять письма через Wordpress"
+msgstr "Send email via wordpress"
+
+msgid "Заголовок письма"
+msgstr "Email header"
+
+msgid "имя пользователя"
+msgstr "user name"
+
+msgid "логин пользователя"
+msgstr "user login"
+
+msgid "пароль пользователя"
+msgstr "user password"
+
+msgid "страница входа"
+msgstr "login page"
+
+msgid "Уведомление администратора об ответе на домашнее задание"
+msgstr "Administrator notification about response on Homework"
+
+msgid "название материала"
+msgstr "material name"
+
+msgid "email пользователя"
+msgstr "user email"
+
+msgid "текст ответа"
+msgstr "reply text"
+
+msgid "ссылка на панель управления"
+msgstr "link to control panel"
+
+msgid "Уведомление пользователя о статусе домашнего задания"
+msgstr "User notification on Homework status"
+
+msgid "статус"
+msgstr "status"
+
+msgid "ссылка на материал"
+msgstr "link to material"
+
+msgid "Уведомление пользователя о комментарии к ответу на домашнее задание"
+msgstr "User notification on comments for homework resolve"
+
+msgid "текст комментария"
+msgstr "comment text"
+
+msgid "Уведомление администратора о комментарии к ответу на домашнее задание"
+msgstr "Administrator notification on comments for homework resolve"
+
+msgid "ссылка на страницу"
+msgstr "link to page"
+
+msgid "название страницы"
+msgstr "page title"
+
+msgid "Не отображать"
+msgstr "Do not display"
+
+msgid "Емейл для получения вопросов от пользователя."
+msgstr "Email for user questions."
+
+msgid 'Не отображать "Задать вопрос" для незарегистрированных пользователей'
+msgstr 'Do not display "Ask a question" for unregistered users'
+
+msgid "Защита контента"
+msgstr "Content Protection"
+
+msgid "Ограничения для пользователей"
+msgstr "User Restrictions"
+
+msgid "Включить шифрование ссылок .mp4"
+msgstr "Enable link encryption for .mp4"
+
+msgid "Отключить правую кнопку мыши"
+msgstr "Disable right mouse button"
+
+msgid "Запретить копирование текста"
+msgstr "Disable text copying"
+
+msgid "Исключения:"
+msgstr "Exceptions:"
+
+msgid "Использовать Стандартный YouTube плеер для воспроизведения видео с YouTube"
+msgstr "Use Standard YouTube Player to play YouTube videos"
+
+msgid "Использовать Стандартный Vimeo плеер для воспроизведения видео с Vimeo"
+msgstr "Use Standard Vimeo Player to play Vimeo videos"
+
+msgid "Версия плеера Plyr"
+msgstr "Player Version Plyr"
+
+msgid "Запретить множественную авторизацию."
+msgstr "Disable multiple authorization."
+
+msgid "Интервал проверки акаунтов:"
+msgstr "Account verification interval:"
+
+msgid "секунд"
+msgstr "seconds"
+
+msgid "Регистрация пользователей"
+msgstr "User registration"
+
+msgid "Добавление ключей"
+msgstr "Add Access codes"
+
+msgid "Массовая регистрация пользователей и предоставление им доступа к материалам."
+msgstr "Bulk user registration and permitting access to materials."
+
+msgid "Выполнение данной операции может занять до 10 минут."
+msgstr "This operation may take up to 10 minutes."
+
+msgid "Пожалуйста не закрывайте страницу!"
+msgstr "Please do not close thit page!"
+
+msgid "Вставьте список емейлов (через запятую или каждый емейл в отдельной строке)"
+msgstr "Insert email list (comma-separated or each email on a separate line)"
+
+msgid "Импортировать"
+msgstr "Import"
+
+msgid "Ввести новые емейлы"
+msgstr "Enter new emails"
+
+msgid "Виберите уровень доступа"
+msgstr "Choose Access level"
+
+msgid "Время действия"
+msgstr "Active time"
+
+msgid "месяцев"
+msgstr "months"
+
+msgid "дней"
+msgstr "days"
+
+msgid "Создать пользователей"
+msgstr "Create users"
+
+msgid "Массовое добавление ключей пользователям."
+msgstr "Bulk adding Access codes to users."
+
+msgid "Проверить"
+msgstr "Check"
+
+msgid "Добавить коды доступа"
+msgstr "Add Access codes"
+
+msgid "MEMBERLUX"
+msgstr "MEMBERLUX"
+
+msgid "Все материалы"
+msgstr "All materials"
+
+msgid "Добавить материал"
+msgstr "Add material"
+
+msgid "Новый материал"
+msgstr "New material"
+
+msgid "Смотреть"
+msgstr "Preview"
+
+msgid "Ничего не найдено"
+msgstr "Nothing found"
+
+msgid "Ничего не найдено в корзине"
+msgstr "No items found in the basket"
+
+msgid "Рубрики материалов"
+msgstr "Material categories"
+
+msgid "Рубрика материалов"
+msgstr "Material category"
+
+msgid "Найти рубрику"
+msgstr "Find Category"
+
+msgid "Родительская рубрика"
+msgstr "Parental category"
+
+msgid "Все рубрики"
+msgstr "All categories"
+
+msgid "Родительская рубрика:"
+msgstr "Parental category:"
+
+msgid "Редактировать рубрику"
+msgstr "Edit category"
+
+msgid "Обновить рубрику"
+msgstr "Update category"
+
+msgid "Добавить новую рубрику"
+msgstr "Add new category"
+
+msgid "Название рубрики"
+msgstr "Category name"
+
+msgid "Рубрики"
+msgstr "Categories"
+
+msgid "Уровни доступа"
+msgstr "Access levels"
+
+msgid "Найти уровень"
+msgstr "Find Access level"
+
+msgid "Все уровни"
+msgstr "All access levels"
+
+msgid "Родительский уровень"
+msgstr "Parent access level"
+
+msgid "Родительский уровень:"
+msgstr "Parent access level:"
+
+msgid "Редактировать уровень"
+msgstr "Edit access level"
+
+msgid "Обновить уровень"
+msgstr "Refresh access level"
+
+msgid "Добавить новый"
+msgstr "Add new"
+
+msgid "Название рубрики"
+msgstr "Category name"
+
+msgid "Уровни доступа"
+msgstr "Access levels"
+
+msgid "Продажа доступа"
+msgstr "Access sale"
+
+msgid "Найти домашнее задание"
+msgstr "Find Homework"
+
+msgid "Все домашние задания"
+msgstr "All Homeworks"
+
+msgid "Редактировать домашнее задание"
+msgstr "Edit Homework"
+
+msgid "Обновить домашнее задание"
+msgstr "Update Homework"
+
+msgid "Добавить домашнее задание"
+msgstr "Add Homework"
+
+msgid "Название домашнего задания"
+msgstr "Homework name"
+
+msgid "Найти автотренинг"
+msgstr "Find Autotraining"
+
+msgid "Все автотренинги"
+msgstr "All Autotrainings"
+
+msgid "Название автотренинга"
+msgstr "Autotraining name"
+
+msgid "Клиент MEMBERLUX"
+msgstr "MEMBERLUX client"
+
+msgid "Тренер MEMBERLUX"
+msgstr "MEMBERLUX trainer"
+
+msgid "Дополнительные параметры страницы"
+msgstr "Advanced page options"
+
+msgid "Тип контента"
+msgstr "Content type"
+
+msgid "Статистика входов"
+msgstr "Site analytics"
+
+msgid "Рассылка"
+msgstr "Mailing"
+
+msgid "Активация"
+msgstr "Activation"
+
+msgid "Параметры"
+msgstr "Parameters"
+
+msgid "Уроки"
+msgstr "Tutorials"
+
+msgid "Страница не найдена."
+msgstr "Page not found."
+
+msgid "Информационная панель"
+msgstr "Informational panel"
+
+msgid "Уведомления"
+msgstr "Notifications"
+
+msgid "Специальное предложение"
+msgstr "Special offer"
+
+msgid "Нет уведомлений"
+msgstr "No notifications"
+
+msgid "Создать копию страницы"
+msgstr "Create a copy of the page"
+
+msgid "Клонировать"
+msgstr "Clone"
+
+msgid "Краткое описание"
+msgstr "Short description"
+
+msgid "Подписки"
+msgstr "Subscriptions"
+
+msgid "Вложения"
+msgstr "Attachments"
+
+msgid "Фоновое изображение"
+msgstr "Background Image"
+
+msgid "Индикаторы"
+msgstr "Indicators"
+
+msgid "Обновить"
+msgstr "Refresh"
+
+msgid "Код формы"
+msgstr "Form code"
+
+msgid "Видео урок"
+msgstr "Video lesson"
+
+msgid "ваш код"
+msgstr "your code"
+
+msgid "Смещение"
+msgstr "Offset"
+
+msgid "на"
+msgstr "on"
+
+msgid "часов"
+msgstr "hours"
+
+msgid "минут"
+msgstr "minutes"
+
+msgid "Домашнее задание"
+msgstr "Homework"
+
+msgid "Выберите способ подтверждения:"
+msgstr "Select confirmation method:"
+
+msgid "Автоматически"
+msgstr "Automatically"
+
+msgid "Автоматически через"
+msgstr "Automatically through"
+
+msgid "Вручную"
+msgstr "Manual"
+
+msgid "Описание задания:"
+msgstr "Task description:"
+
+msgid "Обратная связь"
+msgstr "Feedback"
+
+msgid "Сортировка"
+msgstr "Sorting"
+
+msgid "Расположите материалы в нужной последовательности."
+msgstr "Arrange materials in desired order."
+
+msgid "Все"
+msgstr "All"
+
+msgid "Без"
+msgstr "Without"
+
+msgid "рубрики"
+msgstr "categories"
+
+msgid "уровня доступа"
+msgstr "access levels"
+
+msgid "Скрыть материалы, показывать только описание."
+msgstr "Hide materials, show description only."
+
+msgid "мес."
+msgstr "month"
+
+msgid "дн."
+msgstr "days"
+
+msgid "Показать"
+msgstr "Show"
+
+msgid "Сначала Вставьте свои коды доступа."
+msgstr "Insert your access codes first."
+
+msgid "Неверное значение периода. Только целые числа, больше нуля."
+msgstr "Invalid 'Period' value. Only integers greater than zero."
+
+msgid "Неверное значение количества ключей. Только целые числа, больше нуля."
+msgstr "Invalid 'Number of keys' value. Only integers greater than zero."
+
+msgid "Оставшиеся коды доступа"
+msgstr "Remaining access codes"
+
+msgid "Использованные коды доступа"
+msgstr "Used access codes"
+
+msgid "Вы действительно хотите удалить коды доступа?"
+msgstr "Do you really want to delete access codes?"
+
+msgid "Коды не удалены"
+msgstr "Access codes not deleted"
+
+msgid "Скопировано!"
+msgstr "Copyied!"
+
+msgid "Видимость"
+msgstr "Vizibility"
+
+msgid "Скрывать материалы если нет доступа к этому уровню"
+msgstr "Hide materiala if there is no permission for this access level."
+
+msgid "Письма напоминания"
+msgstr "Reminder emails"
+
+msgid "Письмо 1"
+msgstr "Email #1"
+
+msgid "Письмо 2"
+msgstr "Email #2"
+
+msgid "Письмо 3"
+msgstr "Email #3"
+
+msgid "Отправить письмо за"
+msgstr "Send email in"
+
+msgid "дней до окончания срока"
+msgstr "days before expiration"
+
+msgid "Регистрация новых пользователей"
+msgstr "Registration of new users"
+
+msgid "название уровня доступа"
+msgstr "Access level name"
+
+msgid "Подписать"
+msgstr "Subscribe"
+
+msgid "Отписать от всех остальных групп"
+msgstr "Unsubscribe from all other groups"
+
+msgid "Коды доступа"
+msgstr "Access codes"
+
+msgid "Сгенерировать коды доступа"
+msgstr "Generate access codes"
+
+msgid "Добавить свои"
+msgstr "Add customised"
+
+msgid "количество"
+msgstr "quantity"
+
+msgid "(шт.)"
+msgstr "(pcs.)"
+
+msgid "время действия"
+msgstr "active time"
+
+msgid "Сгенерировать"
+msgstr "Generate"
+
+msgid "Вставьте список кодов доступа (каждый в отдельной строке)"
+msgstr "Insert access codes list (each in separate line)"
+
+msgid "Разрешено использовать только: A-Z, a-z, А-Я, а-я, 0-9, ! @ # $ % ^ & * ( ) - _ [ ] { } < > ~ + = , . ; : / ? |"
+msgstr "You may use only this characters: A-Z, a-z, А-Я, а-я, 0-9, ! @ # $ % ^ & * ( ) - _ [ ] { } < > ~ + = , . ; : / ? |"
+
+msgid "Период"
+msgstr "Period"
+
+msgid "Всего"
+msgstr "Total"
+
+msgid "Использовано"
+msgstr "Used"
+
+msgid "Осталось"
+msgstr "Left"
+
+msgid "Удалить все коды доступа"
+msgstr "Delete all access codes"
+
+msgid "Переместить"
+msgstr "Move"
+
+msgid "Копировать"
+msgstr "Copy"
+
+msgid "Перемещение кодов доступа"
+msgstr "Access code moving"
+
+msgid "Уровень доступа"
+msgstr "Access level"
+
+msgid "Ошибка! Неверно введенные коды доступа."
+msgstr "Error! Invalid access codes."
+
+msgid "Коды доступа добавлены"
+msgstr "Access codes added"
+
+msgid "шт"
+msgstr "pcs"
+
+msgid "Статистика"
+msgstr "Statistics"
+
+msgid "Добавить автоблокировку"
+msgstr "Add Autoblocking"
+
+msgid "с"
+msgstr "from"
+
+msgid "по"
+msgstr "to"
+
+msgid "Очистить"
+msgstr "Clear"
+
+msgid "пользователей"
+msgstr "users"
+
+msgid "Всего заходов"
+msgstr "Total entries"
+
+msgid "Уникальных"
+msgstr "Unique"
+
+msgid "Активность"
+msgstr "Activity"
+
+msgid "Заблокированные пользователи"
+msgstr "Blocked users"
+
+msgid "Активен"
+msgstr "Active"
+
+msgid "Блокировать"
+msgstr "Block"
+
+msgid "Блокирован"
+msgstr "Blocked"
+
+msgid "1 минута"
+msgstr "1 minute"
+
+msgid "5 минут"
+msgstr "5 minutes"
+
+msgid "15 минут"
+msgstr "15 minutes"
+
+msgid "30 минут"
+msgstr "30 minutes"
+
+msgid "1 час"
+msgstr "1 hour"
+
+msgid "12 часов"
+msgstr "12 hours"
+
+msgid "1 день"
+msgstr "1 day"
+
+msgid "1 неделя"
+msgstr "1 week"
+
+msgid "1 месяц"
+msgstr "1 month"
+
+msgid "Укажите название фильтра"
+msgstr "Enter filter name"
+
+msgid "Выберите интервал из списка"
+msgstr "Select interval from list"
+
+msgid "Укажите количество уникальных входов"
+msgstr "Enter the number of unique logins"
+
+msgid "Добавлен"
+msgstr "Added"
+
+msgid "элемента"
+msgstr "element"
+
+msgid "Описание"
+msgstr "Description"
+
+msgid "Ярлык"
+msgstr "Shortcut"
+
+msgid "Обзор автотренинга"
+msgstr "Autotrainings preview"
+
+msgid "Изменить"
+msgstr "Change"
+
+msgid "Перейти"
+msgstr "Go to"
+
+msgid "Нет автотренингов"
+msgstr "Autotrainings missing"
+
+msgid "Общее смещение:"
+msgstr "Common offset:"
+
+msgid "Отсутствует"
+msgstr "Missing"
+
+msgid "Собственное смещение"
+msgstr "Proper offset"
+
+msgid "Домашнее задание с автоподтверждением и со смещением в одном из предыдущих материалов"
+msgstr "Homework with autoconfirmation and offset in one of the previous materials"
+
+msgid "Нет смещения."
+msgstr "No offset."
+
+msgid "Есть"
+msgstr "Done"
+
+msgid "График публикции материалов еще не составлен."
+msgstr "Materials publication schedule is not created."
+
+msgid "Произошла ошибка: Автотренинг не найден"
+msgstr "An error occurred: Autotraining not found"
+
+msgid "Автоблокировка"
+msgstr "Autoblocking"
+
+msgid "Добавить в список исключений автоблокировки"
+msgstr "Add to Autoblocking exceptions list"
+
+msgid "Удалить из списка исключений автоблокировки"
+msgstr "Remove from Autoblocking exceptions list"
+
+msgid "Дополнительная информация"
+msgstr "Additional information"
+
+msgid "Добавить новый ключ"
+msgstr "Add new Access code"
+
+msgid "Ваш код доступа"
+msgstr "Your Access code"
+
+msgid "Ваши коды доступа"
+msgstr "Your Access codes"
+
+msgid "Настройки автотренингов"
+msgstr "Autotraining settings"
+
+msgid "Выбор автотренинга"
+msgstr "Autotraining selection"
+
+msgid "Введите порядковый номер урока"
+msgstr "Enter lesson number"
+
+msgid "Уровень автотренинга обновлен"
+msgstr "Autotraining level updated"
+
+msgid "Ваш аккаунт временно заблокирован."
+msgstr "Your account is temporarily blocked."
+
+msgid "Заблокировать"
+msgstr "Block"
+
+msgid "Разблокировать"
+msgstr "Unblock"
+
+msgid "Пользовательский аккаунт заблокирован."
+msgid_plural "%s пользовательских аккаунтов заблокировано."
+msgstr[0] "User account is blocked."
+msgstr[1] "%s user accounts blocked."
+
+msgid "Состояние аккаунта"
+msgstr "Account status"
+
+msgid "Заблокирован: фильтр"
+msgstr "Blocked: filter"
+
+msgid "Автоматическое подтверждение"
+msgstr "Autoconfirmation"
+
+msgid "д"
+msgstr "d"
+
+msgid "ч"
+msgstr "hrs"
+
+msgid "мин"
+msgstr "min"
+
+msgid "Автоматическое подтверждение со смещением"
+msgstr "Autoconfirmation with offset"
+
+msgid "Ручное подтверждение"
+msgstr "Manual confirmation"
+
+msgid "Скрыть элементы управления YouTube"
+msgstr "Hide YouTube controls"
+
+msgid "Ширина контента"
+msgstr "Content width"
+
+msgid "Страница оформления заказа"
+msgstr "Checkout page"
+
+msgid "Зафиксировать ширину страницы в размере 460px"
+msgstr "Fix page width at 460px"
+
+msgid "Неограниченный доступ"
+msgstr "Unlimited access"
+
+msgid "Неограниченное время доступа"
+msgstr "Unlimited access time"

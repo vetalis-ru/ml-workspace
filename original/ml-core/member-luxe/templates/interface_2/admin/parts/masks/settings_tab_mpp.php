@@ -1,0 +1,1 @@
+<li><a href="#tab-mblp" class="mpp-color-tab"><?php _e('Прием платежей', 'mbl_admin') ?></a></li>

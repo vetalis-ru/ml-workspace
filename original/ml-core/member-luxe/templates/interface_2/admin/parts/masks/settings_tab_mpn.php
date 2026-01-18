@@ -1,0 +1,1 @@
+<li><a href="#tab-mbl-nav" class="mpn-color-tab"><?php _e('Панель навигации', 'mbl_admin') ?></a></li>

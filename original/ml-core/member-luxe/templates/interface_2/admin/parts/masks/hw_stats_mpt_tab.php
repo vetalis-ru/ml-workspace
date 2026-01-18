@@ -1,0 +1,1 @@
+<li><a href="#mbl_hw_stats_pane"><i class="fa fa-bar-chart"></i> <span><?php _e('Статистика заданий', 'mbl_admin'); ?></span></a></li>

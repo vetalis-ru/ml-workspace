@@ -1,0 +1,107 @@
+.comments-list .comment .mbl-hw-attachments,
+.mbl-hw-attachments,
+.lesson-files-list {
+  overflow: hidden;
+  position: relative;
+  display: block;
+
+  a {
+    color: #555;
+    display: block;
+    float: left;
+    font-size: 13px;
+
+    height: 48px;
+    vertical-align: baseline;
+    margin: 0 14px 15px 0;
+
+    padding-left: 45px;
+    position: relative;
+
+    width: calc(25% - 14px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+
+    .comment-item.answer & {
+      float: right;
+    }
+
+    @include respond-to('xs') {
+      //height: 38px;
+      width: calc(33% - 5px);
+      margin: 0 5px 10px 0;
+    }
+
+    @include respond-to('xsm') {
+      width: calc(50% - 5px);
+    }
+
+    @include respond-to('xss') {
+      width: 100%;
+      min-width: 100%;
+    }
+
+      .extension {
+      display: block;
+      text-transform: uppercase;
+      color: #8e8e8e;
+      margin-top: 3px;
+      float: none;
+      text-align: left;
+      font-size: 13px;
+      margin-left: 0;
+    }
+
+    &:hover {
+      .extension {
+        text-decoration: none;
+      }
+    }
+
+    .filename {
+      line-height: 27px;
+      font-size: 13px;
+      margin-left: 0;
+      text-align: left;
+      display: block;
+    }
+
+    .fa {
+      font-size: 48px;
+      position: absolute;
+      left: 0;
+
+      @include respond-to('xs') {
+        font-size: 38px;
+      }
+    }
+
+    img {
+      border-radius: 3px;
+      max-height: 48px;
+      vertical-align: baseline;
+      margin: 0;
+      padding: 0;
+      display: block;
+      @include respond-to('xs') {
+        max-height: 38px;
+      }
+    }
+
+    &:hover {
+      color: #000;
+
+      .fa {
+        color: #000;
+      }
+    }
+
+  }
+
+}
+
+.comment .mbl-hw-attachments {
+  margin-top: 10px;
+}

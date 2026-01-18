@@ -1,0 +1,1 @@
+<li><a href="#tab_mbl_access_options" class="universal-aсcess-color-tab"><?php _e('Универсальный доступ', 'mbl_admin') ?></a></li>

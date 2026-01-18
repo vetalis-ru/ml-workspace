@@ -1,0 +1,401 @@
+.mbc-layout {
+    display: flex;
+}
+
+.mbc-horizontal .mbc-layout {
+    flex-wrap: wrap;
+}
+
+.mbc-panel {
+    margin-bottom: 3rem;
+}
+
+.mbc-canvas {
+
+}
+
+.mbc-vertical .mbc-sticky {
+    position:sticky;
+    top: 30px;
+}
+
+.mbc-horizontal .mbc-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+}
+
+.mbc-vertical .mbc-panel, .mbc-vertical .mbc-canvas {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+    .mbc-vertical .mbc-panel {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+    .mbc-vertical .mbc-canvas {
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .mbc-horizontal .mbc-form {
+        display: block;
+    }
+    .mbc-horizontal .mbc-layout {
+        flex-wrap: nowrap;
+    }
+    .mbc-horizontal .mbc-panel, .mbc-horizontal .mbc-canvas {
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .mbc-horizontal .mbc-panel {
+        -ms-flex: 0 0 28%;
+        flex: 0 0 28%;
+        max-width: 28%;
+    }
+    .mbc-horizontal .mbc-canvas {
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+    }
+}
+
+.parent-wrap {
+    margin-right: auto;
+    outline: 3px solid forestgreen;
+}
+
+.parent {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mbc-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.mbc-vertical .parent-wrap, .mbc-vertical .parent {
+    width: 21cm;
+    height: 29.7cm;
+}
+
+.mbc-vertical .mbc-image {
+    width: 210mm;
+    height: 297mm;
+}
+
+.mbc-horizontal .parent-wrap, .mbc-horizontal .parent {
+    width: 29.7cm;
+    height: 21cm;
+}
+
+.mbc-horizontal .mbc-image {
+    width: 297mm;
+    height: 210mm;
+}
+
+.media-open {
+    font-size: 13px;
+    line-height: 1.3;
+
+    margin-bottom: 0;
+    margin-left: 20px;
+}
+
+@media (min-width: 1368px) {
+    .media-open {
+        font-size: 16px;
+        max-width: 200px;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.ui-wrapper {
+    padding-bottom: 0 !important;
+}
+
+
+.drop-element {
+    border: 1px solid #ccc;
+    position: absolute;
+    box-sizing: content-box;
+    cursor: move;
+}
+
+.meta-element, .drop-element {
+    height: auto !important;
+}
+
+.meta-element {
+    border: none;
+    display: flex;
+    align-items: flex-end;
+}
+
+.meta-wrap {
+    width: 100%;
+    text-align: center;
+}
+
+.meta-name {
+    font-weight: bold;
+    display: inline;
+    line-height: 1.2;
+}
+
+.move-handle {
+    color: #28ca4d;
+    position: absolute;
+    top: -25px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    font-size: 22px;
+}
+
+.card.root {
+    background-color: transparent;
+}
+
+.root {
+    display: none !important;
+}
+
+.root.active {
+    display: block !important;
+}
+
+.view.active [data-view="position"] {
+    box-shadow: 0 0 20px 0 rgba(129, 137, 143, .44);
+    border-color: yellowgreen;
+}
+
+/*Table*/
+
+table.dataTable {
+    clear: both;
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+    max-width: none !important;
+    border-spacing: 0;
+}
+
+div.dataTables_wrapper div.dataTables_info {
+    padding-top: 0.85em;
+    white-space: nowrap;
+}
+
+div.dataTables_wrapper div.dataTables_paginate {
+    margin: 0;
+    white-space: nowrap;
+    text-align: right;
+}
+
+div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+    margin: 2px 0;
+    white-space: nowrap;
+    justify-content: flex-end;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+}
+
+div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:last-child {
+    padding-right: 0;
+}
+
+div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:first-child {
+    padding-left: 0;
+}
+
+div.table-responsive > div.dataTables_wrapper > div.row {
+    margin: 0;
+}
+
+div.dataTables_wrapper div.dataTables_length label {
+    font-weight: normal;
+    text-align: left;
+    white-space: nowrap;
+}
+
+div.dataTables_wrapper div.dataTables_length select {
+    width: auto;
+    display: inline-block;
+}
+
+div.dataTables_wrapper div.dataTables_filter input {
+    margin-left: 0.5em;
+    display: inline-block;
+    width: auto;
+}
+
+div.dataTables_wrapper div.dataTables_filter {
+    text-align: right;
+}
+
+.dataTable.table td, .dataTable.table th {
+    padding: 0.45rem;
+}
+
+.table-loading {
+    position: relative;
+}
+
+.table-loading:after {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.3;
+}
+
+.table-loading-icon, .mblc-table .table-loading-icon {
+    display: none;
+}
+
+.table-loading .table-loading-icon {
+    display: inline;
+    font-size: 50px;
+    color: #fff;
+    position: absolute;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+}
+
+.mblc_options .nav-link:focus {
+    color: inherit;
+    box-shadow: none;
+    outline: none;
+}
+
+#usersByWmpLevel .select2-container .select2-selection--single, #filterForm .select2-container .select2-selection--single {
+    height: 35px;
+}
+
+#usersByWmpLevel .select2-container--default .select2-selection--single .select2-selection__rendered,
+#filterForm .select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 35px;
+}
+
+#usersByWmpLevel .select2-container--default .select2-selection--single .select2-selection__arrow,
+#filterForm .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 35px;
+}
+
+#usersByWmpLevel .datepicker-input {
+    display: inline-block;
+    height: 35px;
+    width: auto;
+    max-width: 110px;
+}
+
+.mbl-certificate-table .sortable, .mbl-certificate-table .sorted {
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.mbl-certificate-table .sortable:after, .mbl-certificate-table .sorted:after {
+    font-family: "Font Awesome 5 Free";
+    float: right;
+}
+
+.mbl-certificate-table .sortable:after {
+    display: none;
+}
+
+.mbl-certificate-table .sorted:after {
+    display: inline-block;
+}
+
+.mbl-certificate-table .sortable:hover:after {
+    display: inline-block;
+}
+
+.mbl-certificate-table .sortable.asc:hover:after {
+    content: "\f0d8";
+}
+
+.mbl-certificate-table .sortable.desc:hover:after {
+    content: "\f0d7";
+}
+
+.mbl-certificate-table .sorted.asc:after {
+    content: "\f0d8";
+}
+
+.mbl-certificate-table .sorted.desc:after {
+    content: "\f0d7";
+}
+
+.mbl-certificate-table .sorted.asc:hover:after {
+    content: "\f0d7";
+}
+
+.mbl-certificate-table .sorted.desc:hover:after {
+    content: "\f0d8";
+}
+
+.mbl-certificate-table input[type=date].form-control {
+    height: calc(1.5em + .75rem + 0px) !important;
+}
+
+.mbl-certificate-table td {
+    font-size: 13px !important;
+}
+
+.mbl-th {
+    font-size: 12px !important;
+    font-weight: 600;
+}
+
+.mbl-th-check {
+    width: 30px;
+}
+
+@media (min-width: 1200px) {
+    .mbl-th-wpmlevel {
+        width: 160px;
+    }
+}
+
+input[type=radio].form-check-input {
+    margin-top: .3rem;
+    margin-left: -1.25rem;
+    margin-right: 0;
+}
+
+.form-check-inline input[type=radio].form-check-input {
+    position: static;
+    margin-top: 0;
+    margin-right: .3125rem;
+    margin-left: 0;
+}

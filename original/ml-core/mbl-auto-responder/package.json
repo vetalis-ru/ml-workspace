@@ -1,0 +1,65 @@
+{
+  "name": "mbl-auto-responder",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "watch:main": "node server.mjs main.js",
+    "watch:template-list": "node server.mjs template-list.js",
+    "watch:template-edit": "node server.mjs template-edit.js",
+    "watch:options": "node server.mjs options.js",
+    "watch:unsubscribe": "node server.mjs unsubscribe.js",
+    "build": "parcel build",
+    "lint ": "eslint --fix --ext .js,.svelte ./src-frontend"
+  },
+  "devDependencies": {
+    "@parcel/core": "^2.7.0",
+    "browser-sync": "^2.27.10",
+    "eslint": "8.22.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.4",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-svelte3": "^4.0.0",
+    "parcel": "^2.7.0",
+    "parcel-transformer-svelte": "^1.2.3"
+  },
+  "targets": {
+    "default": {
+      "source": "./src-frontend/main.js",
+      "sourceMap": true,
+      "distDir": "./assets/js"
+    },
+    "template-list": {
+      "source": "./src-frontend/template-list.js",
+      "sourceMap": true,
+      "distDir": "./assets/js"
+    },
+    "template-edit": {
+      "source": "./src-frontend/template-edit.js",
+      "sourceMap": true,
+      "distDir": "./assets/js"
+    },
+    "options": {
+      "source": "./src-frontend/options.js",
+      "sourceMap": true,
+      "distDir": "./assets/js"
+    },
+    "unsubscribe": {
+      "source": "./src-frontend/unsubscribe.js",
+      "sourceMap": true,
+      "distDir": "./assets/js"
+    }
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "chyme": "^1.2.3",
+    "svelte": "^3.49.0",
+    "svelte-awesome-color-picker": "^1.2.3",
+    "svelte-tabs": "^1.1.0"
+  },
+  "alias": {
+    "buffer": false,
+    "process": false
+  }
+}

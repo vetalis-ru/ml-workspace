@@ -1,0 +1,32 @@
+form.woocommerce-checkout {
+  .woocommerce-error:not(.wc-stripe-error) {
+    margin-top: -1rem;
+  }
+}
+
+.checkout-login .status .mblp-row .container {
+  width: 100%;
+}
+
+.checkout-tab .woocommerce-checkout .form-fields-group:last-child {
+  margin-bottom: 30px;
+}
+
+.mbl-access-sc {
+  &.mbl-access-locked {
+    position: relative;
+    user-select: none;
+    filter: brightness(100%) saturate(0) invert(0%) sepia(4%);
+    opacity: .6;
+    &:before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      cursor: not-allowed;
+    }
+  }
+}

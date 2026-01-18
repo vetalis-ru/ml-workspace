@@ -1,0 +1,15 @@
+{
+    "name": "mbl/auto-responder",
+    "autoload": {
+        "psr-4": {
+            "Mbl\\AutoResponder\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dmitriy Svistunov",
+            "email": "obakan.ac545@gmail.com"
+        }
+    ],
+    "require": {}
+}

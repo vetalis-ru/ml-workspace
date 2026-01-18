@@ -1,0 +1,1 @@
+<li><a href="#tab-mblr-options" class="ma-color-tab"><?php _e('Авторегистрация', 'mbl_admin') ?></a></li>
