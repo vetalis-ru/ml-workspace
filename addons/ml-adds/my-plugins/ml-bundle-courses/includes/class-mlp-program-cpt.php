@@ -54,7 +54,6 @@ class MLP_Program_CPT {
 
     public static function render_steps_box($post) {
         $steps = get_post_meta($post->ID, 'mlp_steps', true);
-        $json = $steps ? wp_json_encode($steps, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) : "[]";
         $steps = is_array($steps) ? $steps : [];
         $levels = get_terms([
             'taxonomy' => 'wpm-levels',
@@ -64,8 +63,6 @@ class MLP_Program_CPT {
             $levels = [];
         }
         ?>
-        <p>JSON-массив шагов (term_id, duration, units):</p>
-        <textarea name="mlp_steps_json" style="width:100%;height:150px;"><?php echo esc_textarea($json); ?></textarea>
         <?php wp_nonce_field('mlp_steps_save', 'mlp_steps_nonce'); ?>
         <p>Шаги программы (УД, срок, единицы):</p>
         <table class="widefat striped" id="mlp-steps-table">
@@ -144,6 +141,59 @@ class MLP_Program_CPT {
             <button type="button" class="button button-secondary" id="mlp-add-step">Добавить шаг</button>
         </p>
         <p class="description">Быстрый поиск: используйте поле поиска внутри выпадающего списка.</p>
+        <hr>
+        <?php
+        $notify_enabled = (bool)get_post_meta($post->ID, 'mlp_notify_enabled', true);
+        $notify_email = get_post_meta($post->ID, 'mlp_notify_email', true);
+        $notify_step_subject = get_post_meta($post->ID, 'mlp_notify_step_subject', true);
+        $notify_step_body = get_post_meta($post->ID, 'mlp_notify_step_body', true);
+        $notify_complete_subject = get_post_meta($post->ID, 'mlp_notify_complete_subject', true);
+        $notify_complete_body = get_post_meta($post->ID, 'mlp_notify_complete_body', true);
+        ?>
+        <h3>Уведомления о шагах программы</h3>
+        <p>
+            <label>
+                <input type="checkbox" name="mlp_notify_enabled" value="1" <?php checked($notify_enabled); ?>>
+                Отправлять уведомления на email администратора
+            </label>
+        </p>
+        <table class="form-table">
+            <tr>
+                <th scope="row"><label for="mlp_notify_email">Email для уведомлений</label></th>
+                <td>
+                    <input type="email" id="mlp_notify_email" name="mlp_notify_email" value="<?php echo esc_attr($notify_email); ?>" class="regular-text" placeholder="admin@example.com">
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"><label for="mlp_notify_step_subject">Шаг: заголовок письма</label></th>
+                <td>
+                    <input type="text" id="mlp_notify_step_subject" name="mlp_notify_step_subject" value="<?php echo esc_attr($notify_step_subject); ?>" class="regular-text">
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"><label for="mlp_notify_step_body">Шаг: текст письма</label></th>
+                <td>
+                    <textarea id="mlp_notify_step_body" name="mlp_notify_step_body" rows="5" class="large-text"><?php echo esc_textarea($notify_step_body); ?></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"><label for="mlp_notify_complete_subject">Окончание: заголовок письма</label></th>
+                <td>
+                    <input type="text" id="mlp_notify_complete_subject" name="mlp_notify_complete_subject" value="<?php echo esc_attr($notify_complete_subject); ?>" class="regular-text">
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"><label for="mlp_notify_complete_body">Окончание: текст письма</label></th>
+                <td>
+                    <textarea id="mlp_notify_complete_body" name="mlp_notify_complete_body" rows="5" class="large-text"><?php echo esc_textarea($notify_complete_body); ?></textarea>
+                </td>
+            </tr>
+        </table>
+        <p class="description">
+            Доступные шорткоды: [user_id], [user_email], [user_login], [display_name], [program_id], [program_title],
+            [current_term_id], [current_course], [current_step], [total_steps], [next_term_id], [next_course],
+            [next_step], [duration], [units].
+        </p>
         <script>
             (function() {
                 const table = document.getElementById('mlp-steps-table');
@@ -277,7 +327,6 @@ class MLP_Program_CPT {
             }
 
             update_post_meta($post_id, 'mlp_steps', $steps);
-            return;
         }
 
         if (isset($_POST['mlp_steps_json'])) {
@@ -288,6 +337,14 @@ class MLP_Program_CPT {
                 update_post_meta($post_id, 'mlp_steps', $decoded);
             }
         }
+
+        $notify_enabled = isset($_POST['mlp_notify_enabled']) ? 1 : 0;
+        update_post_meta($post_id, 'mlp_notify_enabled', $notify_enabled);
+        update_post_meta($post_id, 'mlp_notify_email', sanitize_email($_POST['mlp_notify_email'] ?? ''));
+        update_post_meta($post_id, 'mlp_notify_step_subject', sanitize_text_field($_POST['mlp_notify_step_subject'] ?? ''));
+        update_post_meta($post_id, 'mlp_notify_step_body', wp_kses_post(wp_unslash($_POST['mlp_notify_step_body'] ?? '')));
+        update_post_meta($post_id, 'mlp_notify_complete_subject', sanitize_text_field($_POST['mlp_notify_complete_subject'] ?? ''));
+        update_post_meta($post_id, 'mlp_notify_complete_body', wp_kses_post(wp_unslash($_POST['mlp_notify_complete_body'] ?? '')));
     }
 
 }

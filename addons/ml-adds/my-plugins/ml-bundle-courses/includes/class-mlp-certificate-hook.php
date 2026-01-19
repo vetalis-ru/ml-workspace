@@ -35,6 +35,7 @@ class MLP_Certificate_Hook {
         if (!is_array($steps) || empty($steps)) {
             return;
         }
+        $total_steps = count($steps);
 
         $current_index = array_search($current_term_id, array_column($steps, 'term_id'), true);
         if ($current_index === false) {
@@ -43,6 +44,10 @@ class MLP_Certificate_Hook {
 
         $next_index = $current_index + 1;
         if (!isset($steps[$next_index])) {
+            MLP_Notifier::notify($program_id, $user_id, $current_term_id, 0, [
+                'current_step' => $current_index + 1,
+                'total_steps' => $total_steps,
+            ]);            
             MLP_Enrollment::set_last_cert_hash($user_id, $hash);
             return;
         }
@@ -70,7 +75,13 @@ class MLP_Certificate_Hook {
         }
 
         // 8) Уведомления
-        MLP_Notifier::notify($program_id, $user_id, $current_term_id, $next_term_id);
+        MLP_Notifier::notify($program_id, $user_id, $current_term_id, $next_term_id, [
+            'current_step' => $current_index + 1,
+            'next_step' => $next_index + 1,
+            'total_steps' => $total_steps,
+            'duration' => $duration,
+            'units' => $units,
+        ]);
 
         // 9) Сохранение состояния + event
         MLP_Enrollment::set_current_step($user_id, $next_index);
