@@ -14,6 +14,7 @@ class MLP_Program_CPT {
 
         add_action('add_meta_boxes', [__CLASS__, 'add_meta_boxes']);
         add_action('save_post_ml_program', [__CLASS__, 'save_meta']);
+        add_action('admin_enqueue_scripts', [__CLASS__, 'enqueue_admin_assets']);
     }
 
     public static function enqueue_admin_assets($hook) {
@@ -53,7 +54,6 @@ class MLP_Program_CPT {
 
     public static function render_steps_box($post) {
         $steps = get_post_meta($post->ID, 'mlp_steps', true);
-        $json = $steps ? wp_json_encode($steps, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) : "[]";
         $steps = is_array($steps) ? $steps : [];
         $levels = get_terms([
             'taxonomy' => 'wpm-levels',
@@ -63,8 +63,6 @@ class MLP_Program_CPT {
             $levels = [];
         }
         ?>
-        <p>JSON-массив шагов (term_id, duration, units):</p>
-        <textarea name="mlp_steps_json" style="width:100%;height:150px;"><?php echo esc_textarea($json); ?></textarea>
         <?php wp_nonce_field('mlp_steps_save', 'mlp_steps_nonce'); ?>
         <p>Шаги программы (УД, срок, единицы):</p>
         <table class="widefat striped" id="mlp-steps-table">
