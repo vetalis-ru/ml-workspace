@@ -54,6 +54,7 @@ class MLP_Program_CPT {
 
     public static function render_steps_box($post) {
         $steps = get_post_meta($post->ID, 'mlp_steps', true);
+        $json = $steps ? wp_json_encode($steps, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) : "[]";
         $steps = is_array($steps) ? $steps : [];
         $levels = get_terms([
             'taxonomy' => 'wpm-levels',
@@ -63,6 +64,8 @@ class MLP_Program_CPT {
             $levels = [];
         }
         ?>
+        <p>JSON-массив шагов (term_id, duration, units):</p>
+        <textarea name="mlp_steps_json" style="width:100%;height:150px;"><?php echo esc_textarea($json); ?></textarea>
         <?php wp_nonce_field('mlp_steps_save', 'mlp_steps_nonce'); ?>
         <p>Шаги программы (УД, срок, единицы):</p>
         <table class="widefat striped" id="mlp-steps-table">
@@ -88,10 +91,10 @@ class MLP_Program_CPT {
                             </select>
                         </td>
                         <td>
-                            <input type="number" min="1" name="mlp_steps[0][duration]" value="1" style="width: 100%;">
+                            <input type="number" min="1" name="mlp_steps[0][duration]" value="1" style="width: 100%;" disabled>
                         </td>
                         <td>
-                            <select name="mlp_steps[0][units]">
+                            <select name="mlp_steps[0][units]" disabled>
                                 <option value="days">days</option>
                                 <option value="months" selected>months</option>
                             </select>
@@ -108,6 +111,7 @@ class MLP_Program_CPT {
                             ? $step['units']
                             : 'months';
                         ?>
+                        <?php $is_first = ($index === 0); ?>
                         <tr class="mlp-step-row">
                             <td>
                                 <select name="mlp_steps[<?php echo esc_attr($index); ?>][term_id]" class="mlp-term-select" style="width: 100%;">
@@ -120,10 +124,10 @@ class MLP_Program_CPT {
                                 </select>
                             </td>
                             <td>
-                                <input type="number" min="1" name="mlp_steps[<?php echo esc_attr($index); ?>][duration]" value="<?php echo esc_attr($duration); ?>" style="width: 100%;">
+                                <input type="number" min="1" name="mlp_steps[<?php echo esc_attr($index); ?>][duration]" value="<?php echo esc_attr($duration); ?>" style="width: 100%;" <?php echo $is_first ? 'disabled' : ''; ?>>
                             </td>
                             <td>
-                                <select name="mlp_steps[<?php echo esc_attr($index); ?>][units]">
+                                <select name="mlp_steps[<?php echo esc_attr($index); ?>][units]" <?php echo $is_first ? 'disabled' : ''; ?>>
                                     <option value="days" <?php selected($units, 'days'); ?>>days</option>
                                     <option value="months" <?php selected($units, 'months'); ?>>months</option>
                                 </select>
@@ -165,6 +169,20 @@ class MLP_Program_CPT {
                     });
                 }
 
+                function updateFirstRowState() {
+                    const rows = table.querySelectorAll('tbody .mlp-step-row');
+                    rows.forEach((row, index) => {
+                        const durationInput = row.querySelector('input[type="number"]');
+                        const unitsSelect = row.querySelector('select[name$="[units]"]');
+                        if (durationInput) {
+                            durationInput.disabled = index === 0;
+                        }
+                        if (unitsSelect) {
+                            unitsSelect.disabled = index === 0;
+                        }
+                    });
+                }
+
                 function cloneRow() {
                     const rows = table.querySelectorAll('tbody .mlp-step-row');
                     const lastRow = rows[rows.length - 1];
@@ -178,6 +196,7 @@ class MLP_Program_CPT {
                     });
                     table.querySelector('tbody').appendChild(newRow);
                     renumberRows();
+                    updateFirstRowState();
                 }
 
                 function initSelect2(select) {
@@ -196,11 +215,14 @@ class MLP_Program_CPT {
                     }
                     button.closest('.mlp-step-row').remove();
                     renumberRows();
+                    updateFirstRowState();
                 }
 
                 table.querySelectorAll('.mlp-term-select').forEach((select) => {
                     initSelect2(select);
                 });
+
+                updateFirstRowState();
 
                 table.addEventListener('click', function(event) {
                     if (event.target.classList.contains('mlp-remove-step')) {
@@ -228,12 +250,22 @@ class MLP_Program_CPT {
 
         if (isset($_POST['mlp_steps']) && is_array($_POST['mlp_steps'])) {
             $steps = [];
-            foreach ($_POST['mlp_steps'] as $step) {
+            foreach ($_POST['mlp_steps'] as $index => $step) {
                 $term_id = isset($step['term_id']) ? (int)$step['term_id'] : 0;
                 $duration = isset($step['duration']) ? (int)$step['duration'] : 0;
                 $units = isset($step['units']) && in_array($step['units'], ['days', 'months'], true)
                     ? $step['units']
                     : 'months';
+
+                if ($index === 0 && $term_id > 0) {
+                    $duration = $duration > 0 ? $duration : 1;
+                    $steps[] = [
+                        'term_id' => $term_id,
+                        'duration' => $duration,
+                        'units' => $units,
+                    ];
+                    continue;
+                }
 
                 if ($term_id > 0 && $duration > 0) {
                     $steps[] = [
