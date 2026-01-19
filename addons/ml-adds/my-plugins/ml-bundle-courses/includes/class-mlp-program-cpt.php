@@ -157,47 +157,51 @@ class MLP_Program_CPT {
                 Отправлять уведомления на email администратора
             </label>
         </p>
-        <table class="form-table">
-            <tr>
-                <th scope="row"><label for="mlp_notify_email">Email для уведомлений</label></th>
-                <td>
-                    <input type="email" id="mlp_notify_email" name="mlp_notify_email" value="<?php echo esc_attr($notify_email); ?>" class="regular-text" placeholder="admin@example.com">
-                </td>
-            </tr>
-            <tr>
-                <th scope="row"><label for="mlp_notify_step_subject">Шаг: заголовок письма</label></th>
-                <td>
-                    <input type="text" id="mlp_notify_step_subject" name="mlp_notify_step_subject" value="<?php echo esc_attr($notify_step_subject); ?>" class="regular-text">
-                </td>
-            </tr>
-            <tr>
-                <th scope="row"><label for="mlp_notify_step_body">Шаг: текст письма</label></th>
-                <td>
-                    <textarea id="mlp_notify_step_body" name="mlp_notify_step_body" rows="5" class="large-text"><?php echo esc_textarea($notify_step_body); ?></textarea>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row"><label for="mlp_notify_complete_subject">Окончание: заголовок письма</label></th>
-                <td>
-                    <input type="text" id="mlp_notify_complete_subject" name="mlp_notify_complete_subject" value="<?php echo esc_attr($notify_complete_subject); ?>" class="regular-text">
-                </td>
-            </tr>
-            <tr>
-                <th scope="row"><label for="mlp_notify_complete_body">Окончание: текст письма</label></th>
-                <td>
-                    <textarea id="mlp_notify_complete_body" name="mlp_notify_complete_body" rows="5" class="large-text"><?php echo esc_textarea($notify_complete_body); ?></textarea>
-                </td>
-            </tr>
-        </table>
-        <p class="description">
-            Доступные шорткоды: [user_id], [user_email], [user_login], [display_name], [program_id], [program_title],
-            [current_term_id], [current_course], [current_step], [total_steps], [next_term_id], [next_course],
-            [next_step], [duration], [units].
-        </p>
+        <div id="mlp-notify-settings">
+            <table class="form-table">
+                <tr>
+                    <th scope="row"><label for="mlp_notify_email">Email для уведомлений</label></th>
+                    <td>
+                        <input type="email" id="mlp_notify_email" name="mlp_notify_email" value="<?php echo esc_attr($notify_email); ?>" class="regular-text" placeholder="admin@example.com">
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="mlp_notify_step_subject">Шаг: заголовок письма</label></th>
+                    <td>
+                        <input type="text" id="mlp_notify_step_subject" name="mlp_notify_step_subject" value="<?php echo esc_attr($notify_step_subject); ?>" class="regular-text">
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="mlp_notify_step_body">Шаг: текст письма</label></th>
+                    <td>
+                        <textarea id="mlp_notify_step_body" name="mlp_notify_step_body" rows="5" class="large-text"><?php echo esc_textarea($notify_step_body); ?></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="mlp_notify_complete_subject">Окончание: заголовок письма</label></th>
+                    <td>
+                        <input type="text" id="mlp_notify_complete_subject" name="mlp_notify_complete_subject" value="<?php echo esc_attr($notify_complete_subject); ?>" class="regular-text">
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="mlp_notify_complete_body">Окончание: текст письма</label></th>
+                    <td>
+                        <textarea id="mlp_notify_complete_body" name="mlp_notify_complete_body" rows="5" class="large-text"><?php echo esc_textarea($notify_complete_body); ?></textarea>
+                    </td>
+                </tr>
+            </table>
+            <p class="description">
+                Доступные шорткоды: [user_id], [user_email], [user_login], [display_name], [program_id], [program_title],
+                [current_term_id], [current_course], [current_step], [total_steps], [next_term_id], [next_course],
+                [next_step], [duration], [units].
+            </p>
+        </div>
         <script>
             (function() {
                 const table = document.getElementById('mlp-steps-table');
                 const addButton = document.getElementById('mlp-add-step');
+                const notifyToggle = document.querySelector('input[name="mlp_notify_enabled"]');
+                const notifySettings = document.getElementById('mlp-notify-settings');
 
                 function cleanupSelect2(row) {
                     row.querySelectorAll('.select2').forEach((element) => element.remove());
@@ -273,6 +277,13 @@ class MLP_Program_CPT {
                 });
 
                 updateFirstRowState();
+                if (notifySettings && notifyToggle) {
+                    const updateNotifySettings = () => {
+                        notifySettings.style.display = notifyToggle.checked ? '' : 'none';
+                    };
+                    notifyToggle.addEventListener('change', updateNotifySettings);
+                    updateNotifySettings();
+                }
 
                 table.addEventListener('click', function(event) {
                     if (event.target.classList.contains('mlp-remove-step')) {

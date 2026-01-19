@@ -2,7 +2,7 @@
 /**
  * Plugin Name: ML Bundle Courses
  * Description: Пошаговая выдача УД по программам (Сборный курс) на основании сертификатов.
- * Version: 0.1.0
+ * Version: 0.2.0
  */
 
 if (!defined('ABSPATH')) {

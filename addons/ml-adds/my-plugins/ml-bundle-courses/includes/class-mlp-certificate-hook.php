@@ -47,7 +47,7 @@ class MLP_Certificate_Hook {
             MLP_Notifier::notify($program_id, $user_id, $current_term_id, 0, [
                 'current_step' => $current_index + 1,
                 'total_steps' => $total_steps,
-            ]);            
+            ]);
             MLP_Enrollment::set_last_cert_hash($user_id, $hash);
             return;
         }
@@ -68,6 +68,7 @@ class MLP_Certificate_Hook {
         }
 
         wpm_update_user_key_dates($user_id, $code, false, 'program_flow');
+        self::sync_key_dates_with_certificate($code, $certificate);
 
         $user = get_user_by('ID', $user_id);
         if ($user) {
@@ -88,5 +89,29 @@ class MLP_Certificate_Hook {
         MLP_Enrollment::set_last_cert_hash($user_id, $hash);
 
         do_action('mlp_program_step_granted', $user_id, $program_id, $current_term_id, $next_term_id);
+    }
+
+    private static function sync_key_dates_with_certificate($code, $certificate): void {
+        $issue_date = $certificate->date_issue ?? '';
+        if (!$issue_date) {
+            return;
+        }
+
+        $timestamp = strtotime($issue_date);
+        if (!$timestamp) {
+            return;
+        }
+
+        $key = wpm_search_key_id($code);
+        if (empty($key['key_info'])) {
+            return;
+        }
+
+        $duration = $key['key_info']['duration'] ?: 0;
+        $units = wpm_array_get($key, 'key_info.units', 'months');
+        $key['key_info']['date_start'] = date('d-m-Y', $timestamp);
+        $key['key_info']['date_end'] = date('d-m-Y', strtotime("+$duration " . $units, $timestamp));
+
+        MBLTermKeysQuery::updateKey($key['key_info']);
     }
 }
