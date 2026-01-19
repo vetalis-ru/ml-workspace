@@ -16,4 +16,4 @@ require_once __DIR__ . '/includes/class-mlp-notifier.php';
 require_once __DIR__ . '/includes/class-mlp-logger.php';
 
 add_action('init', ['MLP_Program_CPT', 'register']);
-add_action('mbl_certificate_issued', ['MLP_Certificate_Hook', 'handle'], 10, 2);
+add_action('mbl_certificate_issued', ['MLP_Certificate_Hook', 'handle'], 20, 2);
