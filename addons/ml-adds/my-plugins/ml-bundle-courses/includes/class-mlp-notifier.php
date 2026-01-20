@@ -76,5 +76,5 @@ class MLP_Notifier {
         ];
 
         return strtr((string)$text, $replacements);
-    }
+    }    
 }
