@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Microsoft Office temp files
+~$*.docx
+~$*.xlsx
+~$*.pptx
+
+# (опционально) если не хочешь хранить документы в репо
+# docs/**/*.docx
+# docs/**/*.xlsx
+# docs/**/*.pptx
