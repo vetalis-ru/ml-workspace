@@ -12,7 +12,7 @@ class MLP_Notifier {
             'current_term_id' => $current_term_id,
             'next_term_id' => $next_term_id,
             'event' => $next_term_id ? 'step_granted' : 'program_completed',
-            'context' => $context,            
+            'context' => $context,
         ];
 
         if ($notify_enabled && $email) {
