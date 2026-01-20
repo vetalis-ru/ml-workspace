@@ -1,4 +1,4 @@
-<?php
+<?php // includes/class-mlp-logger.php
 
 class MLP_Logger {
     private static function log_path(): string {
