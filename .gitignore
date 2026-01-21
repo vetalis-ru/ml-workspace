@@ -11,3 +11,11 @@
 # docs/**/*.docx
 # docs/**/*.xlsx
 # docs/**/*.pptx
+
+# macOS junk
+.DS_Store
+**/.DS_Store
+
+# local docs
+*.docx
+**/*.docx
