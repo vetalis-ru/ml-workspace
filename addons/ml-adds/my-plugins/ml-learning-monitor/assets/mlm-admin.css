@@ -1,0 +1,26 @@
+.mlm-tabs {
+  margin-top: 12px;
+}
+
+.mlm-form-table th {
+  width: 240px;
+  vertical-align: top;
+}
+
+.mlm-shortcodes {
+  margin-top: 8px;
+}
+
+.mlm-shortcodes code {
+  display: inline-block;
+  margin-right: 6px;
+}
+
+#mlm_sleepers_container table.widefat td,
+#mlm_sleepers_container table.widefat th {
+  vertical-align: middle;
+}
+
+.mlm-status {
+  color: #666;
+}
