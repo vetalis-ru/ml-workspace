@@ -5,6 +5,10 @@
 logs/
 *.log
 
+# Environment
+.env
+*.env
+
 # Archives
 *.zip
 
