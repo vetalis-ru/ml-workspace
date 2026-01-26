@@ -24,3 +24,6 @@ wp-config.php
 
 # SFTP-connection settings
 sftp-config.json
+
+# secret files
+wp-secrets.php
