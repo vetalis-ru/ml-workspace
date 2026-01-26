@@ -115,6 +115,14 @@ final class ML_Learning_Monitor {
         // --- Блок "Сони" НИЖЕ вкладок, таблица только по кнопке ---
         echo '<div class="mlm-sleepers" style="margin-top:16px;">';
 
+        $today = current_time('Y-m-d');
+        echo '<div class="mlm-sleepers-filters">';
+        echo '<label for="mlm_sleepers_from">' . esc_html__('Срок истёк после', 'mlm') . '</label> ';
+        echo '<input type="date" id="mlm_sleepers_from" name="mlm_sleepers_from" value="' . esc_attr($today) . '"> ';
+        echo '<label for="mlm_sleepers_to" style="margin-left:8px;">' . esc_html__('и до', 'mlm') . '</label> ';
+        echo '<input type="date" id="mlm_sleepers_to" name="mlm_sleepers_to" value="' . esc_attr($today) . '">';
+        echo '</div>';
+
         echo '<button type="button" class="button button-primary" id="mlm_show_sleepers" data-term-id="' . esc_attr($term_id) . '">';
         echo esc_html__('Показать сонь', 'mlm');
         echo '</button>';
@@ -234,9 +242,6 @@ final class ML_Learning_Monitor {
         update_term_meta($term_id, 'mlm_admin_body', $admin_body);
     }
 
-    /**
-     * AJAX: таблица "сонь" только по клику кнопки + пагинация.
-     */
     public function ajax_get_sleepers() {
         if (!current_user_can('manage_options')) {
             wp_send_json_error(['message' => 'forbidden'], 403);
@@ -249,12 +254,17 @@ final class ML_Learning_Monitor {
 
         $term_id = isset($_POST['term_id']) ? (int) $_POST['term_id'] : 0;
         $page    = isset($_POST['page']) ? max(1, (int) $_POST['page']) : 1;
+        $today   = current_time('Y-m-d');
+        $date_from = isset($_POST['date_from']) ? sanitize_text_field($_POST['date_from']) : '';
+        $date_to = isset($_POST['date_to']) ? sanitize_text_field($_POST['date_to']) : '';
+        $date_from = preg_match('/^\d{4}-\d{2}-\d{2}$/', $date_from) ? $date_from : $today;
+        $date_to = preg_match('/^\d{4}-\d{2}-\d{2}$/', $date_to) ? $date_to : $today;
 
         if ($term_id <= 0) {
             wp_send_json_error(['message' => 'bad_term_id'], 400);
         }
 
-        $data = $this->query_sleepers($term_id, $page, self::PER_PAGE);
+        $data = $this->query_sleepers($term_id, $page, self::PER_PAGE, $date_from, $date_to);
 
         $html = $this->render_sleepers_table_html($data['rows'], $data['total'], $page, self::PER_PAGE, $term_id);
 
@@ -265,21 +275,15 @@ final class ML_Learning_Monitor {
         ]);
     }
 
-    /**
-     * Поиск "сонь" (Phase 1): пользователи, у которых по term_id последний ключ истёк
-     * и нет активного ключа (или unlimited) по этому же term_id.
-     */
-    private function query_sleepers($term_id, $page, $per_page) {
+    private function query_sleepers($term_id, $page, $per_page, $date_from, $date_to) {
         global $wpdb;
 
         $offset = ($page - 1) * $per_page;
 
-        // ВНИМАНИЕ: название таблицы term keys в MemberLux (как в анализе): memberlux_term_keys
         $keys_table = $wpdb->prefix . 'memberlux_term_keys';
         $users_table = $wpdb->users;
+        $usermeta_table = $wpdb->usermeta;
 
-        // Подзапрос: последний (max date_end) ключ по term_id для каждого user_id.
-        // Затем: date_end < NOW и нет активного ключа (date_end >= NOW или unlimited).
         $count_sql = "
             SELECT COUNT(1)
             FROM (
@@ -297,7 +301,8 @@ final class ML_Learning_Monitor {
                   AND k.is_banned = 0
                   AND k.is_unlimited = 0
                   AND k.date_end IS NOT NULL
-                  AND k.date_end < NOW()
+                  AND k.date_end >= %s
+                  AND k.date_end <= %s
                   AND NOT EXISTS (
                       SELECT 1
                       FROM {$keys_table} ka
@@ -306,19 +311,42 @@ final class ML_Learning_Monitor {
                         AND ka.is_banned = 0
                         AND (
                             ka.is_unlimited = 1
-                            OR (ka.date_end IS NOT NULL AND ka.date_end >= NOW())
+                            OR (ka.date_end IS NOT NULL AND ka.date_end >= %s)
                         )
                   )
             ) t
         ";
 
-        $total = (int) $wpdb->get_var($wpdb->prepare($count_sql, $term_id, $term_id, $term_id));
+        $total = (int) $wpdb->get_var(
+            $wpdb->prepare(
+                $count_sql,
+                $term_id,
+                $term_id,
+                $date_from,
+                $date_to,
+                $term_id,
+                $date_to
+            )
+        );
 
         $rows_sql = "
-            SELECT u.ID AS user_id, u.user_email AS email
+            SELECT u.ID AS user_id,
+                   u.user_email AS email,
+                   um_first.meta_value AS first_name,
+                   um_last.meta_value AS last_name,
+                   s.last_issue_date,
+                   s.last_end_date,
+                   s.reminders_sent
             FROM {$users_table} u
+            LEFT JOIN {$usermeta_table} um_first
+              ON um_first.user_id = u.ID AND um_first.meta_key = 'first_name'
+            LEFT JOIN {$usermeta_table} um_last
+              ON um_last.user_id = u.ID AND um_last.meta_key = 'last_name'
             INNER JOIN (
-                SELECT k.user_id
+                SELECT k.user_id,
+                       MAX(k.date_registered) AS last_issue_date,
+                       MAX(k.date_end) AS last_end_date,
+                       0 AS reminders_sent
                 FROM {$keys_table} k
                 INNER JOIN (
                     SELECT user_id, MAX(date_end) AS max_end
@@ -332,7 +360,8 @@ final class ML_Learning_Monitor {
                   AND k.is_banned = 0
                   AND k.is_unlimited = 0
                   AND k.date_end IS NOT NULL
-                  AND k.date_end < NOW()
+                  AND k.date_end >= %s
+                  AND k.date_end <= %s
                   AND NOT EXISTS (
                       SELECT 1
                       FROM {$keys_table} ka
@@ -341,16 +370,27 @@ final class ML_Learning_Monitor {
                         AND ka.is_banned = 0
                         AND (
                             ka.is_unlimited = 1
-                            OR (ka.date_end IS NOT NULL AND ka.date_end >= NOW())
+                            OR (ka.date_end IS NOT NULL AND ka.date_end >= %s)
                         )
                   )
+                GROUP BY k.user_id
             ) s ON s.user_id = u.ID
             ORDER BY u.ID DESC
             LIMIT %d OFFSET %d
         ";
 
         $rows = $wpdb->get_results(
-            $wpdb->prepare($rows_sql, $term_id, $term_id, $term_id, $per_page, $offset),
+            $wpdb->prepare(
+                $rows_sql,
+                $term_id,
+                $term_id,
+                $date_from,
+                $date_to,
+                $term_id,
+                $date_to,
+                $per_page,
+                $offset
+            ),
             ARRAY_A
         );
 
@@ -381,15 +421,30 @@ final class ML_Learning_Monitor {
         echo '<thead><tr>';
         echo '<th>' . esc_html__('User ID', 'mlm') . '</th>';
         echo '<th>' . esc_html__('Email', 'mlm') . '</th>';
+        echo '<th>' . esc_html__('Имя', 'mlm') . '</th>';
+        echo '<th>' . esc_html__('Фамилия', 'mlm') . '</th>';
+        echo '<th>' . esc_html__('Последняя выдача УД', 'mlm') . '</th>';
+        echo '<th>' . esc_html__('Окончание УД', 'mlm') . '</th>';
+        echo '<th>' . esc_html__('Напоминаний', 'mlm') . '<br>' . esc_html__('отправлено', 'mlm') . '</th>';
         echo '</tr></thead>';
 
         echo '<tbody>';
         foreach ($rows as $r) {
             $uid = isset($r['user_id']) ? (int) $r['user_id'] : 0;
             $email = isset($r['email']) ? $r['email'] : '';
+            $first_name = isset($r['first_name']) ? $r['first_name'] : '';
+            $last_name = isset($r['last_name']) ? $r['last_name'] : '';
+            $last_issue = isset($r['last_issue_date']) ? $r['last_issue_date'] : '';
+            $last_end = isset($r['last_end_date']) ? $r['last_end_date'] : '';
+            $reminders_sent = isset($r['reminders_sent']) ? (int) $r['reminders_sent'] : 0;
             echo '<tr>';
             echo '<td>' . esc_html($uid) . '</td>';
             echo '<td>' . esc_html($email) . '</td>';
+            echo '<td>' . esc_html($first_name) . '</td>';
+            echo '<td>' . esc_html($last_name) . '</td>';
+            echo '<td>' . esc_html($last_issue) . '</td>';
+            echo '<td>' . esc_html($last_end) . '</td>';
+            echo '<td>' . esc_html($reminders_sent) . '</td>';
             echo '</tr>';
         }
         echo '</tbody>';

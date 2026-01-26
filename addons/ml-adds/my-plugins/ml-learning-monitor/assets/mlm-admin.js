@@ -17,23 +17,29 @@ jQuery(function ($) {
     }
   }
 
-  // init
   initEmailTabs();
   updateVisibility();
 
-  // toggle block
   $("#mlm_enabled").on("change", updateVisibility);
 
-  // load sleepers (button)
-  function loadSleepers(termId, page) {
+  function loadSleepers(termId, page, sort, order) {
     $("#mlm_sleepers_status").text("Загрузка...");
     $("#mlm_sleepers_container").empty();
+
+    const dateFrom = $("#mlm_sleepers_from").val() || "";
+    const dateTo = $("#mlm_sleepers_to").val() || "";
+    const sortBy = sort || "user_id";
+    const sortOrder = order || "desc";
 
     $.post(MLM.ajaxUrl, {
       action: "mlm_get_sleepers",
       nonce: MLM.nonce,
       term_id: termId,
       page: page,
+      date_from: dateFrom,
+      date_to: dateTo,
+      sort: sortBy,
+      order: sortOrder,
     })
       .done(function (resp) {
         if (!resp || !resp.success) {
@@ -54,14 +60,24 @@ jQuery(function ($) {
     loadSleepers(termId, 1);
   });
 
-  // pagination arrows
   $(document).on("click", ".mlm-page-btn", function () {
     if ($(this).is(":disabled")) return;
 
     const termId = parseInt($(this).data("term-id"), 10) || 0;
     const page = parseInt($(this).data("page"), 10) || 1;
+    const sort = $(this).data("sort") || "user_id";
+    const order = $(this).data("order") || "desc";
     if (!termId || page < 1) return;
 
-    loadSleepers(termId, page);
+    loadSleepers(termId, page, sort, order);
+  });
+
+  $(document).on("click", ".mlm-sort", function (event) {
+    event.preventDefault();
+    const termId = parseInt($(this).data("term-id"), 10) || 0;
+    const sort = $(this).data("sort") || "user_id";
+    const order = $(this).data("order") || "desc";
+    if (!termId) return;
+    loadSleepers(termId, 1, sort, order);
   });
 });
