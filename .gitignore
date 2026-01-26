@@ -2,21 +2,16 @@
 .DS_Store
 **/.DS_Store
 
+# Logs
+*.log
+**/*.log
+
 # Microsoft Office temp files
 ~$*.docx
 ~$*.xlsx
 ~$*.pptx
 
-# (опционально) если не хочешь хранить документы в репо
-# docs/**/*.docx
-# docs/**/*.xlsx
-# docs/**/*.pptx
-
-# macOS junk
-.DS_Store
-**/.DS_Store
-
-# local docs
+# Local docs (ignore all Word docs in repo)
 *.docx
 **/*.docx
 

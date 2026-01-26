@@ -5,6 +5,10 @@
 logs/
 *.log
 
+# Environment
+.env
+*.env
+
 # Archives
 *.zip
 
@@ -18,3 +22,8 @@ wp-config.php
 .idea/
 .vscode/
 
+# SFTP-connection settings
+sftp-config.json
+
+# secret files
+wp-secrets.php
