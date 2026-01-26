@@ -22,3 +22,5 @@ wp-config.php
 .idea/
 .vscode/
 
+# SFTP-connection settings
+sftp-config.json
