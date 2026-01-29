@@ -20,7 +20,7 @@ class MLM_Database {
      * @param string $date_to   Дата окончания периода
      * @return array
      */
-    public function query_sleepers($term_id, $page, $per_page, $date_from, $date_to) {
+    public function query_sleepers($term_id, $page, $per_page, $date_from, $date_to, $sort = 'user_id', $order = 'DESC') {
         global $wpdb;
 
         $offset = ($page - 1) * $per_page;
@@ -28,6 +28,25 @@ class MLM_Database {
         $keys_table = $wpdb->prefix . 'memberlux_term_keys';
         $users_table = $wpdb->users;
         $usermeta_table = $wpdb->usermeta;
+
+        // --- СОРТИРОВКА (добавлено в v1.02) ---
+        // Важно: сортировку разрешаем только по заранее известным колонкам, чтобы исключить SQL injection через ORDER BY.
+        $allowed_sort = [
+            'user_id'        => 'u.ID',
+            'email'          => 'u.user_email',
+            'first_name'     => 'um_first.meta_value',
+            'last_name'      => 'um_last.meta_value',
+            'last_issue_date'=> 's.last_issue_date',
+            'last_end_date'  => 's.last_end_date',
+        ];
+
+        $sort = is_string($sort) ? $sort : 'user_id';
+        $sort_sql = isset($allowed_sort[$sort]) ? $allowed_sort[$sort] : $allowed_sort['user_id'];
+
+        $order = is_string($order) ? strtoupper($order) : 'DESC';
+        $order = ($order === 'ASC') ? 'ASC' : 'DESC';
+        $certs_table = $wpdb->prefix . 'memberlux_certificate';
+        $current_date = current_time('Y-m-d');
 
         $count_sql = "
             SELECT COUNT(1)
@@ -40,14 +59,33 @@ class MLM_Database {
                     WHERE term_id = %d
                     GROUP BY user_id
                 ) lk ON lk.user_id = k.user_id AND lk.max_end = k.date_end
+                
+                -- ДОБАВЛЕНО: проверка сертификатов
+                LEFT JOIN {$certs_table} c ON (
+                    c.user_id = k.user_id 
+                    AND c.wpmlevel_id = k.term_id
+                )
+                
                 WHERE k.term_id = %d
                   AND k.user_id IS NOT NULL
                   AND k.user_id > 0
                   AND k.is_banned = 0
                   AND k.is_unlimited = 0
-                  AND k.date_end IS NOT NULL
+                  
+                  -- ИСПРАВЛЕНО 1: статус 'expired' вместо 'used'
+                  AND k.status = 'expired'
+                  
+                  -- ИСПРАВЛЕНО 2: проверка на дефолтное значение
+                  AND k.date_end != '0000-00-00'
                   AND k.date_end >= %s
                   AND k.date_end <= %s
+                  
+                  -- ИСПРАВЛЕНО 3: <= вместо < (включая текущую дату)
+                  AND k.date_end <= %s
+                  
+                  -- ИСПРАВЛЕНО 4: исключаем пользователей с сертификатами
+                  AND c.certificate_id IS NULL
+                  
                   AND NOT EXISTS (
                       SELECT 1
                       FROM {$keys_table} ka
@@ -56,7 +94,8 @@ class MLM_Database {
                         AND ka.is_banned = 0
                         AND (
                             ka.is_unlimited = 1
-                            OR (ka.date_end IS NOT NULL AND ka.date_end >= %s)
+                            -- ИСПРАВЛЕНО 5: тоже проверка на дефолтное значение
+                            OR (ka.date_end != '0000-00-00' AND ka.date_end >= %s)
                         )
                   )
             ) t
@@ -69,8 +108,9 @@ class MLM_Database {
                 $term_id,
                 $date_from,
                 $date_to,
+                $current_date,
                 $term_id,
-                $date_to
+                $current_date
             )
         );
 
@@ -99,14 +139,33 @@ class MLM_Database {
                     WHERE term_id = %d
                     GROUP BY user_id
                 ) lk ON lk.user_id = k.user_id AND lk.max_end = k.date_end
+                
+                -- ДОБАВЛЕНО: проверка сертификатов
+                LEFT JOIN {$certs_table} c ON (
+                    c.user_id = k.user_id 
+                    AND c.wpmlevel_id = k.term_id
+                )
+                
                 WHERE k.term_id = %d
                   AND k.user_id IS NOT NULL
                   AND k.user_id > 0
                   AND k.is_banned = 0
                   AND k.is_unlimited = 0
-                  AND k.date_end IS NOT NULL
+                  
+                  -- ИСПРАВЛЕНО 1: статус 'expired' вместо 'used'
+                  AND k.status = 'expired'
+                  
+                  -- ИСПРАВЛЕНО 2: проверка на дефолтное значение
+                  AND k.date_end != '0000-00-00'
                   AND k.date_end >= %s
                   AND k.date_end <= %s
+                  
+                  -- ИСПРАВЛЕНО 3: <= вместо < (включая текущую дату)
+                  AND k.date_end <= %s
+                  
+                  -- ИСПРАВЛЕНО 4: исключаем пользователей с сертификатами
+                  AND c.certificate_id IS NULL
+                  
                   AND NOT EXISTS (
                       SELECT 1
                       FROM {$keys_table} ka
@@ -115,12 +174,13 @@ class MLM_Database {
                         AND ka.is_banned = 0
                         AND (
                             ka.is_unlimited = 1
-                            OR (ka.date_end IS NOT NULL AND ka.date_end >= %s)
+                            -- ИСПРАВЛЕНО 5: тоже проверка на дефолтное значение
+                            OR (ka.date_end != '0000-00-00' AND ka.date_end >= %s)
                         )
                   )
                 GROUP BY k.user_id
             ) s ON s.user_id = u.ID
-            ORDER BY u.ID DESC
+            ORDER BY {$sort_sql} {$order}, u.ID DESC
             LIMIT %d OFFSET %d
         ";
 
@@ -131,8 +191,9 @@ class MLM_Database {
                 $term_id,
                 $date_from,
                 $date_to,
+                $current_date,
                 $term_id,
-                $date_to,
+                $current_date,
                 $per_page,
                 $offset
             ),

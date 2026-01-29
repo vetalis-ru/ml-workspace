@@ -25,6 +25,11 @@ class MLM_Ajax_Handler {
 
         $term_id = isset($_POST['term_id']) ? (int) $_POST['term_id'] : 0;
         $page    = isset($_POST['page']) ? max(1, (int) $_POST['page']) : 1;
+        
+        // ДОБАВЛЕНО: параметры сортировки
+        $sort    = isset($_POST['sort']) ? sanitize_text_field($_POST['sort']) : 'user_id';
+        $order   = isset($_POST['order']) ? sanitize_text_field($_POST['order']) : 'desc';
+        
         $today   = current_time('Y-m-d');
         $date_from = isset($_POST['date_from']) ? sanitize_text_field($_POST['date_from']) : '';
         $date_to = isset($_POST['date_to']) ? sanitize_text_field($_POST['date_to']) : '';
@@ -39,7 +44,17 @@ class MLM_Ajax_Handler {
         $data = $database->query_sleepers($term_id, $page, ML_Learning_Monitor::PER_PAGE, $date_from, $date_to);
 
         $renderer = new MLM_Renderer();
-        $html = $renderer->render_sleepers_table($data['rows'], $data['total'], $page, ML_Learning_Monitor::PER_PAGE, $term_id);
+        
+        // ИЗМЕНЕНО: передаем параметры сортировки в рендерер
+        $html = $renderer->render_sleepers_table(
+            $data['rows'], 
+            $data['total'], 
+            $page, 
+            ML_Learning_Monitor::PER_PAGE, 
+            $term_id,
+            $sort,        // новый параметр
+            $order        // новый параметр
+        );
 
         wp_send_json_success([
             'html'  => $html,

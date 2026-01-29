@@ -13,14 +13,16 @@ class MLM_Renderer {
     /**
      * Рендер HTML таблицы "сонь"
      *
-     * @param array $rows      Массив данных пользователей
-     * @param int   $total     Общее количество записей
-     * @param int   $page      Текущая страница
-     * @param int   $per_page  Количество на странице
-     * @param int   $term_id   ID термина
+     * @param array  $rows      Массив данных пользователей
+     * @param int    $total     Общее количество записей
+     * @param int    $page      Текущая страница
+     * @param int    $per_page  Количество на странице
+     * @param int    $term_id   ID термина
+     * @param string $sort      Поле для сортировки
+     * @param string $order     Порядок сортировки (asc/desc)
      * @return string HTML код таблицы
      */
-    public function render_sleepers_table($rows, $total, $page, $per_page, $term_id) {
+    public function render_sleepers_table($rows, $total, $page, $per_page, $term_id, $sort = 'user_id', $order = 'desc') {
         $total_pages = max(1, (int) ceil($total / $per_page));
 
         ob_start();
@@ -39,12 +41,16 @@ class MLM_Renderer {
 
         echo '<table class="widefat striped">';
         echo '<thead><tr>';
-        echo '<th>' . esc_html__('User ID', 'mlm') . '</th>';
-        echo '<th>' . esc_html__('Email', 'mlm') . '</th>';
-        echo '<th>' . esc_html__('Имя', 'mlm') . '</th>';
-        echo '<th>' . esc_html__('Фамилия', 'mlm') . '</th>';
-        echo '<th>' . esc_html__('Последняя выдача УД', 'mlm') . '</th>';
-        echo '<th>' . esc_html__('Окончание УД', 'mlm') . '</th>';
+        
+        // КРИТИЧНО: все заголовки теперь кликабельны для сортировки
+        echo $this->render_sortable_header('user_id', 'User ID', $sort, $order, $term_id, 'desc');
+        echo $this->render_sortable_header('email', 'Email', $sort, $order, $term_id, 'asc');
+        echo $this->render_sortable_header('first_name', 'Имя', $sort, $order, $term_id, 'asc');
+        echo $this->render_sortable_header('last_name', 'Фамилия', $sort, $order, $term_id, 'asc');
+        echo $this->render_sortable_header('last_issue_date', 'Последняя выдача УД', $sort, $order, $term_id, 'desc');
+        echo $this->render_sortable_header('last_end_date', 'Окончание УД', $sort, $order, $term_id, 'desc');
+        
+        // Последний столбец без сортировки
         echo '<th>' . esc_html__('Напоминаний', 'mlm') . '<br>' . esc_html__('отправлено', 'mlm') . '</th>';
         echo '</tr></thead>';
 
@@ -77,14 +83,50 @@ class MLM_Renderer {
         $prev_disabled = ($page <= 1) ? ' disabled' : '';
         $next_disabled = ($page >= $total_pages) ? ' disabled' : '';
 
-        echo '<button type="button" class="button mlm-page-btn" data-term-id="' . esc_attr($term_id) . '" data-page="' . esc_attr($page - 1) . '"' . $prev_disabled . '>&laquo;</button>';
+        // ДОБАВЛЕНО: передача параметров сортировки в кнопки пагинации
+        echo '<button type="button" class="button mlm-page-btn" data-term-id="' . esc_attr($term_id) . '" data-page="' . esc_attr($page - 1) . '" data-sort="' . esc_attr($sort) . '" data-order="' . esc_attr($order) . '"' . $prev_disabled . '>&laquo;</button>';
         echo '<span style="display:inline-block; padding:0 10px;">' . esc_html($page . ' / ' . $total_pages) . '</span>';
-        echo '<button type="button" class="button mlm-page-btn" data-term-id="' . esc_attr($term_id) . '" data-page="' . esc_attr($page + 1) . '"' . $next_disabled . '>&raquo;</button>';
+        echo '<button type="button" class="button mlm-page-btn" data-term-id="' . esc_attr($term_id) . '" data-page="' . esc_attr($page + 1) . '" data-sort="' . esc_attr($sort) . '" data-order="' . esc_attr($order) . '"' . $next_disabled . '>&raquo;</button>';
 
         echo '</div></div>';
 
         echo '</div>';
 
         return ob_get_clean();
+    }
+    
+    /**
+     * Рендер сортируемого заголовка таблицы
+     *
+     * @param string $field     Поле для сортировки
+     * @param string $title     Заголовок столбца
+     * @param string $current   Текущее поле сортировки
+     * @param string $order     Текущий порядок сортировки
+     * @param int    $term_id   ID термина
+     * @param string $default   Порядок по умолчанию (asc/desc)
+     * @return string HTML заголовка
+     */
+    private function render_sortable_header($field, $title, $current, $order, $term_id, $default = 'asc') {
+        $class = '';
+        $new_order = $default;
+        
+        // Если это текущее поле сортировки
+        if ($field === $current) {
+            $class = ' sorted ' . $order;
+            // Определяем противоположный порядок
+            $new_order = ($order === 'asc') ? 'desc' : 'asc';
+        } else {
+            // Если не текущее поле, используем порядок по умолчанию
+            $new_order = $default;
+        }
+        
+        return sprintf(
+            '<th class="sortable%s"><a href="#" class="mlm-sort" data-sort="%s" data-order="%s" data-term-id="%d">%s</a></th>',
+            $class,
+            esc_attr($field),
+            esc_attr($new_order),
+            esc_attr($term_id),
+            esc_html($title)
+        );
     }
 }

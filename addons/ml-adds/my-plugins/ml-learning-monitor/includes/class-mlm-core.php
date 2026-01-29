@@ -1,5 +1,5 @@
 <?php
-/**
+/** class-mlm-core.php
  * Основной класс плагина ML Learning Monitor
  * 
  * @package ML_Learning_Monitor
