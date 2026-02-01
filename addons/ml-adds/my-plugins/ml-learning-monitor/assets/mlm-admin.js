@@ -4,62 +4,38 @@
     // Initialize when DOM is ready
     $(document).ready(function() {
         
-        // Initialize tabs
-        $('#mlm-email-tabs').tabs();
-        
-        // Toggle monitor block
-        $('#mlm_enabled').on('change', function() {
-            $('#mlm-monitor-block').toggle($(this).is(':checked'));
-        }).trigger('change');
-        
-        // Show sleepers button
-        $('#mlm-show-sleepers').on('click', function(e) {
-            e.preventDefault();
-            loadSleepers(1, sortState, orderState);
-        });
-        
-        // Date filter form submit
-        $('#mlm-sleepers-form').on('submit', function(e) {
-            e.preventDefault();
-            loadSleepers(1, sortState, orderState);
-        });
-        
-        // Pagination handler (оригинальная пагинация из MLM_Renderer)
-        $(document).on('click', '.mlm-page-btn', function(e) {
-            e.preventDefault();
-            if ($(this).hasClass('disabled')) return;
-            
-            var page = $(this).data('page');
-            var termId = $(this).data('term-id');
-            
-            if (page && termId) {
-                $('#mlm_date_from').val($('#mlm_date_from').val() || currentDate());
-                $('#mlm_date_to').val($('#mlm_date_to').val() || currentDate());
-                loadSleepers(page, sortState, orderState);
-            }
-        });
+        // Инициализируем вкладки писем (если блок существует и доступен jQuery UI)
+        var $emailTabs = $('#mlm_email_tabs');
+        if ($emailTabs.length && $.fn.tabs && !$emailTabs.data('ui-tabs')) {
+            $emailTabs.tabs();
+        }
+
+        // Текущее состояние сортировки таблицы "сонь" (по умолчанию: user_id DESC)
+        var sortState = 'user_id';
+        var orderState = 'DESC';
+
         
         /**
          * Load sleepers data via AJAX
          * @param {number} page Page number
          */
         function loadSleepers(page, sort, order) {
-            var $button = $('#mlm-show-sleepers');
-            var $container = $('#mlm-sleepers-results');
-            var $loading = $('#mlm-loading');
+            var $button = $('#mlm_show_sleepers');
+            var $container = $('#mlm_sleepers_container');
+            var $loading = $('#mlm_sleepers_status');
             
             // Get form data
             var termId = $('input[name="tag_ID"]').val();
-            var dateFrom = $('#mlm_date_from').val();
-            var dateTo = $('#mlm_date_to').val();
+            var dateFrom = $('#mlm_sleepers_from').val();
+            var dateTo = $('#mlm_sleepers_to').val();
             
             // Set default dates if empty
             if (!dateFrom || !dateTo) {
                 var today = currentDate();
                 dateFrom = dateFrom || today;
                 dateTo = dateTo || today;
-                $('#mlm_date_from').val(dateFrom);
-                $('#mlm_date_to').val(dateTo);
+                $('#mlm_sleepers_from').val(dateFrom);
+                $('#mlm_sleepers_to').val(dateTo);
             }
             
             // Validate dates
@@ -71,16 +47,16 @@
             // Show loading
             var originalText = $button.text();
             $button.prop('disabled', true).text('Загрузка...');
-            $loading.show();
+            $loading.text('Загрузка...').show();
             $container.html('');
             
             // AJAX request
             $.ajax({
-                url: ajaxurl,
+                url: MLM.ajaxUrl,
                 type: 'POST',
                 data: {
                     action: 'mlm_get_sleepers',
-                    nonce: mlm_ajax.nonce,
+                    nonce: MLM.nonce,
                     term_id: termId,
                     page: page,
                     date_from: dateFrom,
@@ -95,8 +71,8 @@
                         // response.html - полный HTML таблицы с пагинацией
                         // response.total - общее количество
                         // response.page - текущая страница
-                        
-                        $container.html(response.html || '<div class="notice notice-info"><p>Нет данных для отображения</p></div>');
+                        var responseData = response.data || {};
+                        $container.html(responseData.html || '<div class="notice notice-info"><p>Нет данных для отображения</p></div>');
                         
                     } else {
                         // Ошибка от сервера
@@ -125,11 +101,47 @@
                 complete: function() {
                     // Restore button
                     $button.prop('disabled', false).text(originalText);
-                    $loading.hide();
+                    $loading.text('');
                 }
             });
         }
         
+        // Toggle monitor block
+        $('#mlm_enabled').on('change', function() {
+            // Скрываем/показываем основной блок настроек
+            $('#mlm_monitor_block').toggle($(this).is(':checked'));
+            // Обновляем вкладки после показа блока, если они ещё не инициализированы
+            if ($(this).is(':checked') && $emailTabs.length && $.fn.tabs) {
+                if ($emailTabs.data('ui-tabs')) {
+                    $emailTabs.tabs('refresh');
+                } else {
+                    $emailTabs.tabs();
+                }
+            }
+        }).trigger('change');
+        
+        // Show sleepers button
+        $('#mlm_show_sleepers').on('click', function(e) {
+            e.preventDefault();
+            loadSleepers(1, sortState, orderState);
+        });
+        
+        // Pagination handler (оригинальная пагинация из MLM_Renderer)
+        $(document).on('click', '.mlm-page-btn', function(e) {
+            e.preventDefault();
+            if ($(this).hasClass('disabled')) return;
+            
+            var page = $(this).data('page');
+            var termId = $(this).data('term-id');
+            
+            if (page && termId) {
+                // Подстраховка: если даты не заполнены, выставляем сегодняшнюю
+                $('#mlm_sleepers_from').val($('#mlm_sleepers_from').val() || currentDate());
+                $('#mlm_sleepers_to').val($('#mlm_sleepers_to').val() || currentDate());
+                loadSleepers(page, sortState, orderState);
+            }
+        });
+
         /**
          * Get current date in YYYY-MM-DD format
          * @return {string}
@@ -142,9 +154,6 @@
             return year + '-' + month + '-' + day;
         }
 
-        // Текущее состояние сортировки таблицы "сонь" (по умолчанию: user_id DESC)
-        var sortState = 'user_id';
-        var orderState = 'DESC';
 
         
         /**
@@ -163,7 +172,8 @@
         
         // Initialize date pickers (if available)
         if ($.fn.datepicker) {
-            $('#mlm_date_from, #mlm_date_to').datepicker({
+            // Инициализируем календарь для фильтров по дате
+            $('#mlm_sleepers_from, #mlm_sleepers_to').datepicker({
                 dateFormat: 'yy-mm-dd',
                 changeMonth: true,
                 changeYear: true,
