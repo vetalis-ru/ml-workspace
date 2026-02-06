@@ -117,3 +117,5 @@ Step Validation: The plugin verifies that the issued certificate corresponds to 
 Auto vs Manual: The algorithm does not distinguish between AUTO and MANUAL certificates. If an admin manually issues a certificate for the current step, the plugin will treat it as step completion and grant the next level. This is a design feature.
 
 Dependency on Certificates Module: The plugin does not work without the active MBL Certificates module, as it is entirely built on its mbl_certificate_issued hook.
+
+Source File Reference: /Users/semenpetrovich/Documents/GitHub/ml-workspace/docs/ml-origin/HANDOFF DOCUMENTS # ENG/HANDOFF DOCUMENT #008- ML-BUNDLE-COURSES (CUSTOM PLUGIN) - eng.md
