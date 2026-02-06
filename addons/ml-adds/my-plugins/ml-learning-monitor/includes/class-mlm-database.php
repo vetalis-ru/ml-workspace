@@ -52,58 +52,40 @@ class MLM_Database {
          */
         $count_sql = "
             SELECT COUNT(*)
-            FROM (
-                SELECT k.user_id
-                FROM {$keys_table} k
-
-                INNER JOIN (
-                    SELECT user_id, MAX(date_end) AS max_end
-                    FROM {$keys_table}
-                    WHERE term_id = %d
-                    GROUP BY user_id
-                ) lk
-                    ON lk.user_id = k.user_id
-                   AND lk.max_end = k.date_end
-
-                LEFT JOIN {$certs_table} c
-                    ON c.user_id = k.user_id
-
-                WHERE k.term_id = %d
-                  AND k.user_id > 0
-                  AND k.is_banned = 0
-                  AND k.is_unlimited = 0
-                  AND k.status = 'expired'
-                  AND k.date_end <> '0000-00-00'
-                  AND k.date_end >= %s
-                  AND k.date_end <= %s
-                  AND c.certificate_id IS NULL
-
-                  AND NOT EXISTS (
-                      SELECT 1
-                      FROM {$keys_table} ka
-                      WHERE ka.user_id = k.user_id
-                        AND ka.term_id = %d
-                        AND ka.is_banned = 0
-                        AND (
-                            ka.is_unlimited = 1
-                            OR (
-                                ka.date_end <> '0000-00-00'
-                                AND ka.date_end > %s
-                            )
-                        )
+            FROM wp_users u
+            INNER JOIN (
+              SELECT user_id, MAX(date_end) AS last_date_end
+              FROM wp_memberlux_term_keys
+              WHERE term_id = %d
+                AND is_banned = 0
+              GROUP BY user_id
+            ) lk ON lk.user_id = u.ID
+            LEFT JOIN wp_memberlux_certificate c
+              ON c.user_id = u.ID
+             AND c.wpmlevel_id = %d
+            WHERE u.user_status = 0
+              AND c.certificate_id IS NULL
+              AND lk.last_date_end BETWEEN %s AND %s
+              AND NOT EXISTS (
+                SELECT 1
+                FROM wp_memberlux_term_keys k2
+                WHERE k2.user_id = u.ID
+                  AND k2.term_id = %d
+                  AND k2.is_banned = 0
+                  AND (
+                    k2.is_unlimited = 1
+                    OR k2.date_end > lk.last_date_end
                   )
-            ) t
-        ";
-
+              )";
+              
         $total = (int) $wpdb->get_var(
             $wpdb->prepare(
                 $count_sql,
-                $term_id,   // lk.term_id
-                $term_id,   // k.term_id
+                $term_id,   // s.term_id
+                $term_id,   // c.wpmlevel_id
                 $date_from, // date_from
                 $date_to,   // date_to
-                $term_id,   // ka.term_id
-                $date_to    // ka.date_end > date_to
+                $term_id    // k2.term_id
             )
         );
 
@@ -114,85 +96,75 @@ class MLM_Database {
          */
         $rows_sql = "
             SELECT
-                u.ID AS user_id,
-                u.user_email AS email,
-                um_first.meta_value AS first_name,
-                um_last.meta_value AS last_name,
-                s.last_issue_date,
-                s.last_end_date,
-                s.reminders_sent
-            FROM {$users_table} u
-
-            LEFT JOIN {$usermeta_table} um_first
-                ON um_first.user_id = u.ID
-               AND um_first.meta_key = 'first_name'
-
-            LEFT JOIN {$usermeta_table} um_last
-                ON um_last.user_id = u.ID
-               AND um_last.meta_key = 'last_name'
-
+                u.ID                         AS user_id,
+                u.user_email                 AS email,
+                um_fn.meta_value             AS first_name,
+                um_ln.meta_value             AS last_name,
+                k_last.date_start            AS last_date_start,
+                lk.last_date_end             AS last_date_end,
+                0                            AS reminders_sent
+            FROM wp_users u
             INNER JOIN (
                 SELECT
-                    k.user_id,
-                    MAX(k.date_registered) AS last_issue_date,
-                    MAX(k.date_end) AS last_end_date,
-                    0 AS reminders_sent
-                FROM {$keys_table} k
+                    user_id,
+                    MAX(date_end) AS last_date_end
+                FROM wp_memberlux_term_keys
+                WHERE term_id = %d
+                  AND is_banned = 0
+                GROUP BY user_id
+            ) lk
+                ON lk.user_id = u.ID
 
-                INNER JOIN (
-                    SELECT user_id, MAX(date_end) AS max_end
-                    FROM {$keys_table}
-                    WHERE term_id = %d
-                    GROUP BY user_id
-                ) lk
-                    ON lk.user_id = k.user_id
-                   AND lk.max_end = k.date_end
+            -- привязываем ИМЕННО тот ключ, который соответствует last_date_end
+            INNER JOIN wp_memberlux_term_keys k_last
+                ON k_last.user_id = u.ID
+               AND k_last.term_id = %d
+               AND k_last.is_banned = 0
+               AND k_last.date_end = lk.last_date_end
 
-                LEFT JOIN {$certs_table} c
-                    ON c.user_id = k.user_id
+            LEFT JOIN wp_usermeta um_fn
+                ON um_fn.user_id = u.ID
+               AND um_fn.meta_key = 'first_name'
+            LEFT JOIN wp_usermeta um_ln
+                ON um_ln.user_id = u.ID
+               AND um_ln.meta_key = 'last_name'
 
-                WHERE k.term_id = %d
-                  AND k.user_id > 0
-                  AND k.is_banned = 0
-                  AND k.is_unlimited = 0
-                  AND k.status = 'expired'
-                  AND k.date_end <> '0000-00-00'
-                  AND k.date_end >= %s
-                  AND k.date_end <= %s
-                  AND c.certificate_id IS NULL
+            LEFT JOIN wp_memberlux_certificate c
+                ON c.user_id = u.ID
+               AND c.wpmlevel_id = %d
 
-                  AND NOT EXISTS (
-                      SELECT 1
-                      FROM {$keys_table} ka
-                      WHERE ka.user_id = k.user_id
-                        AND ka.term_id = %d
-                        AND ka.is_banned = 0
-                        AND (
-                            ka.is_unlimited = 1
-                            OR (
-                                ka.date_end <> '0000-00-00'
-                                AND ka.date_end > %s
-                            )
-                        )
-                  )
-                GROUP BY k.user_id
-            ) s ON s.user_id = u.ID
+            WHERE
+                u.user_status = 0
+                AND c.certificate_id IS NULL
+                AND lk.last_date_end BETWEEN %s AND %s
+                AND NOT EXISTS (
+                    SELECT 1
+                    FROM wp_memberlux_term_keys k2
+                    WHERE k2.user_id = u.ID
+                      AND k2.term_id = %d
+                      AND k2.is_banned = 0
+                      AND (
+                          k2.is_unlimited = 1
+                          OR k2.date_end > lk.last_date_end
+                      )
+                )
 
-            ORDER BY {$sort_sql} {$order}, u.ID DESC
-            LIMIT %d OFFSET %d
+            ORDER BY lk.last_date_end ASC
+            LIMIT %d OFFSET %d;
+
         ";
 
-        $rows = $wpdb->get_results(
+         $rows = $wpdb->get_results(
             $wpdb->prepare(
                 $rows_sql,
                 $term_id,   // lk.term_id
-                $term_id,   // k.term_id
-                $date_from,
-                $date_to,
-                $term_id,   // ka.term_id
-                $date_to,   // ka.date_end > date_to
-                $per_page,
-                $offset
+                $term_id,   // k_last.term_id
+                $term_id,   // c.wpmlevel_id  ← ВАЖНО: этого не хватало
+                $date_from, // date_from
+                $date_to,   // date_to
+                $term_id,   // k2.term_id
+                $per_page,  // LIMIT
+                $offset     // OFFSET
             ),
             ARRAY_A
         );
